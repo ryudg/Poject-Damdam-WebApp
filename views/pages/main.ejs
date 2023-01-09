@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="url을 입력해주세요" />
+    <meta property="og:title" content="담담" />
+    <meta property="og:image" content="https://i.ibb.co/qCCd1X7/Frame-2.png" />
+    <meta property="og:description" content="금연 웹앱" />
+    <meta property="og:site_name" content="DamDam" />
+    <meta property="og:locale" content="Kor" />
+    <meta name="keywords" content="금연, 웹앱" />
+    <meta name="author" content="이름" />
+    <meta name="description" content="DamDam 홈페이지입니다." />
+    <link rel="icon" href="/images/favicon.png" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <title>Damdam</title>
+  </head>
+  <body id="main">
+    <div class="container">
+      <!-- header -->
+      <div class="header">
+        <div class="user-name">
+          <h1>안녕하세요 {name}님</h1>
+        </div>
+        <div class="info-setting">
+          <div class="info">
+            <a href="/userinfo"><i class="fa-solid fa-circle-user"></i></a>
+          </div>
+          <div class="setting">
+            <a href="/setting"><i class="fa-solid fa-gear"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- main- -->
+      <div class="main-timer">
+        <div><img src="/images/main-timer.png" alt="timer-img" /></div>
+        <div>
+          <div class="main-timer-day">12345일</div>
+          <div class="main-timer-clock">
+            <div class="main-timer-hour">23시간</div>
+            <div class="main-timer-minute">59분</div>
+          </div>
+        </div>
+      </div>
+      <!-- section achievement -->
+      <section class="achievement">
+        <div class="achievement-title">
+          <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div><h1>나의 업적</h1></div>
+          <div><h3>8 / 123</h3></div>
+        </div>
+        <div class="achievement-contents">
+          <div class="achievement-content">
+            <div class="achievement-content-img">
+              <img src="/images/trophy1.png" alt="trophy1" />
+            </div>
+            <div class="achievement-content-text">
+              저축 금액 100,000원 달성!
+            </div>
+          </div>
+          <div class="achievement-content">
+            <div class="achievement-content-img">
+              <img src="/images/trophy2.png" alt="trophy2" />
+            </div>
+            <div class="achievement-content-text">
+              금연을 시작한지 일주일이 달상!
+            </div>
+          </div>
+          <div class="achievement-content">
+            <div class="achievement-content-img">
+              <img src="/images/trophy3.png" alt="trophy3" />
+            </div>
+            <div class="achievement-content-text">금연을 시작했어요!</div>
+          </div>
+          <div class="achievement-content">
+            <p>
+              <a href="/archievement">모든<br />업적 보기</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- section result -->
+      <section class="result">
+        <div class="result-title">
+          <div class="result-icon">
+            <i class="fa-regular fa-rectangle-list"></i>
+          </div>
+          <div><h1>나의 성과</h1></div>
+        </div>
+        <div class="result-contents">
+          <div class="count">
+            <div class="count-icon"><i class="fa-solid fa-smoking"></i></div>
+            <div class="count-content">
+              <h3>피우지 않은 담배 개수</h3>
+              <h1>154개</h1>
+            </div>
+          </div>
+          <div class="save">
+            <div class="save-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+            <div class="save-content">
+              <h3>절약한 금액</h3>
+              <h1>154,600원</h1>
+            </div>
+          </div>
+          <div class="time">
+            <div class="time-icon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <div class="time-content">
+              <h3>늘어난 시간</h3>
+              <h1>1,240분</h1>
+            </div>
+          </div>
+          <div class="contour"></div>
+          <div class="overcome">
+            <div class="overcome-icon">
+              <i class="fa-solid fa-hand-fist"></i>
+            </div>
+            <div class="overcome-content">
+              <h1>금단증상 극복하기</h1>
+              <span><i class="fa-solid fa-chevron-right"></i></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section changes -->
+      <section class="change">
+        <div class="change-title">
+          <div class="change-icon"><i class="fa-solid fa-recycle"></i></div>
+          <div><h1>나의 변화</h1></div>
+        </div>
+        <div class="change-contents">
+          <div class="prev">
+            <div>
+              <p>1단계</p>
+              <p>
+                20분 - 혈압, 맥박 수, 손과 발의 체온 등이 정상으로 돌아온다.
+              </p>
+            </div>
+          </div>
+          <div class="arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="now">
+            <div>
+              <p>2단계</p>
+              <p>
+                8시간 - 혈류의 니코틴 수치가 가장 높을 때에 비해 93.75% 제거되어
+                6.25%로 감소한다.
+              </p>
+            </div>
+            <div class="progress">
+              <progress id="progress" value="33" min="0" max="100"></progress>
+              <p>33%</p>
+            </div>
+          </div>
+          <div class="arrow">
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="next">
+            <div>
+              <p>3단계</p>
+              <p>
+                12시간 - 혈중 산소량이 정상 수준으로 상승하고 일산화탄소량이
+                정상 수준으로 감소한다.
+              </p>
+            </div>
+          </div>
+          <div class="contour"></div>
+        </div>
+        <div class="change-seemore">
+          <div class="change-seemore-icon">
+            <i class="fa-solid fa-hand-fist"></i>
+          </div>
+          <div class="change-seemore-content">
+            <h1>변화단계 알아보기</h1>
+            <span><i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </div>
+      </section>
+      <section class="knowledge">
+        <div class="knowledge-title">
+          <div class="knowledge-icon">
+            <i class="fa-regular fa-lightbulb"></i>
+          </div>
+          <div><h1>지식 +</h1></div>
+        </div>
+        <div class="knowledge-content">
+          <h2>흡연은 외모에 즉각적인 영향을 미칩니다.</h2>
+          <h4>
+            담배는 피부 주름을 촉진하여 나이에 비해 늙어 보이게 합니다. 흡연은
+            피부 탄력과 관련이 있는 단백질을 없애고 비타민 A를 고갈시켜 원활한
+            혈류의 흐름을 방해함으로써 피부 노화를 앞당깁니다.
+          </h4>
+        </div>
+        <div class="contour"></div>
+        <div class="knowledge-seemore">
+          <div class="knowledge-seemore-icon">
+            <i class="fa-solid fa-hand-fist"></i>
+          </div>
+          <div class="knowledge-seemore-content">
+            <h1>모든 정보 확인</h1>
+            <span><i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="home active">
+        <a href="/"><i class="fa-solid fa-house"></i></a>
+      </div>
+      <div class="achievement">
+        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+      </div>
+      <div class="community">
+        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+      </div>
+      <div class="calendar">
+        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+      </div>
+    </footer>
+    <!-- fontA -->
+    <script
+      src="https://kit.fontawesome.com/67eff22c15.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
