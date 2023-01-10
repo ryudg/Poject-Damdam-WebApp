@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/BrithDay.css" />
+    <title>BrithDay</title>
+  </head>
+  <body id="BrithDay">
+    <div class="BrithDay-container">
+      <div class="title"><h1>마지막으로 생일을 알려주세요</h1></div>
+      <div class="contents">
+        <img src="/images/BrithDay-title.png" alt="BrithDay-title" />
+        <form action="/BrithDayData" method="post">
+          <label for="BrithDay">
+            <input
+              type="text"
+              name="BrithDayYear"
+              id="BrithDayYear"
+              autocomplete="off"
+              required
+              maxlength="4"
+            />
+            <span>년</span>
+            <input
+              type="text"
+              name="BrithDayMonth"
+              id="BrithDayMonth"
+              autocomplete="off"
+              required
+              maxlength="2"
+            />
+            <span>월</span>
+            <input
+              type="text"
+              name="BrithDayDay"
+              id="BrithDayDay"
+              autocomplete="off"
+              required
+              maxlength="2"
+            />
+            <span>일</span>
+          </label>
+          <button>다음</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

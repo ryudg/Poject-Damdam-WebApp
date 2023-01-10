@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/Price.css" />
+    <title>Price</title>
+  </head>
+  <body id="Price">
+    <div class="Price-container">
+      <div class="title"><h1>피우시는 담배의 가격은 얼마인가요?</h1></div>
+      <div class="contents">
+        <img src="/images/Price-title.png" alt="Price-title" />
+        <form action="/PriceData" method="post">
+          <label for="Price">
+            <input
+              type="text"
+              name="Price"
+              id="Price"
+              autocomplete="off"
+              required
+              maxlength="6"
+            />
+            <span>원</span>
+          </label>
+          <button>다음</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -28,7 +28,7 @@
       <!-- header -->
       <div class="header">
         <div class="user-name">
-          <h1>안녕하세요 {name}님</h1>
+          <h1>안녕하세요 <%= userArr[0].userName %> 님</h1>
         </div>
         <div class="info-setting">
           <div class="info">
@@ -43,10 +43,23 @@
       <div class="main-timer">
         <div><img src="/images/main-timer.png" alt="timer-img" /></div>
         <div>
-          <div class="main-timer-day">12345일</div>
+          <div class="main-timer-day">
+            <% let startDate = new
+            Date(userArr[0].EndYear,userArr[0].EndMonth-1,userArr[0].EndDay,userArr[0].EndHour,userArr[0].EndMinute);
+            %> <% let nowDate = new Date; let currDay = 24 * 60 * 60 * 1000; let
+            diff = nowDate - startDate; let day = parseInt(diff/currDay) ; %>
+            <%= day %>일
+          </div>
           <div class="main-timer-clock">
-            <div class="main-timer-hour">23시간</div>
-            <div class="main-timer-minute">59분</div>
+            <div class="main-timer-hour">
+              <% let hour = parseInt(diff/(1000 * 60 * 60)); let upH = hour -
+              day*24; if(upH <10) {upH = "0"+upH} %> <%= upH %>시간
+            </div>
+            <div class="main-timer-minute">
+              <% let minute = parseInt(diff/(1000 * 60)) %> <% let upM = minute
+              - day*24*60 - (hour - day*24)*60; if(upM <10){upM = "0" + upM} %>
+              <%= upM %>분
+            </div>
           </div>
         </div>
       </div>
@@ -87,6 +100,7 @@
           </div>
         </div>
       </section>
+
       <!-- section result -->
       <section class="result">
         <div class="result-title">
@@ -100,14 +114,14 @@
             <div class="count-icon"><i class="fa-solid fa-smoking"></i></div>
             <div class="count-content">
               <h3>피우지 않은 담배 개수</h3>
-              <h1>154개</h1>
+              <h1><%= userArr[0].CountPerDay * day %>개피</h1>
             </div>
           </div>
           <div class="save">
             <div class="save-icon"><i class="fa-solid fa-piggy-bank"></i></div>
             <div class="save-content">
               <h3>절약한 금액</h3>
-              <h1>154,600원</h1>
+              <h1><%= userArr[0].Price * day %>원</h1>
             </div>
           </div>
           <div class="time">
@@ -116,7 +130,7 @@
             </div>
             <div class="time-content">
               <h3>늘어난 시간</h3>
-              <h1>1,240분</h1>
+              <h1><%= (day*24*60)+(upH * 60) + (upM) %>분</h1>
             </div>
           </div>
           <div class="contour"></div>
@@ -233,4 +247,17 @@
       crossorigin="anonymous"
     ></script>
   </body>
+  <!-- 
+    // 날짜 차이 알아 내기 
+var diff = dat2 - dat1;
+var currDay = 24 * 60 * 60 * 1000;// 시 * 분 * 초 * 밀리세컨
+var currMonth = currDay * 30;// 월 만듬
+var currYear = currMonth * 12; // 년 만듬
+ 
+document.write("* 날짜 두개 : " + strDate1 + ", " + strDate2 + "<br/>");
+document.write("* 일수 차이 : " + parseInt(diff/currDay) + " 일<br/>");
+document.write("* 월수 차이 : " + parseInt(diff/currMonth) + " 월<br/>");
+document.write("* 년수 차이 : " + parseInt(diff/currYear) + " 년<br/><br/>");
+
+   -->
 </html>

@@ -34,6 +34,7 @@ a {
 }
 #EndDate .EndDate-container .contents label {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -65,5 +66,5 @@ a {
   border-radius: 10px;
   font-size: 28px;
   cursor: pointer;
-  margin-top: 114px;
+  margin-top: 34px;
 }

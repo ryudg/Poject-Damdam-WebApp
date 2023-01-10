@@ -23,11 +23,6 @@ app.get("/", function (req, res) {
   res.render("pages/index.ejs");
 });
 
-// ----------main----------
-app.get("/main", (req, res) => {
-  res.render("pages/main.ejs");
-});
-
 // ----------UserName----------
 app.get("/UserName", (req, res) => {
   res.render("pages/UserName.ejs");
@@ -65,9 +60,17 @@ app.post("/StartDateData", (req, res) => {
   if (req.body.StartDay < 10) {
     req.body.StartDay = "0" + req.body.StartDay;
   }
+  if (req.body.StartHour < 10) {
+    req.body.StartHour = "0" + req.body.StartHour;
+  }
+  if (req.body.StartMinute < 10) {
+    req.body.StartMinute = "0" + req.body.StartMinute;
+  }
   userArr[0].StartYear = req.body.StartYear;
   userArr[0].StartMonth = req.body.StartMonth;
   userArr[0].StartDay = req.body.StartDay;
+  userArr[0].StartHour = req.body.StartHour;
+  userArr[0].StartMinute = req.body.StartMinute;
 
   fs.writeFileSync("./public/json/userData.json", JSON.stringify(userArr));
   res.redirect("/EndDate");
@@ -85,12 +88,65 @@ app.post("/EndDateData", (req, res) => {
   if (req.body.EndDay < 10) {
     req.body.EndDay = "0" + req.body.EndDay;
   }
+  if (req.body.EndHour < 10) {
+    req.body.EndHour = "0" + req.body.EndHour;
+  }
+  if (req.body.EndMinute < 10) {
+    req.body.EndMinute = "0" + req.body.EndMinute;
+  }
   userArr[0].EndYear = req.body.EndYear;
   userArr[0].EndMonth = req.body.EndMonth;
   userArr[0].EndDay = req.body.EndDay;
+  userArr[0].EndHour = req.body.EndHour;
+  userArr[0].EndMinute = req.body.EndMinute;
 
   fs.writeFileSync("./public/json/userData.json", JSON.stringify(userArr));
-  res.redirect("/EndDate");
+  res.redirect("/CountPerDay");
+});
+
+// ----------CountPerDay----------
+app.get("/CountPerDay", (req, res) => {
+  res.render("pages/CountPerDay.ejs");
+});
+app.post("/CountPerDayData", (req, res) => {
+  userArr[0].CountPerDay = req.body.CountPerDay;
+
+  fs.writeFileSync("./public/json/userData.json", JSON.stringify(userArr));
+  res.redirect("/Price");
+});
+
+// ----------Price----------
+app.get("/Price", (req, res) => {
+  res.render("pages/Price.ejs");
+});
+app.post("/PriceData", (req, res) => {
+  userArr[0].Price = req.body.Price;
+
+  fs.writeFileSync("./public/json/userData.json", JSON.stringify(userArr));
+  res.redirect("/BrithDay");
+});
+
+// ----------BrithDay----------
+app.get("/BrithDay", (req, res) => {
+  res.render("pages/BrithDay.ejs");
+});
+app.post("/BrithDayData", (req, res) => {
+  if (req.body.BrithDayMonth < 10) {
+    req.body.BrithDayMonth = "0" + req.body.BrithDayMonth;
+  }
+  if (req.body.BrithDayDay < 10) {
+    req.body.BrithDayDay = "0" + req.body.BrithDayDay;
+  }
+  userArr[0].BrithDayYear = req.body.BrithDayYear;
+  userArr[0].BrithDayMonth = req.body.BrithDayMonth;
+  userArr[0].BrithDayDay = req.body.BrithDayDay;
+  fs.writeFileSync("./public/json/userData.json", JSON.stringify(userArr));
+  res.redirect("/Main");
+});
+
+// ----------main----------
+app.get("/main", (req, res) => {
+  res.render("pages/main.ejs", { userArr });
 });
 
 // ----------NoMoreInfo----------

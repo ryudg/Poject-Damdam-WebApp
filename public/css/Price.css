@@ -18,29 +18,28 @@ a {
   color: #000;
   text-decoration: none;
 }
-#StartDate {
+#Price {
   padding: 90px 20px 30px 20px;
   text-align: center;
 }
-#StartDate .StartDate-container .title,
-#StartDate .StartDate-container .subtitle {
+#Price .Price-container .title {
   padding: 10px;
+  margin-bottom: 20px;
 }
-#StartDate .StartDate-container .subtitle {
-  margin-bottom: 30px;
+#Price .Price-container .title h1 {
+  font-size: 28px;
 }
-#StartDate .StartDate-container .contents img {
+#Price .Price-container .contents img {
   margin-bottom: 50px;
 }
-#StartDate .StartDate-container .contents label {
+#Price .Price-container .contents label {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px 10px;
-  font-size: 18px;
+  gap: 10px;
+  font-size: 28px;
 }
-#StartDate .StartDate-container .contents label input {
+#Price .Price-container .contents label input {
   width: 100px;
   height: 30px;
   border-radius: 10px;
@@ -49,16 +48,11 @@ a {
   padding: 0 5px;
   text-align: center;
 }
-#StartDate .StartDate-container .contents label input#StartMonth,
-#StartDate .StartDate-container .contents label input#StartDay,
-#StartDate .StartDate-container .contents label input#StartHour,
-#StartDate .StartDate-container .contents label input#StartMinute {
-  width: 50px;
-}
-#StartDate .StartDate-container .contents label input:focus {
+
+#Price .Price-container .contents label input:focus {
   outline: 2px solid #62d2a2;
 }
-#StartDate .StartDate-container button {
+#Price .Price-container button {
   border: none;
   background-color: #62d2a2;
   color: #fff;
@@ -68,5 +62,5 @@ a {
   border-radius: 10px;
   font-size: 28px;
   cursor: pointer;
-  margin-top: 54px;
+  margin-top: 114px;
 }

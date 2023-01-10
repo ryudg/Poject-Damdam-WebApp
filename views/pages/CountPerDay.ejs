@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/CountPerDay.css" />
+    <title>CountPerDay</title>
+  </head>
+  <body id="CountPerDay">
+    <div class="CountPerDay-container">
+      <div class="title"><h1>하루에 담배를 얼마나 피우셨나요?</h1></div>
+      <div class="contents">
+        <img src="/images/CountPerDay-title.png" alt="CountPerDay-title" />
+        <form action="/CountPerDayData" method="post">
+          <label for="CountPerDay">
+            <input
+              type="text"
+              name="CountPerDay"
+              id="CountPerDay"
+              autocomplete="off"
+              required
+              maxlength="4"
+            />
+            <span>개피</span>
+          </label>
+          <button>다음</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

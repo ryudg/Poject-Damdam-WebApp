@@ -18,29 +18,28 @@ a {
   color: #000;
   text-decoration: none;
 }
-#StartDate {
+#BrithDay {
   padding: 90px 20px 30px 20px;
   text-align: center;
 }
-#StartDate .StartDate-container .title,
-#StartDate .StartDate-container .subtitle {
+#BrithDay .BrithDay-container .title {
   padding: 10px;
+  margin-bottom: 20px;
 }
-#StartDate .StartDate-container .subtitle {
+#BrithDay .BrithDay-container .subtitle {
   margin-bottom: 30px;
 }
-#StartDate .StartDate-container .contents img {
+#BrithDay .BrithDay-container .contents img {
   margin-bottom: 50px;
 }
-#StartDate .StartDate-container .contents label {
+#BrithDay .BrithDay-container .contents label {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 20px 10px;
+  gap: 10px;
   font-size: 18px;
 }
-#StartDate .StartDate-container .contents label input {
+#BrithDay .BrithDay-container .contents label input {
   width: 100px;
   height: 30px;
   border-radius: 10px;
@@ -49,16 +48,14 @@ a {
   padding: 0 5px;
   text-align: center;
 }
-#StartDate .StartDate-container .contents label input#StartMonth,
-#StartDate .StartDate-container .contents label input#StartDay,
-#StartDate .StartDate-container .contents label input#StartHour,
-#StartDate .StartDate-container .contents label input#StartMinute {
+#BrithDay .BrithDay-container .contents label input#BrithDayMonth,
+#BrithDay .BrithDay-container .contents label input#BrithDayDay {
   width: 50px;
 }
-#StartDate .StartDate-container .contents label input:focus {
+#BrithDay .BrithDay-container .contents label input:focus {
   outline: 2px solid #62d2a2;
 }
-#StartDate .StartDate-container button {
+#BrithDay .BrithDay-container button {
   border: none;
   background-color: #62d2a2;
   color: #fff;
@@ -68,5 +65,5 @@ a {
   border-radius: 10px;
   font-size: 28px;
   cursor: pointer;
-  margin-top: 54px;
+  margin-top: 154px;
 }

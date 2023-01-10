@@ -42,22 +42,43 @@
               maxlength="2"
             />
             <span>일</span>
+            <input
+              type="text"
+              name="EndHour"
+              id="EndHour"
+              autocomplete="off"
+              required
+              maxlength="2"
+            />
+            <span>시</span>
+            <input
+              type="text"
+              name="EndMinute"
+              id="EndMinute"
+              autocomplete="off"
+              required
+              maxlength="2"
+            />
+            <span>분</span>
           </label>
           <button>다음</button>
         </form>
       </div>
-      <div class="InpuUserName-nextBtn"></div>
     </div>
 
     <script>
       let EndYear = document.querySelector("#EndYear");
       let EndMonth = document.querySelector("#EndMonth");
       let EndDay = document.querySelector("#EndDay");
+      let EndHour = document.querySelector("#EndHour");
+      let EndMinute = document.querySelector("#EndMinute");
 
       let D = new Date();
       EndYear.value = D.getFullYear();
       EndMonth.value = D.getMonth() + 1;
       EndDay.value = D.getDate();
+      EndHour.value = D.getHours();
+      EndMinute.value = D.getMinutes();
     </script>
   </body>
 </html>
