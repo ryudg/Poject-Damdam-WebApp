@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+:root {
+  --main-color: #1fab89;
+  --main-color-opacity30: rgba(31, 171, 137, 0.3);
+  --sub-color: #62d2a2;
+  --sub2-color: #9df3c4;
+  --bg-color: #e9f3ef;
+  --font: "Yeon Sung", cursive;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+  word-break: keep-all;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+#UserName {
+  padding: 90px 20px 30px 20px;
+  text-align: center;
+}
+#UserName .UserName-container .title {
+  margin-bottom: 73px;
+}
+
+#UserName .UserName-container .contents img {
+  margin-bottom: 50px;
+}
+#UserName .UserName-container .contents label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 28px;
+}
+#UserName .UserName-container .contents label input {
+  width: 140px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #62d2a2;
+  font-size: 22px;
+  padding: 0 5px;
+  text-align: center;
+}
+#UserName .UserName-container .contents label input:focus {
+  outline: 2px solid #62d2a2;
+}
+#UserName .UserName-container button {
+  border: none;
+  background-color: #62d2a2;
+  color: #fff;
+  letter-spacing: 0.3em;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 28px;
+  cursor: pointer;
+  margin-top: 114px;
+}

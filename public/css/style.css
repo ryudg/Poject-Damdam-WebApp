@@ -107,7 +107,7 @@ a {
   padding: 5px 0;
 }
 /* ----------achievement end---------- */
-/* ----------achievement start---------- */
+/* ----------result start---------- */
 #main .result {
   background-color: var(--bg-color);
   border-radius: 10px;
@@ -175,7 +175,7 @@ a {
   background-color: #9df3c4;
   margin: 30px 0;
 }
-/* ----------achievement end---------- */
+/* ----------result end---------- */
 /* ----------change start ---------- */
 #main .change {
   background-color: var(--bg-color);

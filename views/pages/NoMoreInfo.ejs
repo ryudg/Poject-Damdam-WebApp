@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- css -->
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/NoMoreInfo.css" />
 
-    <title>Damdam</title>
+    <title>NoMoreInfo</title>
   </head>
   <body id="main">
     <div class="container">
       <!-- header -->
       <div class="header">
         <div class="user-name">
-          <h1>안녕하세요 {name}님</h1>
+          <h1>안녕하세요 <%= userArr[0].userName %>님</h1>
         </div>
         <div class="info-setting">
           <div class="info">
@@ -37,6 +37,65 @@
           </div>
         </div>
       </div>
+      <!-- need-info -->
+      <div class="need-info">
+        <h1>정보를 입력 후 금연을 시작해보세요</h1>
+      </div>
+      <!-- create-info-btn -->
+      <div class="create-info-btn">
+        <form action="/StartDate">
+          <button>정보입력</button>
+        </form>
+      </div>
+      <!--daily-average  -->
+      <section class="daily-average">
+        <div class="daily-average-title">
+          <div class="daily-average-icon">
+            <i class="fa-solid fa-chart-column"></i>
+          </div>
+          <div class="daily-average-title-text">
+            <h3>한국 하루 평균 흡연량</h3>
+            <h1>12.5개피</h1>
+          </div>
+        </div>
+      </section>
+      <!-- 10yEffect -->
+      <section class="effect">
+        <div class="effect-title">
+          <div class="effect-icon">
+            <i class="fa-regular fa-clipboard"></i>
+          </div>
+          <div class="effect-title-text">
+            <h1>10년 금연 효과</h1>
+          </div>
+        </div>
+        <div class="effect-contents">
+          <div class="count">
+            <div class="count-icon"><i class="fa-solid fa-smoking"></i></div>
+            <div class="count-content">
+              <h3>피우지 않은 담배 개수</h3>
+              <h1>154개</h1>
+            </div>
+          </div>
+          <div class="save">
+            <div class="save-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+            <div class="save-content">
+              <h3>절약한 금액</h3>
+              <h1>154,600원</h1>
+            </div>
+          </div>
+          <div class="time">
+            <div class="time-icon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <div class="time-content">
+              <h3>늘어난 시간</h3>
+              <h1>1,240분</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- knowledge -->
       <section class="knowledge">
         <div class="knowledge-title">
           <div class="knowledge-icon">
@@ -51,16 +110,6 @@
             피부 탄력과 관련이 있는 단백질을 없애고 비타민 A를 고갈시켜 원활한
             혈류의 흐름을 방해함으로써 피부 노화를 앞당깁니다.
           </h4>
-        </div>
-        <div class="contour"></div>
-        <div class="knowledge-seemore">
-          <div class="knowledge-seemore-icon">
-            <i class="fa-solid fa-hand-fist"></i>
-          </div>
-          <div class="knowledge-seemore-content">
-            <h1>모든 정보 확인</h1>
-            <span><i class="fa-solid fa-chevron-right"></i></span>
-          </div>
         </div>
       </section>
     </div>

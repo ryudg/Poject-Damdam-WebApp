@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/StartDate.css" />
+    <title>StartDate</title>
+  </head>
+  <body id="StartDate">
+    <div class="StartDate-container">
+      <div class="title"><h1>언제부터 흡연을 하셨나요?</h1></div>
+      <div class="subtitle"><h4>기억이 나는 데로 입력해 주세요.</h4></div>
+      <div class="contents">
+        <img src="/images/StartDate-title.png" alt="StartDate-title" />
+        <form action="/StartDateData" method="post">
+          <label for="StartDate">
+            <input
+              type="text"
+              name="StartYear"
+              id="StartYear"
+              autocomplete="off"
+              required
+              maxlength="4"
+            />
+            <span>년</span>
+            <input
+              type="text"
+              name="StartMonth"
+              id="StartMonth"
+              autocomplete="off"
+              required
+              maxlength="2"
+            />
+            <span>월</span>
+            <input
+              type="text"
+              name="StartDay"
+              id="StartDay"
+              autocomplete="off"
+              required
+              maxlength="2"
+            />
+            <span>일</span>
+          </label>
+          <button>다음</button>
+        </form>
+      </div>
+      <div class="InpuUserName-nextBtn"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/EndDate.css" />
+    <title>EndDate</title>
+  </head>
+  <body id="EndDate">
+    <div class="EndDate-container">
+      <div class="title"><h1>금연 시작 날짜가 오늘인가요?</h1></div>
+      <div class="subtitle"><h4>아니라면 시작 날짜를 입력해주세요</h4></div>
+      <div class="contents">
+        <img src="/images/EndDate-title.png" alt="EndDate-title" />
+        <form action="/EndDateData" method="post">
+          <label for="EndDate">
+            <input
+              type="text"
+              name="EndYear"
+              id="EndYear"
+              autocomplete="off"
+              required
+              maxlength="4"
+            />
+            <span>년</span>
+            <input
+              type="text"
+              name="EndMonth"
+              id="EndMonth"
+              autocomplete="off"
+              required
+              maxlength="2"
+            />
+            <span>월</span>
+            <input
+              type="text"
+              name="EndDay"
+              id="EndDay"
+              autocomplete="off"
+              required
+              maxlength="2"
+            />
+            <span>일</span>
+          </label>
+          <button>다음</button>
+        </form>
+      </div>
+      <div class="InpuUserName-nextBtn"></div>
+    </div>
+
+    <script>
+      let EndYear = document.querySelector("#EndYear");
+      let EndMonth = document.querySelector("#EndMonth");
+      let EndDay = document.querySelector("#EndDay");
+
+      let D = new Date();
+      EndYear.value = D.getFullYear();
+      EndMonth.value = D.getMonth() + 1;
+      EndDay.value = D.getDate();
+    </script>
+  </body>
+</html>
