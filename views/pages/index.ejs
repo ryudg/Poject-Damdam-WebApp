@@ -19,9 +19,10 @@
             let link = "http://localhost:3001/main";
             let link2 = "http://localhost:3001/NoMoreInfo";
             let link3 = "http://localhost:3001/UserName";
+
             if (data.length == 0) {
               location.href = link3;
-            } else if (data[0].userName && data[0].StartDate == undefined) {
+            } else if (data[0].userName && data[0].id == undefined) {
               location.href = link2;
             } else {
               location.href = link;

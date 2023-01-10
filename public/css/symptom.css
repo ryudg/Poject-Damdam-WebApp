@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap');
+
+body {
+  font-family: 'Yeon Sung', cursive;
+}
+
+.symp_wrap {
+  padding: 0 10px;
+}
+
+/* 금단증상 제목 */
+
+.symp_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95px;
+  position: relative;
+}
+
+.symp_title h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.symp_left_arrow {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.symp_left_arrow img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 금단증상 버튼 */
+
+.symp_button_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 10px 0;
+}
+
+.symp_button_wrap li {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 10px 0;
+}
+
+.symp_button_wrap li p {
+  font-size: 14px;
+  padding: 6px 10px;
+  background-color: #9df3c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* 금단증상 내용 */
+
+.symp_contents_wrap {
+  background-color: #e9f3ef;
+  padding: 10px 20px;
+  margin: 0 0 30px 0;
+}
+
+.symp_contents_wrap ul li {
+  margin: 0 0 20px 0;
+}
+
+.symp_contents_wrap ul li:nth-child(4) {
+  margin: 0;
+}
+
+.symp_contents_wrap h1 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.contents_upper {
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.contents_img_wrap {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 0;
+}
+
+.contents_img_wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+.contents_upper p {
+  font-size: 20px;
+}
+
+/* 4D display active */
+.symp_contents_4D {
+  display: none;
+}
+
+.symp_contents_4D.active {
+  display: block;
+}
+
+/* 4D가 아닌 금단증상들 */
+
+.symp_contents_exception_4D h1 {
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.symp_contents_exception_4D .contents_upper p {
+  font-size: 24px;
+}
+
+.symp_contents_exception_4D .contents_under {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.symp_contents_exception_4D ul li:nth-child(2) {
+  margin: 0;
+}
+
+.symp_contents_exception_4D .contents_img_wrap {
+  width: 28px;
+  height: 28px;
+}
+
+.symp_contents_exception_4D .contents_img_wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 4D가 아닌 금단증상들 active */
+.symp_contents_exception_4D {
+  display: none;
+}
+
+.symp_contents_exception_4D.active {
+  display: block;
+}
+
+/* 버튼 컬러 active */
+#symp_btn_4D.active {
+  background-color: #62d2a2;
+}
+
+#symp_btn_0.active,
+#symp_btn_1.active,
+#symp_btn_2.active,
+#symp_btn_3.active,
+#symp_btn_4.active,
+#symp_btn_5.active,
+#symp_btn_6.active,
+#symp_btn_7.active,
+#symp_btn_8.active,
+#symp_btn_9.active,
+#symp_btn_10.active,
+#symp_btn_11.active {
+  background-color: #62d2a2;
+}

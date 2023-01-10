@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+:root {
+  --main-color: #1fab89;
+  --main-color-opacity30: rgba(31, 171, 137, 0.3);
+  --sub-color: #62d2a2;
+  --sub2-color: #9df3c4;
+  --bg-color: #e9f3ef;
+  --font: "Yeon Sung", cursive;
+}
+
+body#achievement {
+  font-family: "Yeon Sung", cursive;
+  margin-bottom: 60px;
+}
+
+#achievement .achiev_wrap {
+  padding: 0 20px;
+}
+
+/* 업적 제목 */
+#achievement .achiev_contents_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+#achievement .achiev_title {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#achievement .achiev_title h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+#achievement .achiev_left_arrow {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#achievement .achiev_price {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#achievement .achiev_price_img {
+  width: 32px;
+  height: 32px;
+  margin: 0 10px 0 0;
+}
+
+#achievement .achiev_price_img img {
+  width: 100%;
+  height: 100%;
+}
+
+#achievement .achiev_price span {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+/* 업적 내용 */
+#achievement .achiev_contents_wrap li {
+  display: flex;
+  gap: 20px;
+  margin: 0 0 30px 0;
+}
+
+#achievement .achiev_content_box {
+  background-color: #e9f3ef;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+#achievement .achiev_content_img {
+  width: 158px;
+  height: 158px;
+}
+
+#achievement .achiev_content_img img {
+  width: 100%;
+}
+
+#achievement .achiev_content_box p {
+  font-size: 14px;
+  text-align: center;
+  /* margin: 10px 0 0 0; */
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  border-top: 1px solid var(--main-color);
+  background: #fff;
+}
+footer .home,
+footer .achievement,
+footer .community,
+footer .calendar {
+  flex: 1;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .home a,
+footer .achievement a,
+footer .community a,
+footer .calendar a {
+  color: var(--main-color-opacity30);
+}
+footer .home.active a,
+footer .achievement.active a,
+footer .community.active a,
+footer .calendar.active a {
+  color: var(--main-color);
+}
+#achievement .achiev_content_box {
+  position: relative;
+}
+#achievement .checkBox {
+  width: 20px !important;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}

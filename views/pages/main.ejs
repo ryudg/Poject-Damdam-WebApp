@@ -95,7 +95,7 @@
           </div>
           <div class="achievement-content">
             <p>
-              <a href="/archievement">모든<br />업적 보기</a>
+              <a href="/achievement">모든<br />업적 보기</a>
             </p>
           </div>
         </div>
@@ -130,7 +130,7 @@
             </div>
             <div class="time-content">
               <h3>늘어난 시간</h3>
-              <h1><%= (day*24*60)+(upH * 60) + (upM) %>분</h1>
+              <h1><%= day*24*60 %>분</h1>
             </div>
           </div>
           <div class="contour"></div>
@@ -195,11 +195,14 @@
             <i class="fa-solid fa-hand-fist"></i>
           </div>
           <div class="change-seemore-content">
-            <h1>변화단계 알아보기</h1>
-            <span><i class="fa-solid fa-chevron-right"></i></span>
+            <a href="/stage">
+              <h1>변화단계 알아보기</h1>
+              <span><i class="fa-solid fa-chevron-right"></i></span
+            ></a>
           </div>
         </div>
       </section>
+      <!-- knowledge -->
       <section class="knowledge">
         <div class="knowledge-title">
           <div class="knowledge-icon">
@@ -208,11 +211,15 @@
           <div><h1>지식 +</h1></div>
         </div>
         <div class="knowledge-content">
-          <h2>흡연은 외모에 즉각적인 영향을 미칩니다.</h2>
+          <h2>
+            <% let randomArr =
+            knowledge104[Math.floor(Math.random()*knowledge104.length)]; %> <%=
+            randomArr.categoryTxt; %>
+          </h2>
           <h4>
-            담배는 피부 주름을 촉진하여 나이에 비해 늙어 보이게 합니다. 흡연은
-            피부 탄력과 관련이 있는 단백질을 없애고 비타민 A를 고갈시켜 원활한
-            혈류의 흐름을 방해함으로써 피부 노화를 앞당깁니다.
+            <%=
+            randomArr.contents[Math.floor(Math.random()*randomArr.contents.length)].txt
+            %>
           </h4>
         </div>
         <div class="contour"></div>
@@ -221,12 +228,15 @@
             <i class="fa-solid fa-hand-fist"></i>
           </div>
           <div class="knowledge-seemore-content">
-            <h1>모든 정보 확인</h1>
-            <span><i class="fa-solid fa-chevron-right"></i></span>
+            <a href="/knowledge">
+              <h1>모든 정보 확인</h1>
+              <span><i class="fa-solid fa-chevron-right"></i></span
+            ></a>
           </div>
         </div>
       </section>
     </div>
+    <!-- footer -->
     <footer>
       <div class="home active">
         <a href="/"><i class="fa-solid fa-house"></i></a>
@@ -246,18 +256,11 @@
       src="https://kit.fontawesome.com/67eff22c15.js"
       crossorigin="anonymous"
     ></script>
-  </body>
-  <!-- 
-    // 날짜 차이 알아 내기 
-var diff = dat2 - dat1;
-var currDay = 24 * 60 * 60 * 1000;// 시 * 분 * 초 * 밀리세컨
-var currMonth = currDay * 30;// 월 만듬
-var currYear = currMonth * 12; // 년 만듬
- 
-document.write("* 날짜 두개 : " + strDate1 + ", " + strDate2 + "<br/>");
-document.write("* 일수 차이 : " + parseInt(diff/currDay) + " 일<br/>");
-document.write("* 월수 차이 : " + parseInt(diff/currMonth) + " 월<br/>");
-document.write("* 년수 차이 : " + parseInt(diff/currYear) + " 년<br/><br/>");
 
-   -->
+    <script>
+      fetch("userData.json")
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    </script>
+  </body>
 </html>

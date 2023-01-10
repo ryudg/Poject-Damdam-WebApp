@@ -18,6 +18,40 @@ let userArr = [];
 userArr = [...jsonData];
 let userInfo = {};
 
+let knowledge104 = [];
+let stage = [];
+let clinic = [];
+const knowledgeFile = fs.readFileSync(
+  "./public/json/knowledgeData.json",
+  "utf-8"
+);
+const stageFile = fs.readFileSync("./public/json/stageData.json", "utf-8");
+const clinicFile = fs.readFileSync("./public/json/clinicData.json", "utf-8");
+const jsonKnowData = JSON.parse(knowledgeFile);
+const jsonStageData = JSON.parse(stageFile);
+const jsonClinicData = JSON.parse(clinicFile);
+knowledge104 = [...jsonKnowData];
+stage = [...jsonStageData];
+clinic = [...jsonClinicData];
+
+// 현재시간
+const now = new Date().getTime();
+// 시작시간
+const start = new Date(
+  userArr[0].EndYear,
+  userArr[0].EndMonth - 1,
+  userArr[0].EndDay,
+  userArr[0].EndHour,
+  userArr[0].EndMinute
+).getTime();
+// 지난시간(분)
+const pass = Math.floor((now - start) / (1000 * 60));
+
+let achievedbArr = [];
+const achievedbFile = fs.readFileSync("./public/json/achieveDB.json", "utf-8");
+const achievedbData = JSON.parse(achievedbFile);
+achievedbArr = [...achievedbData];
+
 // ----------splash----------
 app.get("/", function (req, res) {
   res.render("pages/index.ejs");
@@ -146,12 +180,43 @@ app.post("/BrithDayData", (req, res) => {
 
 // ----------main----------
 app.get("/main", (req, res) => {
-  res.render("pages/main.ejs", { userArr });
+  res.render("pages/main.ejs", {
+    userArr,
+    knowledge104,
+    stage,
+    pass,
+    achievedbArr,
+  });
 });
 
 // ----------NoMoreInfo----------
 app.get("/NoMoreInfo", (req, res) => {
   res.render("pages/NoMoreInfo.ejs", { userArr });
+});
+
+// stage
+app.get("/stage", function (req, res) {
+  res.render("pages/stage.ejs", { stage, pass });
+});
+
+// knowledge
+app.get("/knowledge", function (req, res) {
+  res.render("pages/knowledge.ejs", { knowledge104 });
+});
+
+// clinic
+app.get("/clinic", function (req, res) {
+  res.render("pages/clinic.ejs", { clinic });
+});
+
+// symptom (금단증상) 페이지
+app.get("/symptom", function (req, res) {
+  res.render("pages/symptom.ejs");
+});
+
+// achievement (업적) 페이지
+app.get("/achievement", function (req, res) {
+  res.render("pages/achievement.ejs", { achievedbArr, userArr });
 });
 
 // ----------listen----------

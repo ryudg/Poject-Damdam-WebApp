@@ -1,0 +1,213 @@
+/* style.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Yeon Sung", cursive;
+}
+
+/* knowledge 페이지 */
+#knowledge .wrap {
+  max-width: 500px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 30px 10px 0;
+}
+
+#knowledge header {
+  position: relative;
+}
+
+#knowledge header img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#knowledge h1 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+}
+
+#knowledge main {
+  margin-top: 30px;
+}
+
+#knowledge .know-title {
+  width: 160px;
+  font-size: 14px;
+  font-weight: 400;
+  background: #62d2a2;
+  border-radius: 10px;
+  text-align: center;
+  padding: 6px 0;
+  margin-bottom: 20px;
+}
+
+#knowledge .content-box {
+  background: #e9f3ef;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+}
+
+#knowledge .content-box h3 {
+  display: inline-block;
+  width: auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  word-break: keep-all;
+}
+
+/* stage 페이지 */
+#stage .wrap {
+  max-width: 500px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 30px 10px 0;
+}
+
+#stage header {
+  position: relative;
+}
+
+#stage header img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#stage h1 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+}
+
+#stage main {
+  margin-top: 30px;
+}
+
+#stage .content-box {
+  background: #e9f3ef;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  position: relative;
+}
+
+#stage .content-box .box-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#stage .content-box .box-title h3 {
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 400;
+  word-break: keep-all;
+}
+
+#stage .content-box .box-title p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#stage .content-box .stage-txt {
+  margin-bottom: 10px;
+}
+
+#stage .content-box .prog-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#stage .content-box .prog-bar progress {
+  width: 85%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 9px;
+}
+
+#stage .content-box .prog-bar progress::-webkit-progress-bar {
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+#stage .content-box .prog-bar progress::-webkit-progress-value {
+  background-color: #62d2a2;
+  border-radius: 3px;
+}
+
+/* 단계 완료시 효과 */
+
+#stage .content-box.complete::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/mdi_check-decagram.svg);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#stage .content-box.complete .prog-bar progress::-webkit-progress-value {
+  background-color: #9df3c4;
+}
+
+/* 현재 진행단계 */
+#stage .content-box.challenge {
+  border: 3px solid #62d2a2;
+}
+
+#stage .content-box.challenge .box-title h3 {
+  background: #62d2a2;
+  color: #fff;
+}
+
+/* clinic 페이지 */
+#clinic .wrap {
+  max-width: 500px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 30px 10px 0;
+}
+
+#clinic header {
+  position: relative;
+}
+
+#clinic header img {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#clinic header h1 {
+  font-size: 36px;
+  text-align: center;
+  font-weight: 400;
+}
+
+#clinic main {
+  margin-top: 30px;
+}

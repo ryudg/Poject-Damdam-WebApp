@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowledge</title>
+    <link rel="stylesheet" href="css/style2.css" />
+  </head>
+  <body id="knowledge">
+    <div class="wrap">
+      <header>
+        <a href="/main">
+          <img src="images/icon_arrow-back.svg" alt="back" />
+        </a>
+        <h1>지식+</h1>
+      </header>
+      <main>
+        <h2 class="know-title">금연을 해야하는 104가지 이유</h2>
+
+        <% for( let i = 0; i < knowledge104.length; i++ ) { %>
+        <div class="content-box">
+          <h3><%= knowledge104[i].categoryTxt %></h3>
+          <ul>
+            <% for( let j = 0; j < knowledge104[i].contents.length; j++ ) { %>
+            <li>
+              <%= knowledge104[i].contents[j].num %>. <%=
+              knowledge104[i].contents[j].txt %>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+        <% } %>
+      </main>
+    </div>
+  </body>
+</html>

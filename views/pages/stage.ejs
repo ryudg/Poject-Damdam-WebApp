@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stage of Change</title>
+    <link rel="stylesheet" href="css/style2.css" />
+  </head>
+
+  <body id="stage">
+    <div class="wrap">
+      <header>
+        <a href="/main"><img src="images/icon_arrow-back.svg" alt="back" /></a>
+        <h1>변화 단계</h1>
+      </header>
+      <main>
+        <% for( let i = 0; i < stage.length; i++ ) { %>
+        <div class="content-box">
+          <div class="box-title">
+            <h3><%= stage[i].stage %></h3>
+            <p><%= stage[i].goal %></p>
+          </div>
+          <p class="stage-txt"><%= stage[i].stageTxt %></p>
+          <div class="prog-bar">
+            <% let gage = Math.floor((pass/stage[i].min)*100 ) %> <% if (gage >=
+            100) { %> <% gage = 100 %> <% } %>
+
+            <progress max="100" value="<%= gage %>"></progress>
+            <p class="gage"><%= gage %>%</p>
+          </div>
+        </div>
+        <% } %>
+      </main>
+    </div>
+
+    <script>
+      let boxEl = document.querySelectorAll(".content-box");
+      let progressEl = document.querySelectorAll(".content-box progress");
+      for (b = 0; b < boxEl.length; b++) {
+        let progressValue = progressEl[b].attributes.value.value;
+        if (progressValue >= 100) {
+          boxEl[b].classList.add("complete");
+        }
+      }
+      let completeBox = document.querySelectorAll(".content-box.complete");
+      boxEl[completeBox.length].classList.add("challenge");
+    </script>
+  </body>
+</html>
