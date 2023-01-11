@@ -25,330 +25,39 @@
           <div class="achiev_price_img">
             <img src="./images/achieve_2.png" alt="" />
           </div>
-          <span class="achiev_score"><%= achievedbArr.length %></span
-          ><span>/14</span>
+          <span class="achiev_score"><%= totalLength %></span><span>/</span
+          ><span><%= allLength %></span>
         </div>
       </div>
       <!-- 업적 내용 -->
       <div class="achiev_contents_wrap">
-        <ul>
-          <li>
-            <div id="achiev_content_1" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% let startDate = new
-                Date(userArr[0].EndYear,userArr[0].EndMonth-1,userArr[0].EndDay,userArr[0].EndHour,userArr[0].EndMinute);
-                %> <% let nowDate = new Date; let currDay = 24 * 60 * 60 * 1000;
-                let diff = nowDate - startDate; let day = parseInt(diff/currDay)
-                ; %>
-                <!--  -->
-                <% if(userArr[0].Price * day > 100000) {%>
-                <img src="<%= achievedbArr[0].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[0].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                저축한 금액이
-                <br />
-                100,000원 달성!
-              </p>
-            </div>
-            <div id="achiev_content_2" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(userArr[0].Price * day > 500000) {%>
-                <img src="<%= achievedbArr[1].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[1].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                저축한 금액이
-                <br />
-                500,000원 달성!
-              </p>
-            </div>
-          </li>
-          <li>
-            <div id="achiev_content_3" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(userArr[0].Price * day > 1000000) {%>
-                <img src="<%= achievedbArr[2].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[2].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                저축한 금액이
-                <br />
-                1,000,000원 달성!
-              </p>
-            </div>
-            <div id="achiev_content_4" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(day >= 7) {%>
-                <img src="<%= achievedbArr[3].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[3].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                금연을 시작한지
-                <br />
-                일주일 달성!
-              </p>
-            </div>
-          </li>
-          <li>
-            <div id="achiev_content_5" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(day >= 15) {%>
-                <img src="<%= achievedbArr[4].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[4].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                금연을 시작한지
-                <br />
-                보름 달성!
-              </p>
-            </div>
-            <div id="achiev_content_6" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(day >= 30) {%>
-                <img src="<%= achievedbArr[5].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[5].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                금연을 시작한지
-                <br />
-                한 달 달성!
-              </p>
-            </div>
-          </li>
-          <li>
-            <div id="achiev_content_7" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(day >= 180) {%>
-                <img src="<%= achievedbArr[6].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[6].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                금연을 시작한지
-                <br />
-                반 년 달성!
-              </p>
-            </div>
-            <div id="achiev_content_8" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(day >= 365) {%>
-                <img src="<%= achievedbArr[7].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[7].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                금연을 시작한지
-                <br />
-                일 년 달성!
-              </p>
-            </div>
-          </li>
-          <li>
-            <div id="achiev_content_9" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(userArr[0].Price * day > 500000) {%>
-                <img src="<%= achievedbArr[8].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[8].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                저축한 금액이
-                <br />
-                500,000원 달성!
-              </p>
-            </div>
-            <div id="achiev_content_10" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(day*24*60 >= 10000) {%>
-                <img src="<%= achievedbArr[9].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[9].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                늘어난 수명이
-                <br />
-                10,000분 달성!
-              </p>
-            </div>
-          </li>
-          <li>
-            <div id="achiev_content_11" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(day * userArr[0].CountPerDay >= 100) {%>
-                <img src="<%= achievedbArr[10].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[10].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>
-                피우지 않은 담배
-                <br />
-                100개비 달성!
-              </p>
-            </div>
-            <div id="achiev_content_12" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(achievedbArr.length >= 0) {%>
-                <img src="<%= achievedbArr[11].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[11].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>변화 10단계 달성!</p>
-            </div>
-          </li>
-          <li>
-            <div id="achiev_content_13" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(achievedbArr.length >= 0) {%>
-                <img src="<%= achievedbArr[12].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[12].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>금연을 시작했습니다!</p>
-            </div>
-            <div id="achiev_content_14" class="achiev_content_box">
-              <div class="achiev_content_img">
-                <!-- 아래 if문으로 업적이 달성되는 조건을 만들어주세요.(적혀있는 것은 예시입니다.) -->
-                <% if(achievedbArr.length >= 0) {%>
-                <img src="<%= achievedbArr[13].달성후 %>" alt="achiev_img" />
-                <div>
-                  <img
-                    class="checkBox"
-                    src="./images/mdi_check-decagram.svg"
-                    alt="checkBox"
-                  />
-                </div>
-                <% } else { %>
-                <img src="<%= achievedbArr[13].달성전 %>" alt="achiev_img" />
-                <% } %>
-              </div>
-              <p>생일 축하해요!</p>
-            </div>
-          </li>
-        </ul>
+        <div class="depth1">
+          <% for( let i = 0; i < test[0].Price.length; i++ ) { %>
+          <div class="depth2">
+            <% if(test[0].Price[i].date) { %>
+            <img class="checkBox" src="./images/checkBox.png" alt="checkBox" />
+            <% } %>
+            <div><img src="<%= test[0].Price[i].img %>" alt="Price" /></div>
+            <p><%= test[0].Price[i].content %></p>
+          </div>
+          <% } %> <% for( let i = 0; i < test[1].Day.length; i++ ) { %>
+          <div class="depth2">
+            <% if(test[1].Day[i].date) { %>
+            <img class="checkBox" src="./images/checkBox.png" alt="checkBox" />
+            <% } %>
+            <div><img src="<%= test[1].Day[i].img %>" alt="Day" /></div>
+            <p><%= test[1].Day[i].content %></p>
+          </div>
+          <% } %> <% for( let i = 0; i < test[2].Count.length; i++ ) { %>
+          <div class="depth2">
+            <% if(test[2].Count[i].date) { %>
+            <img class="checkBox" src="./images/checkBox.png" alt="checkBox" />
+            <% } %>
+            <div><img src="<%= test[2].Count[i].img %>" alt="Count" /></div>
+            <p><%= test[2].Count[i].content %></p>
+          </div>
+          <% } %>
+        </div>
       </div>
     </div>
     <footer>
@@ -370,12 +79,5 @@
       src="https://kit.fontawesome.com/67eff22c15.js"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      let box = document.querySelectorAll(".checkBox");
-      let check = document.querySelectorAll(".checkBox").length;
-      let score = document.querySelector(".achiev_score");
-      score.innerHTML = check;
-    </script>
   </body>
 </html>

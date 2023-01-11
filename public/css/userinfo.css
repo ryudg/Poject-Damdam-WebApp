@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+
+:root {
+  --main-color: #1fab89;
+  --main-color-opacity30: rgba(31, 171, 137, 0.3);
+  --sub-color: #62d2a2;
+  --sub2-color: #9df3c4;
+  --bg-color: #e9f3ef;
+  --font: "Yeon Sung", cursive;
+}
+body {
+  font-family: "Yeon Sung", cursive;
+  font-size: 16px;
+  margin-bottom: 90px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.backbutton {
+  display: flex;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 1px;
+}
+.userinfo-title-main {
+  display: flex;
+  justify-content: center;
+  margin: 30px 20px;
+}
+.userinfo-usertitle {
+  display: flex;
+  margin: 30px 20px;
+  margin-top: 0px;
+}
+.userinfo-usertitle .userinfo-usertitle-username {
+  margin-left: 20px;
+  font-size: 28px;
+  border-style: none;
+  width: 100px;
+}
+.userinfo-container {
+  width: 355px;
+  margin: 0 10px;
+  height: 80px;
+  background: #e9f3ef;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+.userinfo-container > h3 {
+  padding-top: 10px;
+  margin-left: 20px;
+}
+.userinfo-container .userinfo-container-size18 {
+  display: flex;
+  font-size: 18px;
+  height: 30px;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.userinfo-container .userinfo-container-size18 > p {
+  margin: 0 10px;
+}
+.userinfo-container .userinfo-birthday {
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #62d2a2;
+  background: #e9f3ef;
+}
+.userinfo-container .userinfo-birthday#userinfo-year {
+  width: 100px;
+}
+.userinfo-container .userinfo-birthday#userinfo-month {
+  width: 50px;
+}
+.userinfo-container .userinfo-birthday#userinfo-day {
+  width: 50px;
+}
+.userinfo-container .userinfo-container-size28 {
+  display: flex;
+  font-size: 28px;
+  height: 30px;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.userinfo-container .userinfo-container-size28 > p {
+  margin-left: 10px;
+}
+.userinfo-container .userinfo-container-size28 #userinfo-price {
+  width: 100px;
+  border: 1px solid #62d2a2;
+  background: #e9f3ef;
+  border-radius: 10px;
+  height: 30px;
+}
+.userinfo-container .userinfo-container-size28 #userinfo-oneday-smoking {
+  width: 100px;
+  border: 1px solid #62d2a2;
+  background: #e9f3ef;
+  border-radius: 10px;
+  height: 30px;
+}
+.userinfo-container .userinfo-container-size18 #userinfo-smoking-startyear {
+  width: 100px;
+  border: 1px solid #62d2a2;
+  background: #e9f3ef;
+  border-radius: 10px;
+  height: 30px;
+}
+.userinfo-container .userinfo-container-size18 #userinfo-smoking-startmonth {
+  width: 50px;
+  border: 1px solid #62d2a2;
+  background: #e9f3ef;
+  border-radius: 10px;
+  height: 30px;
+}
+.userinfo-container .userinfo-container-size18 #userinfo-smoking-startday {
+  width: 50px;
+  border: 1px solid #62d2a2;
+  background: #e9f3ef;
+  border-radius: 10px;
+  height: 30px;
+}
+.userinfo-container .userinfo-container-size18 #userinfo-smoking-endyear {
+  width: 100px;
+  border: 1px solid #62d2a2;
+  background: #e9f3ef;
+  border-radius: 10px;
+  height: 30px;
+}
+.userinfo-container .userinfo-container-size18 #userinfo-smoking-endmonth {
+  width: 50px;
+  border: 1px solid #62d2a2;
+  background: #e9f3ef;
+  border-radius: 10px;
+  height: 30px;
+}
+.userinfo-container .userinfo-container-size18 #userinfo-smoking-endday {
+  width: 50px;
+  border: 1px solid #62d2a2;
+  background: #e9f3ef;
+  border-radius: 10px;
+  height: 30px;
+}
+.userinfo-submit {
+  width: 335px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #62d2a2;
+  color: #ffffff;
+  margin: 20px 30px;
+  margin-top: 0px;
+}
+
+/* ----------footer start---------- */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  border-top: 1px solid var(--main-color);
+  background: #fff;
+}
+footer .home,
+footer .achievement,
+footer .community,
+footer .calendar {
+  flex: 1;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .home a,
+footer .achievement a,
+footer .community a,
+footer .calendar a {
+  color: var(--main-color-opacity30);
+}
+footer .home.active a,
+footer .achievement.active a,
+footer .community.active a,
+footer .calendar.active a {
+  color: var(--main-color);
+}
+
+/* ----------footer end---------- */

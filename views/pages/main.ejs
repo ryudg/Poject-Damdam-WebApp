@@ -68,15 +68,17 @@
         <div class="achievement-title">
           <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
           <div><h1>나의 업적</h1></div>
-          <div><h3>8 / 123</h3></div>
+          <div><h3><%= totalLength %> / <%= allLength %></h3></div>
         </div>
         <div class="achievement-contents">
+          <% console.log(testPriceArr); let randomPrice =
+          Math.floor(Math.random()*testPriceArr.length); console.log(random);%>
           <div class="achievement-content">
             <div class="achievement-content-img">
-              <img src="/images/trophy1.png" alt="trophy1" />
+              <img src="<%= testPriceArr[random].img %>" alt="trophy1" />
             </div>
             <div class="achievement-content-text">
-              저축 금액 100,000원 달성!
+              <%= testPriceArr[random].content %>
             </div>
           </div>
           <div class="achievement-content">
@@ -139,8 +141,10 @@
               <i class="fa-solid fa-hand-fist"></i>
             </div>
             <div class="overcome-content">
-              <h1>금단증상 극복하기</h1>
-              <span><i class="fa-solid fa-chevron-right"></i></span>
+              <a href="/symptom"
+                ><h1>금단증상 극복하기</h1>
+                <span><i class="fa-solid fa-chevron-right"></i></span
+              ></a>
             </div>
           </div>
         </div>
@@ -154,9 +158,10 @@
         <div class="change-contents">
           <div class="prev">
             <div>
-              <p>1단계</p>
+              <p><%= stage[stageCount-1].stage %></p>
               <p>
-                20분 - 혈압, 맥박 수, 손과 발의 체온 등이 정상으로 돌아온다.
+                <%= stage[stageCount-1].goal %> - <%=
+                stage[stageCount-1].stageTxt %>
               </p>
             </div>
           </div>
@@ -165,15 +170,22 @@
           </div>
           <div class="now">
             <div>
-              <p>2단계</p>
+              <p><%= stage[stageCount].stage %></p>
               <p>
-                8시간 - 혈류의 니코틴 수치가 가장 높을 때에 비해 93.75% 제거되어
-                6.25%로 감소한다.
+                <%= stage[stageCount].goal %> - <%= stage[stageCount].stageTxt
+                %>
               </p>
             </div>
             <div class="progress">
-              <progress id="progress" value="33" min="0" max="100"></progress>
-              <p>33%</p>
+              <% let gage = Math.floor((pass/stage[stageCount].min)*100) %> <%
+              if(gage >= 100){ gage = 100} %>
+              <progress
+                id="progress"
+                value="<%= gage %>"
+                min="0"
+                max="100"
+              ></progress>
+              <p><%= gage %>%</p>
             </div>
           </div>
           <div class="arrow">
@@ -181,10 +193,10 @@
           </div>
           <div class="next">
             <div>
-              <p>3단계</p>
+              <p><%= stage[stageCount+1].stage %></p>
               <p>
-                12시간 - 혈중 산소량이 정상 수준으로 상승하고 일산화탄소량이
-                정상 수준으로 감소한다.
+                <%= stage[stageCount+1].goal %> - <%=
+                stage[stageCount+1].stageTxt %>
               </p>
             </div>
           </div>
@@ -256,11 +268,5 @@
       src="https://kit.fontawesome.com/67eff22c15.js"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      fetch("userData.json")
-        .then((res) => res.json())
-        .then((data) => console.log(data));
-    </script>
   </body>
 </html>

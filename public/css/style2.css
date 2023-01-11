@@ -2,6 +2,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
 
+:root {
+  --main-color: #1fab89;
+  --main-color-opacity30: rgba(31, 171, 137, 0.3);
+  --sub-color: #62d2a2;
+  --sub2-color: #9df3c4;
+  --bg-color: #e9f3ef;
+  --font: "Yeon Sung", cursive;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +23,7 @@ ul {
 
 body {
   font-family: "Yeon Sung", cursive;
+  margin-bottom: 90px;
 }
 
 /* knowledge 페이지 */
@@ -211,3 +221,40 @@ body {
 #clinic main {
   margin-top: 30px;
 }
+
+/* ----------footer start---------- */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  border-top: 1px solid var(--main-color);
+  background: #fff;
+}
+footer .home,
+footer .achievement,
+footer .community,
+footer .calendar {
+  flex: 1;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .home a,
+footer .achievement a,
+footer .community a,
+footer .calendar a {
+  color: var(--main-color-opacity30);
+}
+footer .home.active a,
+footer .achievement.active a,
+footer .community.active a,
+footer .calendar.active a {
+  color: var(--main-color);
+}
+
+/* ----------footer end---------- */

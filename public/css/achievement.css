@@ -141,3 +141,38 @@ footer .calendar.active a {
   right: 10px;
   top: 10px;
 }
+
+.achiev_contents_wrap .depth1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+.achiev_contents_wrap .depth2 {
+  width: 48%;
+  background: #e9f3ef;
+  border-radius: 10px;
+  padding: 10px;
+}
+.achiev_contents_wrap .depth2 div {
+  display: flex;
+  justify-content: center;
+}
+.achiev_contents_wrap .depth2 img {
+  width: 80%;
+}
+.achiev_contents_wrap .depth2 p {
+  text-align: center;
+  word-break: keep-all;
+}
+.depth2 {
+  position: relative;
+}
+.checkBox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+}

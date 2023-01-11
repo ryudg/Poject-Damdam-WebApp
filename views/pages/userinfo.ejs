@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 정보</title>
+    <link rel="stylesheet" href="/css/userinfo.css" />
+  </head>
+  <body>
+  <div>
+      
+    <a href="/main" class="backbutton">
+      <img src="/images/ion_arrow-back.png" alt="뒤로가기" />
+    </a>
+    <h1 class="userinfo-title-main">내 정보</h1>
+  
+
+  <form action="/delete" method="post">
+    <input
+      type="file"
+      accept="image/*"
+     
+      multiple
+      style="display: none"
+      class="real-upload"
+    />
+    <div class="userinfo-usertitle">
+      <img src="/images/mdi_user.png" alt="기본이미지" class="uploadimg" />
+      <input name="userName" type="text" class="userinfo-usertitle-username" placeholder="{name}" value="<%= userArr[0].userName %> " ></input>
+    </div>
+      <div class="userinfo-container">
+        <h3>생년월일</h3>
+        <div class="userinfo-container-size18">           
+          <input type="text" name="BrithDayYear" class="userinfo-birthday" id="userinfo-year"  oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1')" maxlength="4" value="<%= userArr[0].BrithDayYear %>"/> <p>년</p>
+          <input type="text" name="BrithDayMonth" class="userinfo-birthday" id="userinfo-month" oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1')" maxlength="2"/ value="<%= userArr[0].BrithDayMonth %>" ><p>월</p>
+          <input type="text" name="BrithDayDay" class="userinfo-birthday" id="userinfo-day" oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1')" maxlength="2" value="<%= userArr[0].BrithDayDay %>"/><p>일</p>
+        </div>
+      </div>
+      </div>
+    <div class="userinfo-container">
+      <h3 >담배 가격</h3>
+      <div class="userinfo-container-size28">
+          <input type="text" name="Price" id="userinfo-price" value="<%= userArr[0].Price %>"/>
+          <p>원</p> 
+      </div>
+    </div>
+    <div class="userinfo-container">
+      <h3>하루 흡연량</h3>
+      <div class="userinfo-container-size28">
+      <input
+        type="text"
+        name="CountPerDay"
+        id="userinfo-oneday-smoking"
+        value="<%= userArr[0].CountPerDay %>"
+        /> 
+        <p>개피</p> 
+      </div>
+    </div >
+    <div class="userinfo-container">
+      <h3>흡연 시작일</h3>
+      <div class="userinfo-container-size18">
+          <input
+            type="text"
+            name="StartYear"
+            id="userinfo-smoking-startyear"
+            value="<%= userArr[0].StartYear %>"
+          /> <p>년</p> 
+          <input
+            type="text"
+            name="StartMonth"
+            id="userinfo-smoking-startmonth"
+            value="<%= userArr[0].StartMonth %>"
+          /> <p>월</p>
+          <input
+            type="text"
+            name="StartDay"
+            id="userinfo-smoking-startday"
+            value="<%= userArr[0].StartDay %>"
+          /> <p>일</p>
+      </div>
+    </div>
+    <div class="userinfo-container">
+        <h3>금연 시작일</h3>
+      <div class="userinfo-container-size18">
+          <input
+            type="text"
+            name="EndYear"
+            id="userinfo-smoking-endyear"
+            value="<%= userArr[0].EndYear %>"
+          /> <p>년</p>
+          <input
+            type="text"
+            name="EndMonth"
+            id="userinfo-smoking-endmonth"
+            value="<%= userArr[0].EndMonth %>" 
+          /> <p>월</p>
+          <input
+            type="text"
+            name="EndDay"
+            id="userinfo-smoking-endday"
+            value="<%=userArr[0].EndDay %>"
+          /> <p>일</p>
+      </div>
+    </div>
+        <button type="submit" class="userinfo-submit">수정</button>
+      
+  </form>
+  </div>
+    
+    <!-- footer -->
+    <footer>
+      <div class="home ">
+        <a href="/"><i class="fa-solid fa-house"></i></a>
+      </div>
+      <div class="achievement">
+        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+      </div>
+      <div class="community">
+        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+      </div>
+      <div class="calendar">
+        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+      </div>
+    </footer>
+    <!-- fontA -->
+    <script
+      src="https://kit.fontawesome.com/67eff22c15.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const upload = document.querySelector(".uploadimg");
+      const realUpload = document.querySelector(".real-upload");
+      upload.addEventListener("click", () => realUpload.click());
+    </script>
+  </body>
+</html>

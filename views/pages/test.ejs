@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+      }
+      .depth1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+      }
+      .depth2 {
+        width: 45%;
+        background: #ccc;
+        border-radius: 10px;
+        padding: 10px;
+      }
+      .depth2 div {
+        display: flex;
+        justify-content: center;
+      }
+      .depth2 img {
+        width: 80%;
+      }
+      .depth2 p {
+        text-align: center;
+        word-break: keep-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div><h1>업적</h1></div>
+    <div>
+      <div class="depth1">
+        <% for( let i = 0; i < test[0].Price.length; i++ ) { %>
+
+        <div class="depth2">
+          <div><img src="<%= test[0].Price[i].img %>" alt="Price" /></div>
+          <p><%= test[0].Price[i].content %></p>
+        </div>
+
+        <% } %> <% for( let i = 0; i < test[1].Day.length; i++ ) { %>
+
+        <div class="depth2">
+          <div><img src="<%= test[1].Day[i].img %>" alt="Day" /></div>
+          <p><%= test[1].Day[i].content %></p>
+        </div>
+
+        <% } %> <% for( let i = 0; i < test[2].Count.length; i++ ) { %>
+
+        <div class="depth2">
+          <div><img src="<%= test[2].Count[i].img %>" alt="Count" /></div>
+          <p><%= test[2].Count[i].content %></p>
+        </div>
+
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>설정</title>
+    <link rel="stylesheet" href="/css/setting.css" />
+  </head>
+  <body>
+    <div class="container">
+      <a href="/main" class="setting-backbutton">
+        <img src="/images/ion_arrow-back.png" alt="뒤로가기" />
+      </a>
+
+      <h1 class="setting-title">설정</h1>
+
+      <div class="setting-layout-small">
+        <div class="setting-icontitle">
+          <img src="/images/mdi_theme-light-dark.png" alt="밝기조절" />
+          <h3>테마</h3>
+        </div>
+        <div class="setting-icon">
+          <img src="/images/ph_sun-bold.png" alt="밝음" />
+          <div class="setting-movebun">
+            <div class="setting-ellipse"></div>
+          </div>
+          <img src="/images/ph_moon-stars.png" alt="어두움" />
+        </div>
+      </div>
+
+      <div class="setting-layout-small">
+        <div class="setting-icontitle">
+          <img src="/images/material-symbols_language.png" alt="언어아이콘" />
+          <h3>언어</h3>
+        </div>
+        <div class="setting-icon">
+          <p>한국어</p>
+          <div class="setting-movebun">
+            <div class="setting-ellipse"></div>
+          </div>
+          <p>English</p>
+        </div>
+      </div>
+
+      <div class="setting-layout-big">
+        <div class="setting-icontitle">
+          <img
+            src="/images/mdi_trash-can-outline.png"
+            alt="데이더비우기 아이콘"
+          />
+          <h3>데이터</h3>
+        </div>
+        <div class="reset-div">
+          <div class="setting-resetBtn">
+            <button>다이어리 초기화</button>
+          </div>
+          <div class="setting-modal-bg">
+            <div class="setting-modal">
+              <h1>앗!</h1>
+              <h1>정말로 다이어리</h1>
+              <h1>초기화를 하시겠습니까?</h1>
+              <a href="#">확인</a>
+            </div>
+          </div>
+        </div>
+        <div class="reset-div">
+          <div class="setting-resetBtn">
+            <button>사용자 정보 초기화</button>
+          </div>
+          <div class="setting-modal-bg">
+            <div class="setting-modal">
+              <h1>앗!</h1>
+              <h1>정말로 사용자 정보</h1>
+              <h1>초기화를 하시겠습니까?</h1>
+              <form action="/deltete"></form>
+              <a href="#">확인</a>
+            </div>
+          </div>
+        </div>
+        <div class="reset-div">
+          <div class="setting-resetBtn">
+            <button>전체 초기화</button>
+          </div>
+          <div class="setting-modal-bg">
+            <div class="setting-modal">
+              <h1>앗!</h1>
+              <h1>정말로 전체</h1>
+              <h1>초기화를 하시겠습니까?</h1>
+              <a href="#">확인</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="setting-layout-small">
+        <div class="setting-icontitle">
+          <img
+            src="/images/material-symbols_mail-outline.png"
+            alt="개발자메일 아이콘"
+          />
+          <h3>개발자 정보</h3>
+        </div>
+        <div class="setting-icon space-between">
+          <a href="mailto:asdf@gmail.com">asdf@gmail.com</a>
+          <img
+            src="/images/material-symbols_arrow-forward-ios-rounded.png"
+            alt="더보기"
+          />
+        </div>
+      </div>
+
+      <div class="setting-layout-normal">
+        <div class="setting-icontitl">
+          <img
+            src="/images/material-symbols_info-outline-rounded.png"
+            alt="앱정보 아이콘"
+          />
+          <h3>앱 정보</h3>
+        </div>
+        <div class="setting-vision">
+          <div class="space-between">
+            <a href="#">서비스이용약관</a>
+            <img
+              src="/images/material-symbols_arrow-forward-ios-rounded.png"
+              alt="더보기"
+            />
+          </div>
+          <div class="space-between">
+            <a href="#">개인정보보호방침</a>
+            <img
+              src="/images/material-symbols_arrow-forward-ios-rounded.png"
+              alt="더보기"
+            />
+          </div>
+          <div class="space-between">
+            <p>앱 버전</p>
+            <p>v 0.1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- container -->
+    <!-- footer -->
+    <footer>
+      <div class="home">
+        <a href="/"><i class="fa-solid fa-house"></i></a>
+      </div>
+      <div class="achievement">
+        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+      </div>
+      <div class="community">
+        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+      </div>
+      <div class="calendar">
+        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+      </div>
+    </footer>
+    <!-- fontA -->
+    <script
+      src="https://kit.fontawesome.com/67eff22c15.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let moveBtn = document.querySelectorAll(".setting-movebun");
+      let moveBar = document.querySelectorAll(".setting-ellipse");
+
+      moveBtn.forEach((e, i) => {
+        e.addEventListener("click", () => {
+          moveBar[i].classList.toggle("move");
+        });
+      });
+      let resetBtn = document.querySelectorAll(".setting-resetBtn");
+      let modal = document.querySelectorAll(".setting-modal");
+      let modalBg = document.querySelectorAll(".setting-modal-bg");
+      resetBtn.forEach((e, i) => {
+        e.addEventListener("click", () => {
+          modalBg[i].classList.add("abc");
+        });
+      });
+      modalBg.forEach((e) => {
+        e.addEventListener("click", () => {
+          e.classList.remove("abc");
+        });
+      });
+    </script>
+  </body>
+</html>

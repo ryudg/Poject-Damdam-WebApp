@@ -102,6 +102,10 @@ a {
   align-items: center;
   text-align: center;
 }
+#main .container .achievement .achievement-content img {
+  width: 60px;
+  height: 60px;
+}
 #main .container .achievement .achievement-content .achievement-content-text {
   font-size: 10px;
   padding: 5px 0;
@@ -137,6 +141,7 @@ a {
   margin: 20px 0;
   display: flex;
 }
+
 #main .result .result-contents .overcome {
   margin-bottom: 0;
 }
@@ -156,12 +161,15 @@ a {
 #main .result .result-contents .count-content,
 #main .result .result-contents .save-content,
 #main .result .result-contents .time-content,
-#main .result .result-contents .overcome-content {
+#main .result .result-contents .overcome-content a {
   display: flex;
   width: calc(100% - 32px);
   margin: 0 20px;
   justify-content: space-between;
   align-items: center;
+}
+#main .result .result-contents .overcome-content a {
+  gap: 80px;
 }
 #main .result .result-contents .overcome-content span {
   display: flex;
@@ -218,7 +226,7 @@ a {
 #main .change .change-contents .next {
   font-size: 10px;
   margin: 10px 0;
-  width: 50%;
+  width: 80%;
 }
 #main .change .change-contents .now .progress {
   width: 100%;

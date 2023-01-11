@@ -13,21 +13,18 @@
 
     <script>
       setTimeout(() => {
-        fetch("/json/userData.json")
-          .then((res) => res.json())
-          .then((data) => {
-            let link = "http://localhost:3001/main";
-            let link2 = "http://localhost:3001/NoMoreInfo";
-            let link3 = "http://localhost:3001/UserName";
-
-            if (data.length == 0) {
-              location.href = link3;
-            } else if (data[0].userName && data[0].id == undefined) {
-              location.href = link2;
-            } else {
-              location.href = link;
-            }
-          });
+        let link = "http://localhost:3001/main";
+        let link2 = "http://localhost:3001/NoMoreInfo";
+        let link3 = "http://localhost:3001/UserName";
+        let userName = "<%= userArr[0].userName %>";
+        let StartYear = "<%= userArr[0].StartYear %>";
+        if (userName.length == 0) {
+          location.href = link3;
+        } else if (StartYear.length == 0 && userName.length >= 1) {
+          location.href = link2;
+        } else {
+          location.href = link;
+        }
       }, 2000);
     </script>
   </body>
