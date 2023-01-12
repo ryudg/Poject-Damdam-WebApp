@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clinic</title>
+    <link rel="stylesheet" href="css/style2.css" />
+    <!-- kakaomap API -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e56122c28647b1223c462053019bef80"
+    ></script>
+    <!-- kakaomap marker -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e56122c28647b1223c462053019bef80&libraries=LIBRARY"
+    ></script>
+    <!-- kakaomap marker services -->
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e56122c28647b1223c462053019bef80&libraries=services"
+    ></script>
+  </head>
+
+  <body id="clinic">
+    <div class="wrap">
+      <header>
+        <a href="/community"
+          ><img src="images/icon_arrow-back.svg" alt="back"
+        /></a>
+        <h1>금연 클리닉</h1>
+      </header>
+      <main>
+        <div id="map" style="width: 100%; height: 45vh"></div>
+
+        <div class="clinic-info">
+          <div class="clinic-name info">
+            <h3>기관</h3>
+            <p></p>
+          </div>
+          <div class="clinic-add info">
+            <h3>주소</h3>
+            <p></p>
+          </div>
+          <div class="clinic-tel info">
+            <h3>연락처</h3>
+            <p></p>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div class="home">
+        <a href="/"><i class="fa-solid fa-house"></i></a>
+      </div>
+      <div class="achievement">
+        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+      </div>
+      <div class="community active">
+        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+      </div>
+      <div class="calendar">
+        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+      </div>
+    </footer>
+    <!-- fontA -->
+    <script
+      src="https://kit.fontawesome.com/67eff22c15.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      function nearClinic(lat, lon) {
+        fetch("json/clinicData.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            // 현재위치 기준 가까운 클리닉 찾기
+            let gap = [];
+            for (let i = 0; i < data.length; i++) {
+              gap[i] =
+                Math.abs(data[i].lat - lat) + Math.abs(data[i].lon - lon);
+            }
+
+            let minGap = Math.min(...gap);
+
+            let nearId = gap.indexOf(minGap, 0);
+
+            let choosedClinic = data[nearId];
+
+            const nameEl = document.querySelector(
+              ".clinic-info .clinic-name p"
+            );
+            const addEl = document.querySelector(".clinic-info .clinic-add p");
+            const telEl = document.querySelector(".clinic-info .clinic-tel p");
+            nameEl.innerHTML = choosedClinic.name;
+            addEl.innerHTML = choosedClinic.add;
+            telEl.innerHTML = choosedClinic.tel;
+
+            var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+              mapOption = {
+                center: new kakao.maps.LatLng(
+                  choosedClinic.lat,
+                  choosedClinic.lon
+                ), // 지도의 중심좌표
+                level: 4, // 지도의 확대 레벨
+              };
+
+            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+            var map = new kakao.maps.Map(mapContainer, mapOption);
+
+            // 커스텀 오버레이
+            let contents = [];
+            let positions = [];
+            for (let i = 0; i < data.length; i++) {
+              contents[i] = `<div class="customoverlay">
+                <a href="${data[i].url}" target="_blank">
+                  <div class="marker"></div>
+                </a>
+                <button class="title" onclick="thisClinic(${data[i].lat}, ${data[i].lon})">${data[i].name}</button>
+              </div>`;
+
+              positions[i] = new kakao.maps.LatLng(data[i].lat, data[i].lon);
+
+              // 커스텀 오버레이를 생성합니다
+              var customOverlay = new kakao.maps.CustomOverlay({
+                map: map,
+                position: positions[i],
+                content: contents[i],
+                yAnchor: 1,
+              });
+            }
+          });
+      }
+
+      // 클리닉 선택시 노출정보 변경
+      let markers = document.querySelectorAll(".customoverlay .title");
+      function thisClinic(lat, lon) {
+        nearClinic(lat, lon);
+      }
+
+      // 현재위치
+      function getLocation() {
+        navigator.geolocation.getCurrentPosition(showPosition, geoFalse);
+      }
+
+      function showPosition(position) {
+        let pos = {
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        };
+        myLat = pos.lat;
+        myLon = pos.lon;
+        nearClinic(myLat, myLon);
+        console.log(pos);
+      }
+
+      function geoFalse() {
+        let divEl = document.querySelector("#map");
+        divEl.innerHTML = `
+            <div class = "alert">
+              <p>앗!</P>
+              <p><%= name %>님의 위치를</p>
+              <p>찾을 수 없어요.</P>
+              <p>위치 권한을 허용해주세요.</P>
+            <div>
+          `;
+      }
+      getLocation();
+    </script>
+  </body>
+</html>

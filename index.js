@@ -40,6 +40,16 @@ const testJson = fs.readFileSync("achieveDBv2.json", "utf-8");
 const testData = JSON.parse(testJson);
 test = [...testData];
 
+const memoreadFile = fs.readFileSync("./public/json/memo.json", "utf-8");
+const memojsonData = JSON.parse(memoreadFile);
+let memoArr = [];
+memoArr = [...memojsonData];
+
+let chattingdbArr = [];
+const chattingdbFile = fs.readFileSync("chattingDB.json", "utf-8");
+const chattingdbData = JSON.parse(chattingdbFile);
+chattingdbArr = [...chattingdbData];
+
 // ----------splash----------
 app.get("/", function (req, res) {
   res.render("pages/index.ejs", { userArr });
@@ -275,11 +285,6 @@ app.get("/knowledge", function (req, res) {
   res.render("pages/knowledge.ejs", { knowledge104 });
 });
 
-// clinic
-app.get("/clinic", function (req, res) {
-  res.render("pages/clinic.ejs", { clinic });
-});
-
 // symptom (금단증상) 페이지
 app.get("/symptom", function (req, res) {
   res.render("pages/symptom.ejs");
@@ -351,9 +356,36 @@ app.get("/achievement", function (req, res) {
 app.get("/userinfo", async function (req, res) {
   res.render("pages/userinfo.ejs", { userArr });
 });
-
-app.get("/setting", async function (req, res) {
+app.get("/title", function (req, res) {
+  res.render("pages/title.ejs");
+});
+// setting
+app.get("/setting", function (req, res) {
   res.render("pages/setting.ejs");
+});
+
+app.post("/delete", function (req, res) {
+  const newData = {
+    userName: req.body.userName,
+    BrithDayYear: req.body.BrithDayYear,
+    BrithDayMonth: req.body.BrithDayMonth,
+    BrithDayDay: req.body.BrithDayDay,
+    Price: req.body.Price,
+    CountPerDay: req.body.CountPerDay,
+    StartYear: req.body.StartYear,
+    StartMonth: req.body.StartMonth,
+    StartDay: req.body.StartDay,
+    EndYear: req.body.EndYear,
+    EndMonth: req.body.EndMonth,
+    EndDay: req.body.EndDay,
+    img: req.body.img,
+  };
+  userArr.splice(0, 1, newData);
+
+  // console.log(req.body.userName);
+  // console.log(req.body.BrithDayMonth);
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/userinfo");
 });
 
 // test
@@ -407,6 +439,60 @@ app.get("/test", function (req, res) {
 
   fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
   res.render("pages/test.ejs", { test, totalLength });
+});
+
+// ----------calendar----------
+app.get("/calendar", function (req, res) {
+  res.render("pages/calendar.ejs", { memoArr });
+});
+
+// ----------create----------
+app.post("/create", function (req, res) {
+  let data = {};
+  let dateData = req.body.date;
+  dateData = "D" + dateData.split("-").join("");
+
+  data[`${dateData}`] = [
+    {
+      감정: req.body.감정,
+      욕구: req.body.욕구,
+      제목: req.body.제목,
+      내용: req.body.내용,
+      날짜: req.body.date,
+    },
+  ];
+
+  memoArr.push(data);
+
+  fs.writeFileSync("./public/json/memo.json", JSON.stringify(memoArr));
+  res.redirect("/calendar");
+});
+
+//community.ejs
+app.get("/community", (req, res) => {
+  res.render("pages/community.ejs");
+});
+
+// chatting (채팅) 페이지
+app.get("/chatting", function (req, res) {
+  // console.log(userArr[0].userName);
+  res.render("pages/chatting.ejs", { chattingdbArr });
+});
+// chatting (채팅) create
+app.post("/chattingcreate", function (req, res) {
+  const text = req.body.text;
+  const date = req.body.date;
+  // console.log(text, date);
+
+  chattingdbArr.push({ 내용: text, 날짜: date });
+  fs.writeFileSync("chattingDB.json", JSON.stringify(chattingdbArr));
+  res.redirect("/chatting");
+});
+
+// clinic
+app.get("/clinic", function (req, res) {
+  let name = userArr[0].userName;
+  res.render("pages/clinic.ejs", { name });
 });
 
 // ----------listen----------

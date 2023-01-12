@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/memo.css" />
+    <title>Document</title>
+  </head>
+  <body id="calendar">
+    <div class="container">
+      <!-- title -->
+      <div class="title">
+        <div>
+          <a href="/main"><img src="./images/back.png" alt="back" /></a>
+        </div>
+        <div><h1>캘린더</h1></div>
+      </div>
+
+      <!-- calendar -->
+      <div class="calendarBox">
+        <table id="calendar">
+          <thead>
+            <tr class="btn-wrap clearfix">
+              <td>
+                <label id="prev"><i class="fa-solid fa-angle-left"></i></label>
+              </td>
+              <td id="current-year-month" colspan="5">
+                <span class="current-year"></span>년
+                <span class="current-month"></span>월
+              </td>
+              <td>
+                <label id="next"><i class="fa-solid fa-angle-right"></i></label>
+              </td>
+            </tr>
+            <tr>
+              <td class="sun">Sun</td>
+              <td>Mon</td>
+              <td>Tue</td>
+              <td>Wed</td>
+              <td>Thu</td>
+              <td>Fri</td>
+              <td class="sat">Sat</td>
+            </tr>
+          </thead>
+          <tbody id="calendar-body" class="calendar-body"></tbody>
+        </table>
+      </div>
+
+      <!-- memo -->
+      <div class="memo">
+        <div class="date">
+          <p></p>
+        </div>
+        <div class="contents"></div>
+        <div class="writeBtn">
+          <button class="writeBtn">
+            <img src="./images/icon-write.png" alt="" />
+          </button>
+        </div>
+      </div>
+
+      <!-- writePopup -->
+      <div class="writePopup">
+        <div class="title">
+          <div class="closeBtn">
+            <img src="/images/close.png" alt="close" />
+          </div>
+          <h1>메모 작성</h1>
+        </div>
+
+        <!--title-->
+        <form action="/create" method="post">
+          <div>
+            <input class="memoDate" value="2002-10-12" name="date" readonly />
+          </div>
+          <div class="box1">
+            <h2>감정</h2>
+            <div class="emotion-box">
+              <!-- 이미지에 클래스를 줘서 해당 이미지를 선택하면 특정 값(숫자)가 되도록 한 후 input의 value 값에 넣어준 후 폼으로 전송 (그 후 input은 type="hidden"으로 하기 ) -->
+              <!--text -> hidden으로 변경하기-->
+              <input
+                class="memo_1"
+                type="hidden"
+                value=""
+                name="감정"
+                required
+              />
+              <a href="#"
+                ><img class="e1" src="/images/emotion1.png" alt="emotion1"
+              /></a>
+              <a href="#"
+                ><img class="e2" src="/images/emotion2.png" alt="emotion2"
+              /></a>
+              <a href="#"
+                ><img class="e3" src="/images/emotion3.png" alt="emotion3"
+              /></a>
+              <a href="#"
+                ><img class="e4" src="/images/emotion4.png" alt="emotion4"
+              /></a>
+              <a href="#"
+                ><img class="e5" src="/images/emotion5.png" alt="emotion5"
+              /></a>
+            </div>
+            <!--emotion-box-->
+          </div>
+          <!--box1-->
+
+          <div class="box1">
+            <h2>흡연 욕구</h2>
+            <div class="battery-box">
+              <input
+                class="memo_2"
+                type="hidden"
+                value=""
+                name="욕구"
+                required
+              />
+              <a class="pre" href="#"
+                ><img src="/images/icon-bottom.png" alt="icon-bottom"
+              /></a>
+              <div class="battery">
+                <img class="show" src="/images/battery3.png" alt="battery3" />
+              </div>
+              <a class="next" href="#"
+                ><img src="/images/icon-top.png" alt="icon-top"
+              /></a>
+            </div>
+            <!--battery-box-->
+          </div>
+          <!--box1-->
+
+          <div class="box2">
+            <h2>메모</h2>
+            <div class="memo-box">
+              <div class="memo-box2">
+                <input
+                  class="memo_title"
+                  type="text"
+                  name="제목"
+                  placeholder="제목을 입력해주세요"
+                  maxlength="25"
+                  required
+                  autocomplete="off"
+                />
+                <textarea
+                  class="memo_contents"
+                  name="내용"
+                  cols="0"
+                  rows="8"
+                  placeholder="내용을 입력해주세요"
+                  maxlength="200"
+                  required
+                  autocomplete="off"
+                ></textarea>
+              </div>
+              <!--memo-box2-->
+            </div>
+            <!--memo-box-->
+          </div>
+          <!--box2-->
+          <input class="write-finish-btn" type="submit" value="작성 완료" />
+        </form>
+      </div>
+
+      <!-- footer -->
+      <footer>
+        <div class="home">
+          <a href="/"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="achievement">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="community">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="calendar active">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
+
+      <!-- fontA -->
+      <script
+        src="https://kit.fontawesome.com/67eff22c15.js"
+        crossorigin="anonymous"
+      ></script>
+
+      <!-- myscript -->
+      <script src="./js/main.js"></script>
+    </div>
+  </body>
+</html>

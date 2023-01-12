@@ -71,29 +71,32 @@
           <div><h3><%= totalLength %> / <%= allLength %></h3></div>
         </div>
         <div class="achievement-contents">
-          <% console.log(testPriceArr); let randomPrice =
-          Math.floor(Math.random()*testPriceArr.length); console.log(random);%>
+          <% let randomPrice = Math.floor(Math.random()*testPriceArr.length); %>
           <div class="achievement-content">
             <div class="achievement-content-img">
-              <img src="<%= testPriceArr[random].img %>" alt="trophy1" />
+              <img src="<%= testPriceArr[randomPrice].img %>" alt="trophy1" />
             </div>
             <div class="achievement-content-text">
-              <%= testPriceArr[random].content %>
+              <%= testPriceArr[randomPrice].content %>
             </div>
           </div>
+          <% let randomDay = Math.floor(Math.random()*testDayArr.length); %>
           <div class="achievement-content">
             <div class="achievement-content-img">
-              <img src="/images/trophy2.png" alt="trophy2" />
+              <img src="<%= testDayArr[randomDay].img %>" alt="trophy2" />
             </div>
             <div class="achievement-content-text">
-              금연을 시작한지 일주일이 달상!
+              <%= testDayArr[randomDay].content %>
             </div>
           </div>
+          <% let randomCount = Math.floor(Math.random()*testCountArr.length); %>
           <div class="achievement-content">
             <div class="achievement-content-img">
-              <img src="/images/trophy3.png" alt="trophy3" />
+              <img src="<%= testCountArr[randomCount].img %>" alt="trophy3" />
             </div>
-            <div class="achievement-content-text">금연을 시작했어요!</div>
+            <div class="achievement-content-text">
+              <%= testCountArr[randomCount].content %>
+            </div>
           </div>
           <div class="achievement-content">
             <p>

@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+:root {
+  --main-color: #1fab89;
+  --main-color-opacity30: rgba(31, 171, 137, 0.3);
+  --sub-color: #62d2a2;
+  --sub2-color: #9df3c4;
+  --bg-color: #e9f3ef;
+  --font: "Yeon Sung", cursive;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+body {
+  margin-bottom: 60px;
+}
+#calendar .container {
+  padding: 30px 20px;
+}
+/* ----------title start---------- */
+#calendar .container .title {
+  display: flex;
+  align-items: center;
+}
+#calendar .container .title div:first-child {
+  width: 36px;
+}
+#calendar .container .title div:last-child {
+  width: calc(100% - 18px);
+  text-align: center;
+}
+#calendar .container .title div:last-child h1 {
+  width: 100%;
+}
+/* ----------title end---------- */
+
+/* ----------footer start---------- */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  border-top: 1px solid var(--main-color);
+  background: #fff;
+}
+footer .home,
+footer .achievement,
+footer .community,
+footer .calendar {
+  flex: 1;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .home a,
+footer .achievement a,
+footer .community a,
+footer .calendar a {
+  color: var(--main-color-opacity30);
+}
+footer .home.active a,
+footer .achievement.active a,
+footer .community.active a,
+footer .calendar.active a {
+  color: var(--main-color);
+}
+/* ----------footer end---------- */
+
+.calendarBox {
+  margin-top: 20px;
+}
+.calendarBox #calendar {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 10px;
+}
+.calendarBox #calendar thead .btn-wrap {
+  text-align: center;
+}
+td,
+tr {
+  padding: 5px 0;
+}
+.calendarBox #calendar thead .btn-wrap label {
+  font-size: 24px;
+}
+.calendarBox #calendar thead #current-year-month {
+  font-size: 24px;
+}
+
+.sat,
+.sun,
+.tr td:first-child,
+.tr td:last-child {
+  color: red;
+}
+#calendar-body td,
+thead td {
+  text-align: center;
+}
+thead tr:last-child {
+  font-size: 20px;
+}
+#calendar-body td {
+  width: 42px;
+  height: 42px;
+  font-size: 20px;
+}
+.select {
+  background: var(--main-color);
+  border-radius: 50%;
+  color: #ffffff !important;
+}
+
+.memo {
+  margin: 30px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  position: relative;
+}
+.memo .contents .content {
+  width: 90%;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.memo .contents .content .emotion {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+.memo .contents .content .main {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 10px;
+  padding: 3px;
+}
+.memo .contents .content .main .sub {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.memo .contents .content .main .sub div {
+  display: flex;
+  justify-self: unset;
+  align-items: center;
+}
+.memo .contents .content .main .sub p {
+  font-size: 22px;
+}
+.memo .contents .content .main .sub img {
+  width: 36px;
+  height: 28px;
+}
+.memo .contents .content .main .sub2 {
+  margin-top: 5px;
+}
+.memo .contents .content p.text {
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+}
+.memo .writeBtn button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: none;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+.memo .writeBtn button img {
+  width: 100%;
+  height: 100%;
+}
+
+/*  */
+.writePopup {
+  display: flex;
+  width: 90%;
+  height: 0%;
+  overflow-y: scroll;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #fff;
+  box-shadow: 1px 1px 100px rgba(0, 0, 0, 1);
+  border-radius: 15px;
+  position: fixed;
+  z-index: 99999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: height 0.5s;
+}
+.writePopup.active {
+  height: 80%;
+}
+/*  title  */
+.writePopup .title {
+  width: 100%;
+  height: 96px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.writePopup .title .closeBtn {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.writePopup .title .closeBtn > img {
+  width: 100%;
+  height: 100%;
+}
+
+.writePopup .title h1 {
+  font-weight: 400;
+  font-size: 36px;
+}
+
+/* box 1, 2 */
+.writePopup form {
+  width: 100%;
+}
+.writePopup .box1 {
+  /* width: 355px; */
+  /* width: 100%; */
+  height: 116px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.writePopup .box1 h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.writePopup .box2 {
+  /* width: 355px; */
+  /* width: 100%; */
+  height: 250px;
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+
+.writePopup .box2 h2 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+/* emotion-box */
+
+.writePopup .emotion-box {
+  /* width: 315px; */
+  width: 100%;
+  height: 56px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.writePopup .emotion-box > a:hover {
+  background-color: var(--main-color);
+  width: 46px;
+  height: 46px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.writePopup .emotion-box a.active {
+  background-color: var(--main-color);
+  width: 46px;
+  height: 46px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* battery-box */
+.writePopup .battery-box {
+  /* width: 315px; */
+  width: 100%;
+  height: 56px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* memo-box */
+.writePopup .memo-box {
+  /* width: 315px; */
+  width: 100%;
+  height: 190px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.writePopup .memo-box2 {
+  /* width: 315px; */
+  width: 100%;
+  padding: 10px;
+}
+
+.writePopup .memo-box2 .memo_title {
+  width: 100%;
+  font-size: 18px;
+  font-family: var(--main-font);
+  border: none;
+  margin-bottom: 10px;
+}
+
+.writePopup .memo-box2 .memo_contents {
+  width: 100%;
+  font-size: 14px;
+  font-family: var(--main-font);
+  border: none;
+  resize: none;
+}
+
+.writePopup .write-finish-btn {
+  width: 100%;
+  height: 50px;
+  font-family: var(--main-font);
+  color: #fff;
+  background-color: var(--main-color);
+  font-size: 28px;
+  font-weight: 400;
+  border: none;
+  padding: 7px 100px;
+  border-radius: 10px;
+  letter-spacing: 0.3em;
+  margin-bottom: 10px;
+}
+.memoDate {
+  border: none;
+}
+.memoDate:focus {
+  outline: none;
+}

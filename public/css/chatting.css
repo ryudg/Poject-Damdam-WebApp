@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap");
+
+:root {
+  --main-color: #1fab89;
+  --main-color-opacity30: rgba(31, 171, 137, 0.3);
+  --sub-color: #62d2a2;
+  --sub2-color: #9df3c4;
+  --bg-color: #e9f3ef;
+  --font: "Yeon Sung", cursive;
+}
+body {
+  margin-bottom: 60px;
+  font-family: "Yeon Sung", cursive;
+}
+
+.chat_wrap {
+  padding: 0 10px;
+  position: relative;
+}
+
+/* 금단증상 제목 */
+
+.chat_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85px;
+  position: relative;
+}
+
+.chat_title h1 {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.chat_left_arrow {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.chat_left_arrow img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 채팅 창 */
+
+.chat_box {
+  height: 450px;
+  overflow-y: scroll;
+  background: #e9f3ef;
+  border-radius: 10px;
+  border: 1px solid #62d2a2;
+  margin: 0 0 10px 0;
+  padding: 20px;
+}
+
+.chat_box li {
+  display: flex;
+  gap: 10px;
+  margin: 0 0 10px 0;
+}
+
+.chat_abata {
+  width: 36px;
+  height: 36px;
+}
+
+.chat_abata img {
+  width: 100%;
+  height: 100%;
+}
+
+.chat_contant {
+  width: 86.6667%;
+  background-color: #fff;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  padding: 10px;
+}
+
+.chat_contant_me {
+  width: 86.6667%;
+  background-color: #62d2a2;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  padding: 10px;
+}
+
+.chat_contant_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 5px 0;
+}
+
+.chat_contant_top_me {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 5px 0;
+}
+
+.chat_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0 0 0;
+}
+
+.chat_bottom p {
+  font-size: 8px;
+  color: #838383;
+}
+
+.chat_recommend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 18px;
+  height: 18px;
+}
+
+.chat_recommend img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 채팅 입력란 */
+.chat_input {
+  height: 62px;
+  border-top: 1px solid #1fab89;
+  border-bottom: 1px solid #1fab89;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat_emoticon {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.chat_emoticon img {
+  width: 100%;
+  height: 100%;
+}
+
+.chat_input form {
+  width: 59.466666%;
+  height: 67.7419354%;
+}
+
+.chat_input form input {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #1fab89;
+  outline: 0;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+
+.chat_input form input::placeholder {
+  color: #1fab89;
+}
+
+.chat_input form button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+}
+
+/* 메세지 입력 요청 창 */
+.chat_request {
+  position: absolute;
+  z-index: 30;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 335px;
+  height: 250px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  display: none;
+}
+
+.chat_request_bg {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.chat_request p:nth-child(1) {
+  font-size: 36px;
+  margin: 0 0 30px 0;
+}
+
+.chat_request p:nth-child(2) {
+  width: 280px;
+  height: 50px;
+  background-color: #62d2a2;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* 메세지 입력 요청 창 active 이벤트 */
+
+.chat_request.active {
+  display: flex;
+}
+
+.chat_request_bg.active {
+  display: block;
+}
+/* ----------footer start---------- */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  border-top: 1px solid var(--main-color);
+  background: #fff;
+}
+footer .home,
+footer .achievement,
+footer .community,
+footer .calendar {
+  flex: 1;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .home a,
+footer .achievement a,
+footer .community a,
+footer .calendar a {
+  color: var(--main-color-opacity30);
+}
+footer .home.active a,
+footer .achievement.active a,
+footer .community.active a,
+footer .calendar.active a {
+  color: var(--main-color);
+}
+
+/* ----------footer end---------- */

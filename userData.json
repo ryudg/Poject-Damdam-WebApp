@@ -1,21 +1,26 @@
 [
   {
     "userName": "홍길동",
-    "StartYear": "2015",
     "id": 0,
-    "StartMonth": "03",
-    "StartDay": "12",
-    "StartHour": "13",
-    "StartMinute": "000",
-    "EndYear": "2022",
-    "EndMonth": "12",
-    "EndDay": "1",
-    "EndHour": "09",
-    "EndMinute": "03",
+
+    "StartYear": "2015",
+    "StartMonth": "12",
+    "StartDay": "02",
+    "StartHour": "15",
+    "StartMinute": "10",
+
+    "EndYear": "2020",
+    "EndMonth": "01",
+    "EndDay": "12",
+    "EndHour": "17",
+    "EndMinute": "04",
+
     "CountPerDay": "11",
+
     "Price": "4500",
+
     "BrithDayYear": "1995",
-    "BrithDayMonth": "09",
+    "BrithDayMonth": "10",
     "BrithDayDay": "22"
   }
 ]

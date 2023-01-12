@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 제이쿼리  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- js -->
+    <script src="./js/chatting.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/chatting.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <title>채팅</title>
+  </head>
+  <body>
+    <!-- 메세지 입력 요청 -->
+    <div class="chat_request">
+      <p>
+        메세지를 입력 후 <br />
+        전송 버튼을 눌러주세요
+      </p>
+      <p>확인</p>
+    </div>
+    <div class="chat_request_bg"></div>
+    <div class="chat_wrap">
+      <!-- 금단증상 제목 -->
+      <div class="chat_title">
+        <div class="chat_left_arrow">
+          <a href="/community"
+            ><img src="./images/chatting_1.png" alt="chatting_img"
+          /></a>
+        </div>
+        <h1>채팅</h1>
+      </div>
+      <!-- 채팅 창 -->
+      <div class="chat_box">
+        <ul>
+          <!-- 상대방 채팅창 -->
+          <li>
+            <div class="chat_abata">
+              <img src="./images/chatting_2.png" alt="chatting_img" />
+            </div>
+            <div class="chat_contant">
+              <div class="chat_contant_top">
+                <p>홍길동</p>
+                <div class="chat_level">
+                  <img src="./images/chatting_3.png" alt="chatting_img" />
+                </div>
+              </div>
+              <div class="chat_contant_middle">
+                <p>
+                  여러분 운동하세요. 특히 유산소 운동이요. 금연 스트레스는
+                  운동으로 푸는 겁니다. 괜히 참는다고 가만히 있으면 더 피고
+                  싶어져요.
+                </p>
+              </div>
+              <div class="chat_bottom">
+                <p>12:00</p>
+                <div class="chat_recommend">
+                  <img src="./images/chatting_4.png" alt="chatting_img" />
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- 나의 채팅창 -->
+          <% for(let i = 0; i < chattingdbArr.length; i++) { %>
+          <li>
+            <div class="chat_abata">
+              <img src="./images/chatting_8.svg" alt="chatting_img" />
+            </div>
+            <div class="chat_contant_me">
+              <div class="chat_contant_top_me">
+                <p>나</p>
+                <div class="chat_level">
+                  <img src="./images/chatting_7.png" alt="chatting_img" />
+                </div>
+              </div>
+              <div class="chat_contant_middle">
+                <p><%= chattingdbArr[i].내용 %></p>
+              </div>
+              <div class="chat_bottom">
+                <p><%= chattingdbArr[i].날짜 %></p>
+                <div class="chat_recommend">
+                  <img src="./images/chatting_4.png" alt="chatting_img" />
+                </div>
+              </div>
+            </div>
+          </li>
+          <% } %>
+        </ul>
+      </div>
+      <!-- 채팅 입력란 -->
+      <div class="chat_input">
+        <div class="chat_emoticon">
+          <img src="./images/chatting_5.png" alt="chatting_img" />
+        </div>
+        <form action="/chattingcreate" method="post">
+          <input class="date_input" type="hidden" name="date" value="" />
+          <input
+            class="chat_text_input"
+            type="text"
+            name="text"
+            placeholder="메시지 입력"
+          />
+          <button type="submit">
+            <img src="./images/chatting_6.png" alt="chatting_img" />
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="home">
+        <a href="/"><i class="fa-solid fa-house"></i></a>
+      </div>
+      <div class="achievement">
+        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+      </div>
+      <div class="community active">
+        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+      </div>
+      <div class="calendar">
+        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+      </div>
+    </footer>
+    <!-- fontA -->
+    <script
+      src="https://kit.fontawesome.com/67eff22c15.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

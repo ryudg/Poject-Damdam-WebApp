@@ -377,3 +377,46 @@ footer .calendar.active a {
 }
 
 /* ----------footer end---------- */
+#community .title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#community .title h1 {
+  width: calc(100% - 72px);
+  text-align: center;
+}
+#community .container {
+  padding: 20px;
+  margin-bottom: 60px;
+}
+#community .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#community .container .content a {
+  border-radius: 15px;
+  color: #fff;
+}
+#community .container .content a div {
+  height: 120px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  border: 1px solid #000;
+}
+#community .container .content a.clinic {
+  background-image: url(../images/clinic.png);
+}
+#community .container .content a.chatting {
+  background-image: url(../images/chatting.png);
+}
+#community .container .content a.site1 div {
+  background-image: url(../images/site1.png);
+}
+#community .container .content a.site2 div {
+  background-image: url(../images/site2.png);
+}

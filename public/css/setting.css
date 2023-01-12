@@ -200,7 +200,6 @@ body {
 .setting-layout-normal .setting-vision .space-between > a {
   color: #1028ff;
 }
-/* ----------footer start---------- */
 footer {
   position: fixed;
   bottom: 0;
@@ -234,5 +233,3 @@ footer .community.active a,
 footer .calendar.active a {
   color: var(--main-color);
 }
-
-/* ----------footer end---------- */
