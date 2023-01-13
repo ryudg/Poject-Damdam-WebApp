@@ -135,14 +135,13 @@ body {
   display: flex;
 }
 .setting-modal-bg {
-  width: 100%;
-  height: 100%;
   display: none;
-  position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
-  bottom: 0;
-
+  position: fixed;
+  z-index: 9999999;
   background: rgba(0, 0, 0, 0.7);
 }
 
@@ -153,22 +152,28 @@ body {
   background: #fff;
   box-shadow: 0px 5px 20px 0px #000;
   display: flex;
-  flex-flow: column;
+  justify-content: center;
+  flex-direction: column;
   position: absolute;
-  top: 110px;
-  left: 28px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding-bottom: 20px;
   padding-top: 65px;
   border: 1px solid #62d2a2;
 
   z-index: 30;
 }
-.setting-layout-big .reset-div .setting-modal > a {
-  width: 280px;
+.setting-layout-big .reset-div .setting-modal form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.setting-layout-big .reset-div .setting-modal button {
+  width: 100%;
+  margin: 30px 20px 0px 20px;
   height: 50px;
   border-radius: 10px;
-  margin: 0px auto;
-  margin-top: 30px;
 }
 .setting-layout-big .reset-div .setting-modal h1 {
   font-size: 36px;

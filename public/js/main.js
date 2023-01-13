@@ -1,14 +1,18 @@
+// 달력 년도
 let currentTitleYear = document.querySelector(
   "#current-year-month .current-year"
 );
+// 달력 월
 let currentTitleMonth = document.querySelector(
   "#current-year-month .current-month"
 );
+// 달력 날짜 테이블
 let calendarBody = document.querySelector("#calendar-body");
-
+// 오늘 날짜
 let today = new Date();
+// 현재 월의 1일
 let first = new Date(today.getFullYear(), today.getMonth(), 1);
-
+// 요일 정보
 let dayList = [
   "Sunday",
   "Monday",
@@ -18,6 +22,7 @@ let dayList = [
   "Friday",
   "Saturday",
 ];
+// 월 정보
 let monthList = [
   "01",
   "02",
@@ -32,12 +37,15 @@ let monthList = [
   "11",
   "12",
 ];
+// 평년 정보
 let leapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+// 윤년 정보
 let notleapYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+// 현재 월의 1일
 let pageFirst = first;
-let clickedDate1;
 
+// 평년 윤년 조건
 let pageYear;
 if (first.getFullYear() % 4 === 0) {
   pageYear = leapYear;
@@ -45,17 +53,25 @@ if (first.getFullYear() % 4 === 0) {
   pageYear = notleapYear;
 }
 
+// 이전 달 버튼
 let prevBtn = document.querySelector("#prev");
-let nextBtn = document.querySelector("#next");
+// 이전 달 버튼 클릭 이벤트
 prevBtn.addEventListener("click", prev);
+// 다음 달 버튼
+let nextBtn = document.querySelector("#next");
+// 다음 달 버튼 클릭 이벤트
 nextBtn.addEventListener("click", next);
 
+// 달력 구현 함수
 function showCalendar() {
   let monthCnt = 100;
   let cnt = 1;
   for (let i = 0; i < 6; i++) {
+    // 테이블 요소 추가
     let tr = document.createElement("tr");
+    // 월별 id 추가
     tr.setAttribute("id", monthCnt);
+    // 일별 클래스 추가
     tr.setAttribute("class", "tr");
     for (let j = 0; j < 7; j++) {
       if ((i === 0 && j < first.getDay()) || cnt > pageYear[first.getMonth()]) {
@@ -72,11 +88,17 @@ function showCalendar() {
     monthCnt++;
     calendarBody.appendChild(tr);
   }
+  // 달력 년도 출력
   currentTitleYear.innerHTML = first.getFullYear();
+  // 달력 월 출력
   currentTitleMonth.innerHTML = monthList[first.getMonth()];
 
+  // 메모 작성 날짜
   let titleDate = document.querySelector(".memo .date p");
+  // 메모 작성 날짜 (모달창)
   let memoDate = document.querySelector(".memoDate");
+
+  // 메모 작성 날짜 0보다 작으면 0 추가
   let addZeroM = today.getMonth();
   if (addZeroM < 10) {
     addZeroM = "" + addZeroM;
@@ -85,39 +107,56 @@ function showCalendar() {
   if (addZeroD < 10) {
     addZeroD = "" + addZeroD;
   }
+  // 메모 작성 날짜 입력
   titleDate.innerHTML = `${today.getFullYear()}-${addZeroM + 1}-${addZeroD}`;
+  // 메모 작성 날짜 입력 (모달창)
   memoDate.value = titleDate.innerHTML;
+  // 달력 날짜 선택
   let colorDay = document.querySelectorAll("#calendar-body td");
+  // 날짜 정보 없는 날짜 선택
   let newColorDay = [...colorDay].filter((e) => e.id == "");
+  // 날짜 정보 없는 날짜 숨기기
   newColorDay.forEach((e) => {
     e.style.height = "0px";
     e.style.padding = "0px";
   });
+  // 날짜 클릭 이벤트
   colorDay.forEach((e) => {
     e.addEventListener("click", () => {
+      // 날짜 정보가 있으면
       if (e.id) {
+        // 기본 클릭 이벤트 제거
         colorDay.forEach((j) => {
           j.classList.remove("select");
         });
+        // (클래스)이벤트 추가
         e.classList.add("select");
+        // 선택한 날짜 정보 가져오기
         let selected = document.querySelector(".select").innerHTML;
-
+        // 선택한 날짜 정보가 10보다 작으면 0추가
         if (selected < 10) {
           selected = "0" + selected;
         }
+        // 선택한 날짜 정보 출력하기
         titleDate.innerHTML = `${currentTitleYear.innerHTML}-${currentTitleMonth.innerHTML}-${selected}`;
         memoDate.value = titleDate.innerHTML;
       }
+      // memoo.json 배열에서 프로퍼티 키값
       let memoDay = `D${titleDate.innerHTML.split("-").join("")}`;
-      // console.log(memoDay);
+      // memoo.json 불러오기
+      // 달력 구현 함수가 동작할때마다 작동함
       fetch("json/memo.json")
         .then((res) => res.json())
         .then((data) => {
+          // 메모 정보 배열로 만들기
           let newMemoArr = [...data].filter((e) => e[memoDay]);
-          // console.log(newMemoArr);
+          // 메모 입력 박스
           let memoBox = document.querySelector(".memo .contents");
+          // 메모 정보가 있다면
           if (newMemoArr.length > 0) {
+            // 기본 메모 박스는 빈값
             memoBox.innerHTML = "";
+            // 메모 박스에 메모 정보 배열값을 각각 넣기
             newMemoArr.forEach((e) => {
               memoBox.innerHTML += `
               <div class="content">
@@ -133,30 +172,41 @@ function showCalendar() {
               `;
             });
           } else {
+            // 메모 정보가 없다면 출력할 메세지
             memoBox.innerHTML = `<div class="content"><p class="text">메모를 입력해주세요</p></div>`;
           }
         });
     });
   });
+  // 오늘 날짜 기본 클릭 이벤트
   let todayBox = document.getElementById(`${addZeroD}`);
   todayBox.click();
 
+  // 메모 정보가 있는 날짜에 표시하기
+  // memo.json 불러오기
   fetch("json/memo.json")
     .then((res) => res.json())
     .then((data) => {
+      // memo.json 데이터 배열 중에서 데이터가 있는 값 찾기
       [...data].filter((e) => {
+        // 데이터 안의 년도 찾기
         let strokeYear = Object.values(e)[0][0].날짜.split("-")[0];
+        // 달력 테이블에서의 년도
         let calendarYear = document.querySelector(".current-year").innerHTML;
 
+        // 데이터 안의 월 찾기
         let strokeMonth = Object.values(e)[0][0].날짜.split("-")[1];
+        // 달력 테이블에서의 월
         let calendarMonth = document.querySelector(".current-month").innerHTML;
 
+        // 데이터 안에서의 날짜
         let strokeDay = Object.values(e)[0][0].날짜.split("-")[2];
-
+        // 데이터 안에서의 날짜가 10보다 작으면 0 삭제
         if ([...strokeDay][0] == "0") {
           strokeDay = [...strokeDay].pop();
         }
 
+        // 만약 데이터 상의 날짜가 존재하고  테이블 상의 날짜가 일치하면 정보가 있는 테이블의 날짜에 스타일 추가
         if (strokeYear == calendarYear && strokeMonth == calendarMonth) {
           let stroke = document.getElementById(`${strokeDay}`);
           stroke.style.borderBottom = "1px solid #000";
@@ -166,8 +216,10 @@ function showCalendar() {
       });
     });
 }
+// 달력 테이블 구현 함수 실행
 showCalendar();
 
+// 달력 월 넘어갈때 기존 달력 삭제 함수
 function removeCalendar() {
   let catchTr = 100;
   for (let i = 100; i < 106; i++) {
@@ -177,7 +229,9 @@ function removeCalendar() {
   }
 }
 
+// 이전 달 버튼 함수
 function prev() {
+  // 이전 달 평년 윤년 알아보고 출력하기
   if (pageFirst.getMonth() === 1) {
     pageFirst = new Date(first.getFullYear() - 1, 12, 1);
     first = pageFirst;
@@ -196,8 +250,9 @@ function prev() {
   removeCalendar();
   showCalendar();
 }
-
+// 다음 달 버튼 함수
 function next() {
+  // 다음 달 평년 윤년 알아보고 출력하기
   if (pageFirst.getMonth() === 12) {
     pageFirst = new Date(first.getFullYear() + 1, 1, 1);
     first = pageFirst;
@@ -309,14 +364,18 @@ $(function () {
   });
 });
 
+// 메모 입력 버튼
 let writeBtn = document.querySelector(".writeBtn");
+// 모달창 닫기 버튼
 let closeBtn = document.querySelector(".closeBtn");
-
+// 모달창
 let writePopup = document.querySelector(".writePopup");
 
+// 메모 입력 버튼 누를때 이벤트
 writeBtn.addEventListener("click", () => {
   writePopup.classList.add("active");
 });
+// 모달창 닫기 버튼 누를때 이벤트
 closeBtn.addEventListener("click", () => {
   writePopup.classList.remove("active");
 });

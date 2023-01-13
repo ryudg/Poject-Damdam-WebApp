@@ -17,23 +17,23 @@
         <div class="user-name">
           <h1>안녕하세요 <%= userArr[0].userName %>님</h1>
         </div>
-        <div class="info-setting">
+        <!-- <div class="info-setting">
           <div class="info">
             <a href="/userinfo"><i class="fa-solid fa-circle-user"></i></a>
           </div>
           <div class="setting">
             <a href="/setting"><i class="fa-solid fa-gear"></i></a>
           </div>
-        </div>
+        </div> -->
       </div>
       <!-- main- -->
       <div class="main-timer">
         <div><img src="/images/main-timer.png" alt="timer-img" /></div>
         <div>
-          <div class="main-timer-day">??</div>
+          <div class="main-timer-day">금연</div>
           <div class="main-timer-clock">
-            <div class="main-timer-hour">??</div>
-            <div class="main-timer-minute">??</div>
+            <div class="main-timer-hour">정보</div>
+            <div class="main-timer-minute">입력하기</div>
           </div>
         </div>
       </div>
@@ -104,16 +104,20 @@
           <div><h1>지식 +</h1></div>
         </div>
         <div class="knowledge-content">
-          <h2>흡연은 외모에 즉각적인 영향을 미칩니다.</h2>
+          <h2>
+            <% let randomArr =
+            knowledge104[Math.floor(Math.random()*knowledge104.length)]; %> <%=
+            randomArr.categoryTxt; %>
+          </h2>
           <h4>
-            담배는 피부 주름을 촉진하여 나이에 비해 늙어 보이게 합니다. 흡연은
-            피부 탄력과 관련이 있는 단백질을 없애고 비타민 A를 고갈시켜 원활한
-            혈류의 흐름을 방해함으로써 피부 노화를 앞당깁니다.
+            <%=
+            randomArr.contents[Math.floor(Math.random()*randomArr.contents.length)].txt
+            %>
           </h4>
         </div>
       </section>
     </div>
-    <footer>
+    <!-- <footer>
       <div class="home active">
         <a href="/"><i class="fa-solid fa-house"></i></a>
       </div>
@@ -126,7 +130,7 @@
       <div class="calendar">
         <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
       </div>
-    </footer>
+    </footer> -->
     <!-- fontA -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"

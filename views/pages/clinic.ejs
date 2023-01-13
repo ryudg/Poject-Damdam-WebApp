@@ -22,7 +22,6 @@
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e56122c28647b1223c462053019bef80&libraries=services"
     ></script>
   </head>
-
   <body id="clinic">
     <div class="wrap">
       <header>
@@ -32,8 +31,21 @@
         <h1>금연 클리닉</h1>
       </header>
       <main>
-        <div id="map" style="width: 100%; height: 45vh"></div>
-
+        <div class="map-wrap">
+          <div id="map" style="width: 100%; height: 45vh"></div>
+          <div class="custom_zoomcontrol radius_border">
+            <span onclick="zoomIn()"
+              ><img
+                src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
+                alt="확대"
+            /></span>
+            <span onclick="zoomOut()"
+              ><img
+                src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
+                alt="축소"
+            /></span>
+          </div>
+        </div>
         <div class="clinic-info">
           <div class="clinic-name info">
             <h3>기관</h3>
@@ -73,12 +85,33 @@
     ></script>
 
     <script>
-      function nearClinic(lat, lon) {
+      let mapContainer = document.getElementById("map"), // 지도를 표시할 div
+        mapOption = {
+          center: new kakao.maps.LatLng(37.3817344, 126.9203944), // 지도의 중심좌표
+          level: 4, // 지도의 확대 레벨
+        };
+
+      // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+      let map = new kakao.maps.Map(mapContainer, mapOption);
+
+      // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+      function zoomIn() {
+        map.setLevel(map.getLevel() - 1);
+      }
+
+      // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+      function zoomOut() {
+        map.setLevel(map.getLevel() + 1);
+      }
+
+      // 가까운 클리닉 찾기 및 지도 이동,
+      function panTo(lat, lon) {
         fetch("json/clinicData.json")
           .then((res) => {
             return res.json();
           })
           .then((data) => {
+            map.setLevel(4);
             // 현재위치 기준 가까운 클리닉 찾기
             let gap = [];
             for (let i = 0; i < data.length; i++) {
@@ -101,17 +134,14 @@
             addEl.innerHTML = choosedClinic.add;
             telEl.innerHTML = choosedClinic.tel;
 
-            var mapContainer = document.getElementById("map"), // 지도를 표시할 div
-              mapOption = {
-                center: new kakao.maps.LatLng(
-                  choosedClinic.lat,
-                  choosedClinic.lon
-                ), // 지도의 중심좌표
-                level: 4, // 지도의 확대 레벨
-              };
+            var moveLatLon = new kakao.maps.LatLng(
+              choosedClinic.lat,
+              choosedClinic.lon
+            );
 
-            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
-            var map = new kakao.maps.Map(mapContainer, mapOption);
+            // 지도 중심을 부드럽게 이동시킵니다
+            // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+            map.panTo(moveLatLon);
 
             // 커스텀 오버레이
             let contents = [];
@@ -121,7 +151,7 @@
                 <a href="${data[i].url}" target="_blank">
                   <div class="marker"></div>
                 </a>
-                <button class="title" onclick="thisClinic(${data[i].lat}, ${data[i].lon})">${data[i].name}</button>
+                <button class="title" onclick="panTo(${data[i].lat}, ${data[i].lon})">${data[i].name}</button>
               </div>`;
 
               positions[i] = new kakao.maps.LatLng(data[i].lat, data[i].lon);
@@ -137,12 +167,6 @@
           });
       }
 
-      // 클리닉 선택시 노출정보 변경
-      let markers = document.querySelectorAll(".customoverlay .title");
-      function thisClinic(lat, lon) {
-        nearClinic(lat, lon);
-      }
-
       // 현재위치
       function getLocation() {
         navigator.geolocation.getCurrentPosition(showPosition, geoFalse);
@@ -155,8 +179,7 @@
         };
         myLat = pos.lat;
         myLon = pos.lon;
-        nearClinic(myLat, myLon);
-        console.log(pos);
+        panTo(myLat, myLon);
       }
 
       function geoFalse() {

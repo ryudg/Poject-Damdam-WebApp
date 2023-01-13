@@ -18,13 +18,14 @@
       <form action="/delete" method="post">
         <div class="inputbox-name">
           <input
+          class="imgUp"
             type="file"
             accept="image/*"
             multiple
             style="display: none"
             name="img"
           />
-          <img src="/images/mdi_user.png" alt="기본사진" />
+          <img class="userImg" src="/images/mdi_user.png" alt="기본사진" />
           <input
             type="text"
             value="<%= userArr[0].userName %>"
@@ -130,6 +131,24 @@
               value="<%= userArr[0].StartDay%>"
             />
             <p>일</p>
+            <input
+              type="text"
+              name="StartHour"
+              class="w50px"
+              oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1')"
+              maxlength="2"
+              value="<%= userArr[0].StartHour%>"
+            />
+            <p>시</p>
+            <input
+              type="text"
+              name="StartMinute"
+              class="w50px"
+              oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1')"
+              maxlength="2"
+              value="<%= userArr[0].StartMinute%>"
+            />
+            <p>분</p>
           </div>
         </div>
         <!-- inputbox-Start -->
@@ -163,10 +182,28 @@
               value="<%= userArr[0].EndDay%>"
             />
             <p>일</p>
+            <input
+              type="text"
+              name="EndHour"
+              class="w50px"
+              oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1')"
+              maxlength="2"
+              value="<%= userArr[0].EndHour%>"
+            />
+            <p>시</p>
+            <input
+              type="text"
+              name="EndMinute"
+              class="w50px"
+              oninput="this.value = this.value.replace(/[^0-9.]/g,'').replace(/(\..*)\./g,'$1')"
+              maxlength="2"
+              value="<%= userArr[0].EndMinute%>"
+            />
+            <p>분</p>
           </div>
         </div>
         <!-- inputbox-end -->
-        <div class="inputbox-button">
+
           <button class="input-userinfo-button" type="submit" name="delete">
             수정
           </button>
@@ -194,5 +231,11 @@
       src="https://kit.fontawesome.com/67eff22c15.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+       const upload = document.querySelector(".userImg");
+      const realUpload = document.querySelector(".imgUp");
+      upload.addEventListener("click", () => realUpload.click());
+    </script>
   </body>
+  
 </html>

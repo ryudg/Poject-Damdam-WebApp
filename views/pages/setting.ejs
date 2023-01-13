@@ -50,14 +50,16 @@
         </div>
         <div class="reset-div">
           <div class="setting-resetBtn">
-            <button>다이어리 초기화</button>
+            <button type="submit">다이어리 초기화</button>
           </div>
           <div class="setting-modal-bg">
             <div class="setting-modal">
               <h1>앗!</h1>
               <h1>정말로 다이어리</h1>
               <h1>초기화를 하시겠습니까?</h1>
-              <a href="#">확인</a>
+              <form action="/memoReset" method="post">
+                <button type="submit">확인</button>
+              </form>
             </div>
           </div>
         </div>
@@ -70,8 +72,9 @@
               <h1>앗!</h1>
               <h1>정말로 사용자 정보</h1>
               <h1>초기화를 하시겠습니까?</h1>
-              <form action="/deltete"></form>
-              <a href="#">확인</a>
+              <form action="/userReset" method="post">
+                <button type="submit">확인</button>
+              </form>
             </div>
           </div>
         </div>
@@ -84,7 +87,9 @@
               <h1>앗!</h1>
               <h1>정말로 전체</h1>
               <h1>초기화를 하시겠습니까?</h1>
-              <a href="#">확인</a>
+              <form action="/allReset" method="post">
+                <button type="submit">확인</button>
+              </form>
             </div>
           </div>
         </div>

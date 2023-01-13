@@ -11,11 +11,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Yeon Sung", cursive;
 }
 #userinfo .container {
   position: relative;
   margin: 30px 10px;
-  font-family: "Yeon Sung", cursive;
+
   margin-bottom: 80px;
 }
 #userinfo .container .title {
@@ -65,19 +66,19 @@
 }
 #userinfo .container .inputbox-end {
   width: calc(100% -20px);
-  height: 80px;
+  height: 120px;
   border-radius: 10px;
   background: #e9f3ef;
   margin: 15px 0;
 }
 #userinfo .container .inputbox-Start {
   width: calc(100% -20px);
-  height: 80px;
+  height: 120px;
   border-radius: 10px;
   background: #e9f3ef;
   margin: 15px 0;
 }
-#userinfo .container .inputbox-button {
+#userinfo .container .input-userinfo-button {
   width: calc(100% - 40px);
   background: #62d2a2;
   margin: 0 auto;
@@ -88,7 +89,7 @@
   justify-content: center;
   align-items: center;
 }
-#userinfo .container .inputbox-button button {
+#userinfo .container button {
   border-style: none;
   background: #62d2a2;
   font-size: 28px;
@@ -100,6 +101,8 @@
 }
 #userinfo .container .content-box {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px 10px;
   margin-left: 20px;
   align-items: center;
 }
@@ -111,14 +114,14 @@
   height: 30px;
   border-radius: 10px;
   border: 1px solid #62d2a2;
-  margin-right: 10px;
+  font-size: 18px;
 }
 #userinfo .container .content-box .w50px {
   width: 50px;
   height: 30px;
   border-radius: 10px;
   border: 1px solid #62d2a2;
-  margin: 0 10px;
+  font-size: 18px;
 }
 footer {
   position: fixed;
