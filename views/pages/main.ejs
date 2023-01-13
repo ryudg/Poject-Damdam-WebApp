@@ -158,11 +158,15 @@
         <div class="change-contents">
           <div class="prev">
             <div>
+              <% if((stageCount-1)== -1){ %>
+              <p>0 단계</p>
+              <% }  else { %>
               <p><%= stage[stageCount-1].stage %></p>
               <p>
                 <%= stage[stageCount-1].goal %> - <%=
                 stage[stageCount-1].stageTxt %>
               </p>
+              <% } %>
             </div>
           </div>
           <div class="arrow">
