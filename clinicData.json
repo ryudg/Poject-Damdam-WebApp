@@ -1,138 +1,564 @@
-[
-  {
-    "region": "서울",
-    "name": "서울금연지원센터",
-    "add": "서울특별시 서초구 반도대로222 가톨릭대학교 의생명산업연구원 2001호(2층)",
-    "tel": "02-592-9030",
-    "lat": 37.5000744557682,
-    "lon": 127.005238316462
-  },
-  {
-    "region": "부산",
-    "name": "부산금연지원센터",
-    "add": "부산광역시 서구 구덕로193번길 12-2 (부민동2가) 부산장애인구강진료센터 5층",
-    "tel": "051-242-9030",
-    "lat": 35.1008208738374,
-    "lon": 129.018729457763
-  },
-  {
-    "region": "대구",
-    "name": "대구금연지원센터",
-    "add": "대구광역시 남구 현충로 170 (대명동) 영남대학교병원 권역 호흡기 전문질환센터 1층",
-    "tel": "053-623-9030",
-    "lat": 35.8467157127139,
-    "lon": 128.585384312231
-  },
-  {
-    "region": "인천",
-    "name": "인천금연지원센터",
-    "add": "인천광역시 중구 인항로27 인하대학교병원 3층",
-    "tel": "032-451-9030",
-    "lat": 37.4588371476034,
-    "lon": 126.634288533153
-  },
-  {
-    "region": "광주",
-    "name": "광주금연지원센터",
-    "add": "광주광역시 동구 필문대로365 조선대학교병원 본관 2층",
-    "tel": "062-222-9030",
-    "lat": 35.1389542963677,
-    "lon": 126.92652544156
-  },
-  {
-    "region": "대전",
-    "name": "대전세종금연지원센터",
-    "add": "대전광역시 중구 문화로 266 (문화동) 충남대학교 의과대학 의학도서동(M3) 402호",
-    "tel": "042-580-8383",
-    "lat": 36.3167319051998,
-    "lon": 127.413509694245
-  },
-  {
-    "region": "울산",
-    "name": "울산금연지원센터",
-    "add": "울산광역시 동구 대학병원로 30 (서부동) 4층 울산금연지원센터",
-    "tel": "052-233-9030",
-    "lat": 35.5199631271922,
-    "lon": 129.428748946255
-  },
-  {
-    "region": "경기",
-    "name": "경기남부금연지원센터",
-    "add": "경기도 안양시 동안구 관평로176번길 14 한림대학교 성심병원 교수연구동(제4별관) 6층",
-    "tel": "031-385-9030",
-    "lat": 37.3915033789562,
-    "lon": 126.961817315424
-  },
-  {
-    "region": "경기",
-    "name": "경기북부금연지원센터",
-    "add": "경기도 고양시 일산동구 일산로 323 국가암 예방검진동 6층",
-    "tel": "031-924-9030",
-    "lat": 37.6632510158068,
-    "lon": 126.783368121919
-  },
-  {
-    "region": "강원",
-    "name": "강원금연지원센터",
-    "add": "강원도 원주시 일산로29 4층",
-    "tel": "033-746-9030",
-    "lat": 37.3484817376412,
-    "lon": 127.947812299444
-  },
-  {
-    "region": "충북",
-    "name": "충북금연지원센터",
-    "add": "충청북도 청주시 서원구 충대로 1 (개신동) 충북대학교 자연대 3호관(S1-3) 105호",
-    "tel": "043-278-9030",
-    "lat": 36.6266446456238,
-    "lon": 127.456480320002
-  },
-  {
-    "region": "충남",
-    "name": "충남금연지원센터",
-    "add": "충청남도 천안시 동남구 순천향6길 31 순천향의과대학 학술관 519호",
-    "tel": "041-577-9030",
-    "lat": 36.8027298563385,
-    "lon": 127.134624042461
-  },
-  {
-    "region": "전북",
-    "name": "전북금연지원센터",
-    "add": "전라북도 익산시 익산대로 460 전북금연지원센터",
-    "tel": "1833-9030",
-    "lat": 35.9657497132496,
-    "lon": 126.955500204528
-  },
-  {
-    "region": "전남",
-    "name": "전남금연지원센터",
-    "add": "전라남도 화순군 화순읍 서양로 322 화순전남대학교병원 광주전남지역암센터 1층",
-    "tel": "061-372-9030",
-    "lat": 35.0586032771309,
-    "lon": 127.003231639839
-  },
-  {
-    "region": "경북",
-    "name": "경북금연지원센터",
-    "add": "경상북도 안동시 태사2길 55 안동의료원 5층",
-    "tel": "080-888-9030",
-    "lat": 36.5682477648293,
-    "lon": 128.732093677038
-  },
-  {
-    "region": "경남",
-    "name": "경남금연지원센터",
-    "add": "경상남도 진주시 진주대로816번길 20 (주약동) 2층 경남금연지원센터",
-    "tel": "055-759-9030",
-    "lat": 35.17713706497,
-    "lon": 128.095387407123
-  },
-  {
-    "region": "제주",
-    "name": "제주금연지원센터",
-    "add": "제주특별자치도 제주시 서광로175 아세아빌딩 5층",
-    "tel": "064-758-9030",
-    "lat": 33.4613288300025,
-    "lon": 126.533239912257
+// ----------module----------
+const express = require("express");
+const app = express();
+const ejs = require("ejs");
+const fs = require("fs");
+
+// ----------port----------
+const port = 3001;
+
+// ----------ejs----------
+app.set("view engine", "ejs");
+
+// ----------post----------
+app.use(express.static("public"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// ----------userdata----------
+const readFile = fs.readFileSync("userData.json", "utf-8");
+const jsonData = JSON.parse(readFile);
+let userArr = [];
+userArr = [...jsonData];
+
+// ----------knowledge104----------
+let knowledge104 = [];
+const knowledgeFile = fs.readFileSync("knowledgeData.json", "utf-8");
+const jsonKnowData = JSON.parse(knowledgeFile);
+knowledge104 = [...jsonKnowData];
+
+// ----------stage----------
+let stage = [];
+const stageFile = fs.readFileSync("stageData.json", "utf-8");
+const jsonStageData = JSON.parse(stageFile);
+stage = [...jsonStageData];
+
+// ----------clinic----------
+let clinic = [];
+const clinicFile = fs.readFileSync("clinicData.json", "utf-8");
+const jsonClinicData = JSON.parse(clinicFile);
+clinic = [...jsonClinicData];
+
+// ----------achieveDB----------
+let achievedbArr = [];
+const achievedbFile = fs.readFileSync("achieveDB.json", "utf-8");
+const achievedbData = JSON.parse(achievedbFile);
+achievedbArr = [...achievedbData];
+
+// ----------achieveDBv2----------
+let test = [];
+const testJson = fs.readFileSync("achieveDBv2.json", "utf-8");
+const testData = JSON.parse(testJson);
+test = [...testData];
+
+// ----------calendar memo----------
+const memoreadFile = fs.readFileSync("./public/json/memo.json", "utf-8");
+const memojsonData = JSON.parse(memoreadFile);
+let memoArr = [];
+memoArr = [...memojsonData];
+
+// ----------chatting----------
+let chattingdbArr = [];
+const chattingdbFile = fs.readFileSync("chattingDB.json", "utf-8");
+const chattingdbData = JSON.parse(chattingdbFile);
+chattingdbArr = [...chattingdbData];
+
+// ----------splash----------
+app.get("/", function (req, res) {
+  res.render("pages/index.ejs", { userArr });
+});
+
+// ----------UserName----------
+app.get("/UserName", (req, res) => {
+  res.render("pages/userName.ejs");
+});
+// ----------InpuUserNameData----------
+app.post("/UserNameData", (req, res) => {
+  userArr[0].userName = req.body.userName;
+  userArr[0].id = 0;
+
+  // id 중복 제거
+  const filterArr = userArr.reduce((acc, current) => {
+    const x = acc.find((item) => item.id === current.id);
+    if (!x) {
+      return acc.concat([current]);
+    } else {
+      return acc;
+    }
+  }, []);
+
+  userArr = filterArr;
+
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/noMoreInfo");
+});
+
+// ----------StartDate----------
+app.get("/StartDate", (req, res) => {
+  res.render("pages/startDate.ejs");
+});
+// ----------StartDate 입력----------
+app.post("/StartDateData", (req, res) => {
+  // 월,일 입력값이 0보다 작으면 0 추가
+  if (req.body.StartMonth < 10) {
+    req.body.StartMonth = "0" + req.body.StartMonth;
   }
-]
+  if (req.body.StartDay < 10) {
+    req.body.StartDay = "0" + req.body.StartDay;
+  }
+  if (req.body.StartHour < 10) {
+    req.body.StartHour = "0" + req.body.StartHour;
+  }
+  if (req.body.StartMinute < 10) {
+    req.body.StartMinute = "0" + req.body.StartMinute;
+  }
+  // 배열에 데이터 추가
+  userArr[0].StartYear = req.body.StartYear;
+  userArr[0].StartMonth = req.body.StartMonth;
+  userArr[0].StartDay = req.body.StartDay;
+  userArr[0].StartHour = req.body.StartHour;
+  userArr[0].StartMinute = req.body.StartMinute;
+  // 데이터 업데이트
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/EndDate");
+});
+
+// ----------EndDate----------
+app.get("/EndDate", (req, res) => {
+  res.render("pages/endDate.ejs");
+});
+// ----------EndDate 입력----------
+app.post("/EndDateData", (req, res) => {
+  // 월,일 입력값이 0보다 작으면 0 추가
+  if (req.body.EndMonth < 10) {
+    req.body.EndMonth = "0" + req.body.EndMonth;
+  }
+  if (req.body.EndDay < 10) {
+    req.body.EndDay = "0" + req.body.EndDay;
+  }
+  if (req.body.EndHour < 10) {
+    req.body.EndHour = "0" + req.body.EndHour;
+  }
+  if (req.body.EndMinute < 10) {
+    req.body.EndMinute = "0" + req.body.EndMinute;
+  }
+  // 배열에 데이터 추가
+  userArr[0].EndYear = req.body.EndYear;
+  userArr[0].EndMonth = req.body.EndMonth;
+  userArr[0].EndDay = req.body.EndDay;
+  userArr[0].EndHour = req.body.EndHour;
+  userArr[0].EndMinute = req.body.EndMinute;
+  // 데이터 업데이트
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/CountPerDay");
+});
+
+// ----------CountPerDay----------
+app.get("/CountPerDay", (req, res) => {
+  res.render("pages/countPerDay.ejs");
+});
+// ----------CountPerDay 입력----------
+app.post("/CountPerDayData", (req, res) => {
+  // 배열에 데이터 추가
+  userArr[0].CountPerDay = req.body.CountPerDay;
+  // 데이터 업데이트
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/Price");
+});
+
+// ----------Price----------
+app.get("/Price", (req, res) => {
+  res.render("pages/price.ejs");
+});
+// ----------Price 입력----------
+app.post("/PriceData", (req, res) => {
+  // 배열에 데이터 추가
+  userArr[0].Price = req.body.Price;
+  // 데이터 업데이트
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/BrithDay");
+});
+
+// ----------BrithDay----------
+app.get("/BrithDay", (req, res) => {
+  res.render("pages/brithDay.ejs");
+});
+// ----------BrithDay 입력----------
+app.post("/BrithDayData", (req, res) => {
+  // 월,일 입력값이 0보다 작으면 0 추가
+  if (req.body.BrithDayMonth < 10) {
+    req.body.BrithDayMonth = "0" + req.body.BrithDayMonth;
+  }
+  if (req.body.BrithDayDay < 10) {
+    req.body.BrithDayDay = "0" + req.body.BrithDayDay;
+  }
+  // 배열에 데이터 추가
+  userArr[0].BrithDayYear = req.body.BrithDayYear;
+  userArr[0].BrithDayMonth = req.body.BrithDayMonth;
+  userArr[0].BrithDayDay = req.body.BrithDayDay;
+  // 데이터 업데이트
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/Main");
+});
+
+// ----------main----------
+// 사용자 정보를 모두 입력했을 때 보여줄 페이지
+app.get("/main", (req, res) => {
+  // 현재시간
+  const now = new Date();
+  let nowY = now.getFullYear();
+  let nowM = now.getMonth() + 1;
+  let nowD = now.getDate();
+  // 월,일 0보다 작으면 0추가
+  if (nowM < 10) {
+    nowM = "0" + nowM;
+  }
+  if (nowD < 10) {
+    nowD = "0" + nowD;
+  }
+  // 시작시간
+  const start = new Date(
+    userArr[0].EndYear,
+    userArr[0].EndMonth - 1,
+    userArr[0].EndDay,
+    userArr[0].EndHour,
+    userArr[0].EndMinute
+  );
+  // 지난시간(분)
+  const pass = Math.floor((now - start) / (1000 * 60));
+
+  // 현재 단계 구하기
+  let stageCount = stage
+    .map((e) => e.min <= pass)
+    .filter((e) => e == true).length;
+
+  // 업적 데이터 불러오기
+  // 업적 달성을위한 가격
+  const testPrice = test[0].Price;
+  // 업적 달성을위한 날짜
+  const testDay = test[1].Day;
+  // 업적 달성을위한 담배 개수
+  const testCount = test[2].Count;
+
+  // 금연 진행 날짜
+  const day = parseInt((now - start) / (60 * 60 * 24 * 1000));
+
+  // 각 조건condition에 맞는 데이터 불러오기
+  let testPriceArr = testPrice.filter(
+    (e) => e.condition <= day * userArr[0].Price
+  );
+  let testDayArr = testDay.filter((e) => e.condition <= day);
+  let testCountArr = testCount.filter(
+    (e) => e.condition <= day * userArr[0].CountPerDay
+  );
+
+  // 조건 달성하면 달성 날짜 추가하기
+  if (testPriceArr.at(-1).date == undefined) {
+    testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  }
+  if (testDayArr.at(-1).date == undefined) {
+    testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  }
+  if (testCountArr.at(-1).date == undefined) {
+    testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  }
+
+  // 업적 총 개수 구하기
+  let allLength = testPrice.length + testDay.length + testCount.length;
+  // 업적 달성 개수 구하기
+  let totalLength =
+    testPriceArr.length + testDayArr.length + testCountArr.length;
+
+  res.render("pages/main.ejs", {
+    userArr,
+    knowledge104,
+    achievedbArr,
+    stage,
+    pass,
+    stageCount,
+    totalLength,
+    allLength,
+    testPriceArr,
+    testDayArr,
+    testCountArr,
+  });
+});
+
+// ----------NoMoreInfo----------
+// 사용자 정보를 이름만 입력했을 때 보여줄 페이지
+app.get("/NoMoreInfo", (req, res) => {
+  res.render("pages/noMoreInfo.ejs", { userArr, knowledge104 });
+});
+
+// ----------stage----------
+app.get("/stage", function (req, res) {
+  // 현재시간
+  const now = new Date().getTime();
+  // 시작시간
+  const start = new Date(
+    userArr[0].EndYear,
+    userArr[0].EndMonth - 1,
+    userArr[0].EndDay,
+    userArr[0].EndHour,
+    userArr[0].EndMinute
+  ).getTime();
+  // 지난시간(분)
+  const pass = Math.floor((now - start) / (1000 * 60));
+
+  // 현재 단계 구하기
+  let stageCount = stage
+    .map((e) => {
+      return e.min <= pass;
+    })
+    .filter((e) => e == true).length;
+
+  res.render("pages/stage.ejs", { stage, pass, stageCount });
+});
+
+// --------------------knowledge--------------------
+app.get("/knowledge", function (req, res) {
+  res.render("pages/knowledge.ejs", { knowledge104 });
+});
+
+// ----------symptom (금단증상) 페이지----------
+app.get("/symptom", function (req, res) {
+  res.render("pages/symptom.ejs");
+});
+
+// ----------achievement (업적) 페이지----------
+app.get("/achievement", function (req, res) {
+  // 현재 시간 구하기
+  const now = new Date();
+  let nowY = now.getFullYear();
+  let nowM = now.getMonth() + 1;
+  let nowD = now.getDate();
+
+  // 월,일이 0보다 작으면 0추가하기
+  if (nowM < 10) {
+    nowM = "0" + nowM;
+  }
+  if (nowD < 10) {
+    nowD = "0" + nowD;
+  }
+
+  // 금연 시작 시간 날짜
+  const start = new Date(
+    userArr[0].EndYear,
+    userArr[0].EndMonth - 1,
+    userArr[0].EndDay,
+    userArr[0].EndHour,
+    userArr[0].EndMinute
+  );
+  // 업적 조건 데이터 불러오기
+  const testPrice = test[0].Price;
+  const testDay = test[1].Day;
+  const testCount = test[2].Count;
+  // 금연 진행 날짜
+  const day = parseInt((now - start) / (60 * 60 * 24 * 1000));
+
+  let testPriceArr = testPrice.filter((e) => {
+    return e.condition <= day * userArr[0].Price;
+  });
+  let testDayArr = testDay.filter((e) => {
+    return e.condition <= day;
+  });
+  let testCountArr = testCount.filter((e) => {
+    return e.condition <= day * userArr[0].CountPerDay;
+  });
+
+  if (testPriceArr.at(-1).date == undefined) {
+    testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  }
+  if (testDayArr.at(-1).date == undefined) {
+    testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  }
+  if (testCountArr.at(-1).date == undefined) {
+    testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  }
+
+  let allLength = testPrice.length + testDay.length + testCount.length;
+  let totalLength =
+    testPriceArr.length + testDayArr.length + testCountArr.length;
+
+  fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
+  res.render("pages/achievement.ejs", {
+    test,
+    totalLength,
+    achievedbArr,
+    userArr,
+    allLength,
+  });
+});
+
+// ----------userinfo----------
+app.get("/userinfo", async function (req, res) {
+  res.render("pages/userinfo.ejs", { userArr });
+});
+app.get("/title", function (req, res) {
+  res.render("pages/title.ejs");
+});
+// ----------setting----------
+app.get("/setting", function (req, res) {
+  res.render("pages/setting.ejs");
+});
+
+// ----------데이터 reset----------
+// ----------달력 정보 초기화----------
+app.post("/memoReset", (req, res) => {
+  memoArr = [];
+  fs.writeFileSync("./public/json/memo.json", JSON.stringify(memoArr));
+  res.redirect("/");
+});
+// ----------사용자 정보 초기화----------
+app.post("/userReset", (req, res) => {
+  userArr = [{}];
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/");
+});
+// ----------전체 정보 초기화----------
+app.post("/allReset", (req, res) => {
+  userArr = [{}];
+  memoArr = [];
+  fs.writeFileSync("./public/json/memo.json", JSON.stringify(memoArr));
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/");
+});
+// ----------사용자 정보 수정----------
+app.post("/delete", function (req, res) {
+  const newData = {
+    userName: req.body.userName,
+    BrithDayYear: req.body.BrithDayYear,
+    BrithDayMonth: req.body.BrithDayMonth,
+    BrithDayDay: req.body.BrithDayDay,
+    Price: req.body.Price,
+    CountPerDay: req.body.CountPerDay,
+    StartYear: req.body.StartYear,
+    StartMonth: req.body.StartMonth,
+    StartDay: req.body.StartDay,
+    StartHour: req.body.StartHour,
+    StartMinute: req.body.StartMinute,
+    EndYear: req.body.EndYear,
+    EndMonth: req.body.EndMonth,
+    EndDay: req.body.EndDay,
+    EndHour: req.body.EndHour,
+    EndMinute: req.body.EndMinute,
+    img: req.body.img,
+  };
+  userArr.splice(0, 1, newData);
+  fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  res.redirect("/userinfo");
+});
+
+// ****업적 test*****
+app.get("/test", function (req, res) {
+  const now = new Date();
+  let nowY = now.getFullYear();
+  let nowM = now.getMonth() + 1;
+  let nowD = now.getDate();
+
+  if (nowM < 10) {
+    nowM = "0" + nowM;
+  }
+  if (nowD < 10) {
+    nowD = "0" + nowD;
+  }
+
+  const start = new Date(
+    userArr[0].EndYear,
+    userArr[0].EndMonth - 1,
+    userArr[0].EndDay,
+    userArr[0].EndHour,
+    userArr[0].EndMinute
+  );
+  const testPrice = test[0].Price;
+  const testDay = test[1].Day;
+  const testCount = test[2].Count;
+  const day = parseInt((now - start) / (60 * 60 * 24 * 1000));
+
+  let testPriceArr = testPrice.filter((e) => {
+    return e.condition <= day * userArr[0].Price;
+  });
+  let testDayArr = testDay.filter((e) => {
+    return e.condition <= day;
+  });
+  let testCountArr = testCount.filter((e) => {
+    return e.condition <= day * userArr[0].CountPerDay;
+  });
+
+  if (testPriceArr.at(-1).date == undefined) {
+    testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  }
+  if (testDayArr.at(-1).date == undefined) {
+    testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  }
+  if (testCountArr.at(-1).date == undefined) {
+    testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  }
+
+  let totalLength =
+    testPriceArr.length + testDayArr.length + testCountArr.length;
+
+  fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
+  res.render("pages/test.ejs", { test, totalLength });
+});
+
+// ----------calendar----------
+app.get("/calendar", function (req, res) {
+  res.render("pages/calendar.ejs", { memoArr });
+});
+// ----------create----------
+// 달력 정보 추가
+app.post("/create", function (req, res) {
+  // 달력 객체 만들기
+  let data = {};
+  // 달력 객체 프로퍼티 키 만들기
+  let dateData = req.body.date;
+  dateData = "D" + dateData.split("-").join("");
+  // 달력 객체 안의 정보 배열 만들기
+  data[`${dateData}`] = [
+    {
+      감정: req.body.감정,
+      욕구: req.body.욕구,
+      제목: req.body.제목,
+      내용: req.body.내용,
+      날짜: req.body.date,
+    },
+  ];
+  // 달력 정보 추가
+  memoArr.push(data);
+
+  // 달력 정보 업데이트
+  fs.writeFileSync("./public/json/memo.json", JSON.stringify(memoArr));
+  res.redirect("/calendar");
+});
+
+// ----------community 이동 페이지----------
+app.get("/community", (req, res) => {
+  res.render("pages/community.ejs");
+});
+
+// ----------chatting (채팅) 페이지----------
+app.get("/chatting", function (req, res) {
+  res.render("pages/chatting.ejs", { chattingdbArr });
+});
+// ----------chatting (채팅) create----------
+app.post("/chattingcreate", function (req, res) {
+  const text = req.body.text;
+  const date = req.body.date;
+
+  chattingdbArr.push({ 내용: text, 날짜: date });
+  fs.writeFileSync("chattingDB.json", JSON.stringify(chattingdbArr));
+  res.redirect("/chatting");
+});
+
+// ----------clinic----------
+app.get("/clinic", function (req, res) {
+  let name = userArr[0].userName;
+  res.render("pages/clinic.ejs", { name });
+});
+
+// ----------listen----------
+// 서버 열기
+app.listen(port, () => {
+  console.log(`server running at ${port}`);
+});
