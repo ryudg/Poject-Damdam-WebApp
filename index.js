@@ -64,7 +64,7 @@ const chattingdbData = JSON.parse(chattingdbFile);
 chattingdbArr = [...chattingdbData];
 
 // ----------splash----------
-app.get("/", async function (req, res) {
+app.get("/", function (req, res) {
   res.render("pages/index.ejs", { userArr });
 });
 
