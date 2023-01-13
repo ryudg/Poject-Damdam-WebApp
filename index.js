@@ -70,7 +70,7 @@ app.get("/", function (req, res) {
 
 // ----------UserName----------
 app.get("/UserName", (req, res) => {
-  res.render("pages/UserName.ejs");
+  res.render("pages/userName.ejs");
 });
 // ----------InpuUserNameData----------
 app.post("/UserNameData", (req, res) => {
@@ -90,12 +90,12 @@ app.post("/UserNameData", (req, res) => {
   userArr = filterArr;
 
   fs.writeFileSync("userData.json", JSON.stringify(userArr));
-  res.redirect("/NoMoreInfo");
+  res.redirect("/noMoreInfo");
 });
 
 // ----------StartDate----------
 app.get("/StartDate", (req, res) => {
-  res.render("pages/StartDate.ejs");
+  res.render("pages/startDate.ejs");
 });
 // ----------StartDate 입력----------
 app.post("/StartDateData", (req, res) => {
@@ -125,7 +125,7 @@ app.post("/StartDateData", (req, res) => {
 
 // ----------EndDate----------
 app.get("/EndDate", (req, res) => {
-  res.render("pages/EndDate.ejs");
+  res.render("pages/endDate.ejs");
 });
 // ----------EndDate 입력----------
 app.post("/EndDateData", (req, res) => {
@@ -155,7 +155,7 @@ app.post("/EndDateData", (req, res) => {
 
 // ----------CountPerDay----------
 app.get("/CountPerDay", (req, res) => {
-  res.render("pages/CountPerDay.ejs");
+  res.render("pages/countPerDay.ejs");
 });
 // ----------CountPerDay 입력----------
 app.post("/CountPerDayData", (req, res) => {
@@ -168,7 +168,7 @@ app.post("/CountPerDayData", (req, res) => {
 
 // ----------Price----------
 app.get("/Price", (req, res) => {
-  res.render("pages/Price.ejs");
+  res.render("pages/price.ejs");
 });
 // ----------Price 입력----------
 app.post("/PriceData", (req, res) => {
@@ -181,7 +181,7 @@ app.post("/PriceData", (req, res) => {
 
 // ----------BrithDay----------
 app.get("/BrithDay", (req, res) => {
-  res.render("pages/BrithDay.ejs");
+  res.render("pages/brithDay.ejs");
 });
 // ----------BrithDay 입력----------
 app.post("/BrithDayData", (req, res) => {
@@ -287,7 +287,7 @@ app.get("/main", (req, res) => {
 // ----------NoMoreInfo----------
 // 사용자 정보를 이름만 입력했을 때 보여줄 페이지
 app.get("/NoMoreInfo", (req, res) => {
-  res.render("pages/NoMoreInfo.ejs", { userArr, knowledge104 });
+  res.render("pages/noMoreInfo.ejs", { userArr, knowledge104 });
 });
 
 // ----------stage----------
