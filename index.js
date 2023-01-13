@@ -253,14 +253,20 @@ app.get("/main", (req, res) => {
   );
 
   // 조건 달성하면 달성 날짜 추가하기
-  if (testPriceArr.at(-1).date == undefined) {
-    testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+   if (testPriceArr.length > 0) {
+    if (testPriceArr.at(-1).date == undefined) {
+      testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+    }
   }
-  if (testDayArr.at(-1).date == undefined) {
-    testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  if (testDayArr.length > 0) {
+    if (testDayArr.at(-1).date == undefined) {
+      testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+    }
   }
-  if (testCountArr.at(-1).date == undefined) {
-    testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  if (testCountArr.length > 0) {
+    if (testCountArr.at(-1).date == undefined) {
+      testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+    }
   }
 
   // 업적 총 개수 구하기
@@ -366,14 +372,20 @@ app.get("/achievement", function (req, res) {
     return e.condition <= day * userArr[0].CountPerDay;
   });
 
-  if (testPriceArr.at(-1).date == undefined) {
-    testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+   if (testPriceArr.length > 0) {
+    if (testPriceArr.at(-1).date == undefined) {
+      testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+    }
   }
-  if (testDayArr.at(-1).date == undefined) {
-    testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  if (testDayArr.length > 0) {
+    if (testDayArr.at(-1).date == undefined) {
+      testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+    }
   }
-  if (testCountArr.at(-1).date == undefined) {
-    testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+  if (testCountArr.length > 0) {
+    if (testCountArr.at(-1).date == undefined) {
+      testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+    }
   }
 
   let allLength = testPrice.length + testDay.length + testCount.length;
