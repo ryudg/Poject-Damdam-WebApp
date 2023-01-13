@@ -26,21 +26,21 @@
     <div class="splash">담담</div>
 
     <script>
-      setTimeout(() => {
-        let link = "/main";
-        let link2 = "/noMoreInfo";
-        let link3 = "/userName";
+      let link = "/main";
+      let link2 = "/noMoreInfo";
+      let link3 = "/userName";
 
-        let userName = "<%= userArr[0].userName %>";
-        let StartYear = "<%= userArr[0].StartYear %>";
-        if (userName == false) {
-          location.href = link3;
-        } else if (StartYear.length == 0 && userName.length >= 1) {
-          location.href = link2;
-        } else {
-          location.href = link;
-        }
-      }, 2000);
+      let userName = "<%= userArr[0].userName %>";
+      let StartYear = "<%= userArr[0].StartYear %>";
+      console.log(userName);
+
+      if (userName == false) {
+        location.href = link3;
+      } else if (StartYear == false) {
+        location.href = link2;
+      } else {
+        location.href = link;
+      }
     </script>
   </body>
 </html>
