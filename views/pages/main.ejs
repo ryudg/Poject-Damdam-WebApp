@@ -46,13 +46,14 @@
           <div class="main-timer-day">
             <% let startDate = new
             Date(userArr[0].EndYear,userArr[0].EndMonth-1,userArr[0].EndDay,userArr[0].EndHour,userArr[0].EndMinute);
-            %> <% let nowDate = new Date; let currDay = 24 * 60 * 60 * 1000; let
-            diff = nowDate - startDate; let day = parseInt(diff/currDay) ; %>
+            %> <% let nowDate = new Date; let korea = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),nowDate.getHours()+9,nowDate.getMinutes()); let currDay = 24 * 60 * 60 * 1000; let
+            diff = korea - startDate; let day = parseInt(diff/currDay) ; %>
             <%= day %>일
           </div>
+
           <div class="main-timer-clock">
             <div class="main-timer-hour">
-              <% let hour = parseInt(diff/(1000 * 60 * 60)) + 9; let upH = hour -
+              <% let hour = parseInt(diff/(1000 * 60 * 60)); let upH = hour -
               day*24; if(upH <10) {upH = ""+upH} %> <%= upH %>시간
             </div>
             <div class="main-timer-minute">
@@ -271,6 +272,7 @@
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"
       crossorigin="anonymous"
-    ></script>
+    >
+    </script>
   </body>
 </html>
