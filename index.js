@@ -101,16 +101,16 @@ app.get("/StartDate", (req, res) => {
 app.post("/StartDateData", (req, res) => {
   // 월,일 입력값이 0보다 작으면 0 추가
   if (req.body.StartMonth < 10) {
-    req.body.StartMonth = "0" + req.body.StartMonth;
+    req.body.StartMonth = "" + req.body.StartMonth;
   }
   if (req.body.StartDay < 10) {
-    req.body.StartDay = "0" + req.body.StartDay;
+    req.body.StartDay = "" + req.body.StartDay;
   }
   if (req.body.StartHour < 10) {
-    req.body.StartHour = "0" + req.body.StartHour;
+    req.body.StartHour = "" + req.body.StartHour;
   }
   if (req.body.StartMinute < 10) {
-    req.body.StartMinute = "0" + req.body.StartMinute;
+    req.body.StartMinute = "" + req.body.StartMinute;
   }
   // 배열에 데이터 추가
   userArr[0].StartYear = req.body.StartYear;
@@ -131,16 +131,16 @@ app.get("/EndDate", (req, res) => {
 app.post("/EndDateData", (req, res) => {
   // 월,일 입력값이 0보다 작으면 0 추가
   if (req.body.EndMonth < 10) {
-    req.body.EndMonth = "0" + req.body.EndMonth;
+    req.body.EndMonth = "" + req.body.EndMonth;
   }
   if (req.body.EndDay < 10) {
-    req.body.EndDay = "0" + req.body.EndDay;
+    req.body.EndDay = "" + req.body.EndDay;
   }
   if (req.body.EndHour < 10) {
-    req.body.EndHour = "0" + req.body.EndHour;
+    req.body.EndHour = "" + req.body.EndHour;
   }
   if (req.body.EndMinute < 10) {
-    req.body.EndMinute = "0" + req.body.EndMinute;
+    req.body.EndMinute = "" + req.body.EndMinute;
   }
   // 배열에 데이터 추가
   userArr[0].EndYear = req.body.EndYear;
@@ -187,10 +187,10 @@ app.get("/BrithDay", (req, res) => {
 app.post("/BrithDayData", (req, res) => {
   // 월,일 입력값이 0보다 작으면 0 추가
   if (req.body.BrithDayMonth < 10) {
-    req.body.BrithDayMonth = "0" + req.body.BrithDayMonth;
+    req.body.BrithDayMonth = "" + req.body.BrithDayMonth;
   }
   if (req.body.BrithDayDay < 10) {
-    req.body.BrithDayDay = "0" + req.body.BrithDayDay;
+    req.body.BrithDayDay = "" + req.body.BrithDayDay;
   }
   // 배열에 데이터 추가
   userArr[0].BrithDayYear = req.body.BrithDayYear;
@@ -253,7 +253,7 @@ app.get("/main", (req, res) => {
   );
 
   // 조건 달성하면 달성 날짜 추가하기
-   if (testPriceArr.length > 0) {
+  if (testPriceArr.length > 0) {
     if (testPriceArr.at(-1).date == undefined) {
       testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
     }
@@ -372,19 +372,25 @@ app.get("/achievement", function (req, res) {
     return e.condition <= day * userArr[0].CountPerDay;
   });
 
-   if (testPriceArr.length > 0) {
+  if (testPriceArr.length > 0) {
     if (testPriceArr.at(-1).date == undefined) {
-      testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+      testPriceArr.forEach((e) => {
+        e.date = `${nowY}-${nowM}-${nowD}`;
+      });
     }
   }
   if (testDayArr.length > 0) {
     if (testDayArr.at(-1).date == undefined) {
-      testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+      testDayArr.forEach((e) => {
+        e.date = `${nowY}-${nowM}-${nowD}`;
+      });
     }
   }
   if (testCountArr.length > 0) {
     if (testCountArr.at(-1).date == undefined) {
-      testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+      testCountArr.forEach((e) => {
+        e.date = `${nowY}-${nowM}-${nowD}`;
+      });
     }
   }
 
@@ -424,15 +430,37 @@ app.post("/memoReset", (req, res) => {
 // ----------사용자 정보 초기화----------
 app.post("/userReset", (req, res) => {
   userArr = [{}];
+  // 업적 달성 날짜 초기화
+  test[0].Price.forEach((e) => {
+    e.date = undefined;
+  });
+  test[1].Day.forEach((e) => {
+    e.date = undefined;
+  });
+  test[2].Count.forEach((e) => {
+    e.date = undefined;
+  });
   fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
   res.redirect("/");
 });
 // ----------전체 정보 초기화----------
 app.post("/allReset", (req, res) => {
   userArr = [{}];
   memoArr = [];
+  // 업적 달성 날짜 초기화
+  test[0].Price.forEach((e) => {
+    e.date = undefined;
+  });
+  test[1].Day.forEach((e) => {
+    e.date = undefined;
+  });
+  test[2].Count.forEach((e) => {
+    e.date = undefined;
+  });
   fs.writeFileSync("./public/json/memo.json", JSON.stringify(memoArr));
   fs.writeFileSync("userData.json", JSON.stringify(userArr));
+  fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
   res.redirect("/");
 });
 // ----------사용자 정보 수정----------
