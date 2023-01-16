@@ -52,12 +52,12 @@
           </div>
           <div class="main-timer-clock">
             <div class="main-timer-hour">
-              <% let hour = parseInt(diff/(1000 * 60 * 60)); let upH = hour -
-              day*24; if(upH <10) {upH = "0"+upH} %> <%= upH %>시간
+              <% let hour = parseInt(diff/(1000 * 60 * 60)) - 9; let upH = hour -
+              day*24; if(upH <10) {upH = ""+upH} %> <%= upH %>시간
             </div>
             <div class="main-timer-minute">
               <% let minute = parseInt(diff/(1000 * 60)) %> <% let upM = minute
-              - day*24*60 - (hour - day*24)*60; if(upM <10){upM = "0" + upM} %>
+              - day*24*60 - (hour - day*24)*60; if(upM <10){upM = "" + upM} %>
               <%= upM %>분
             </div>
           </div>
