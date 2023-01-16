@@ -174,8 +174,12 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+#main .result .result-contents .overcome-content {
+  width: 100%;
+}
 #main .result .result-contents .overcome-content a {
-  gap: 80px;
+  display: flex;
+  justify-content: space-between;
 }
 #main .result .result-contents .overcome-content span {
   display: flex;
