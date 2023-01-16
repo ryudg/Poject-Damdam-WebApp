@@ -27,9 +27,9 @@
 ```javascript
 //.....
 setTimeout(() => {
-  let link = "/main";
-  let link2 = "/NoMoreInfo";
-  let link3 = "/UserName";
+  let link = "/main";         // 메인 페이지
+  let link2 = "/NoMoreInfo";  // 이름 정보만 있는 페이지
+  let link3 = "/UserName";    // 이름 입력 페이지
   let userName = "<%= userArr[0].userName %>";
   let StartYear = "<%= userArr[0].StartYear %>";
   if (userName.length == 0) {
@@ -39,14 +39,19 @@ setTimeout(() => {
   } else {
     location.href = link;
   }
-}, 2000);
+}, 1000);
 //.....
 ```
-- `setTimeout()` 이용해서 2초간 구동 후 페이지 이동을 하게 되는데, <br>
+- `setTimeout()` 이용해서 1000ms간 구동 후 페이지 이동을 하게 되는데, <br>
   사용자가 처음 이용시(사용자 정보가 없으면) 이름 입력 페이지로, <br>
   이름 정보가 있다면 간단한 메인 페이지로, <br>
   사용자 정보가 모두 있다면(금연을 시작했다면) 메인페이지로 넘어감<br>
-### 2. 메인 페이지
+
+### 2. 정보 입력 페이지
+- 이름 : 어플 첫 이용시 입력
+- 흡연 시작 날짜, 금연 시작 날짜, 생일 : 업적, 금연 일자 계산 및 서비스 이용을 위한 정보 입력
+
+### 3. 메인 페이지
 - 정보 입력 버튼을 클릭 하면 정보 입력 화면으로 넘어가면서 정보 입력을 진행
-- 사용자가 입력한 정보를 바탕으로 금연 진행 날짜가 출력됨
+- 사용자가 입력한 정보를 계산 금연 진행 날짜가 출력됨
 - 
