@@ -52,7 +52,7 @@
           </div>
           <div class="main-timer-clock">
             <div class="main-timer-hour">
-              <% let hour = parseInt(diff/(1000 * 60 * 60)) - 9; let upH = hour -
+              <% let hour = parseInt(diff/(1000 * 60 * 60)) + 9; let upH = hour -
               day*24; if(upH <10) {upH = ""+upH} %> <%= upH %>시간
             </div>
             <div class="main-timer-minute">
