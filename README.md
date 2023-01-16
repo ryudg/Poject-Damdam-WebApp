@@ -36,6 +36,7 @@
 - 페이지 접속시 처음으로 보여질 화면
 ```javascript
 //.....
+// (index.ejs)
 setTimeout(() => {
   let link = "/main";         // 메인 페이지
   let link2 = "/NoMoreInfo";  // 이름 정보만 있는 페이지
@@ -64,11 +65,79 @@ setTimeout(() => {
 ### 3. 메인 페이지
 - 이름 정보만 있을 때 정보 입력 버튼을 클릭 하면 정보 입력 화면으로 넘어가면서 정보 입력을 진행
 - 사용자가 입력한 정보를 계산 금연 진행 날짜가 출력됨
-- 업적 서브페이지에서 달성 업적 데이터를 가져와 출력
+- [업적 서브페이지](#업적)에서 달성 업적 데이터를 가져와 출력
 - [금단 증상 극복 서브페이지](#금단증상)
 - 현재 변화 단계와 이전, 이후 변화 단계 출력
 - [변화단계 알아보기](#변화단계)
-- 
+- 지식 정보가 랜덤 출력 
+- [모든 지식 정보](#지식정보)
+
+### 4. 내 정보
+- 사용자가 입력한 정보가 기본값으로 출력되고 수정할 수 있음
+- 사용자가 프로필 이미지를 삽입하여 사용할 수 있음 
+- 사용한 모듈 [multer](https://www.npmjs.com/package/multer)
+```javascript
+// (index.js)
+const multer = require("multer");
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/images"); // 저장 위치
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname); // 원래 이미지명으로 저장
+  },
+});
+const upload = multer({
+  storage: storage,
+});
+```
+
+### 5. 설정
+- 사용자가 원하는 데이터(다이어리, 사용자 정보, 전체)를 삭제할 수 있음
+```javascript
+// (index.js)
+
+// 다이어리 초기화
+memoArr = [];
+fs.writeFileSync("./public/json/memo.json", JSON.stringify(memoArr));
+
+// 사용자 정보 초기화
+userArr = [{}];
+fs.writeFileSync("userData.json", JSON.stringify(userArr));
+
+// 업적 날짜 초기화
+test[0].Price.forEach((e) => {
+  e.date = undefined;
+});
+test[1].Day.forEach((e) => {
+  e.date = undefined;
+});
+test[2].Count.forEach((e) => {
+  e.date = undefined;
+});
+fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
+```
+
+### 6. 업적
+```json
+[
+  {
+    "Price": [
+      {
+        "content": "저축한 금액이 10,000원 달성",
+        "condition": 10000,
+        "img": "./images/achieve_3_color.png",
+        "date" : "2023-01-16",
+       }
+     ]
+   }
+]
+``` 
+- 업적 josn 파일에서 `condition`에 맞는 조건을 계산해서 조건과 계산값이 일치(달성)하면 `date` property value를 달성 날짜로 추가
 
 ### 7. 금단증상
+- 
+
+
 ### 8. 변화단계
+### 9. 지식정보
