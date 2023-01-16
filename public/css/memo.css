@@ -23,17 +23,15 @@ body {
 #calendar .container .title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 #calendar .container .title div:first-child {
   width: 36px;
 }
 #calendar .container .title div:last-child {
-  width: calc(100% - 18px);
-  text-align: center;
+  width: 36px;
 }
-#calendar .container .title div:last-child h1 {
-  width: 100%;
-}
+
 /* ----------title end---------- */
 
 /* ----------footer start---------- */

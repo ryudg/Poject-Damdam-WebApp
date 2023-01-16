@@ -27,11 +27,6 @@ body {
   position: relative;
 }
 
-.symp_title h1 {
-  font-size: 36px;
-  font-weight: 500;
-}
-
 .symp_left_arrow {
   width: 36px;
   height: 36px;
