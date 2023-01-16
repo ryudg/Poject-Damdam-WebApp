@@ -212,6 +212,8 @@ let stageCount = stage
 ```
 - 사용자가 위치 정보를 허용했다면 사용자 위치에서 가장 가까운 금연 클리닉 센터 정보 출력
 ```javascript
+// (clinic.ejs)
+// ...
   function panTo(lat, lon) {
     fetch("json/clinicData.json")
       .then((res) => {
@@ -247,6 +249,7 @@ let stageCount = stage
         );
       // ....
       }
+// ...
 ```
   
   
