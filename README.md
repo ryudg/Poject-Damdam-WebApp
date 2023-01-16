@@ -21,8 +21,18 @@
 - 유동균 : 메인
 - 최정호 : 내 정보, 설정
 
+## SEO 최적화
+- favicon 및 meta tag 최적화
+- 모바일 브라우저 toolbar 영역 색상 main color로 변경
+```javascript
+//...
+<meta name="theme-color" content="#1fab89" />
+//...
+```
+
 ## 페이지별 주요 기능
-### 1. Splash
+
+### 1. [Splash](https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/main)
 - 페이지 접속시 처음으로 보여질 화면
 ```javascript
 //.....
