@@ -99,6 +99,7 @@ function showCalendar() {
   let memoDate = document.querySelector(".memoDate");
 
   // 메모 작성 날짜 0보다 작으면 0 추가
+
   let addZeroM = today.getMonth() + 1;
   if (addZeroM < 10) {
     addZeroM = "0" + addZeroM;
@@ -107,7 +108,6 @@ function showCalendar() {
   if (addZeroD < 10) {
     addZeroD = "0" + addZeroD;
   }
-
   // 메모 작성 날짜 입력
   titleDate.innerHTML = `${today.getFullYear()}-${addZeroM}-${addZeroD}`;
   // 메모 작성 날짜 입력 (모달창)
@@ -179,6 +179,16 @@ function showCalendar() {
         });
     });
   });
+  // 오늘 날짜 기본 클릭 이벤트
+  let todayBox = document.getElementById(`${addZeroD}`);
+  if (
+    currentTitleYear.innerHTML == new Date().getFullYear() &&
+    currentTitleMonth.innerHTML == addZeroM
+  ) {
+    todayBox.click();
+  } else {
+    document.getElementById(1).click();
+  }
 
   // 메모 정보가 있는 날짜에 표시하기
   // memo.json 불러오기
@@ -213,15 +223,6 @@ function showCalendar() {
         }
       });
     });
-  // 오늘 날짜 기본 클릭 이벤트
-  let todayBox = document.getElementById(`${today.getDate()}`);
-  // 다음달, 이전달 버튼 누르면 기본 클릭 이벤트 삭제
-  if (
-    currentTitleYear.innerHTML == new Date().getFullYear() &&
-    currentTitleMonth.innerHTML == new Date().getMonth() + 1
-  ) {
-    todayBox.click();
-  }
 }
 // 달력 테이블 구현 함수 실행
 showCalendar();
