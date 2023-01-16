@@ -393,3 +393,6 @@ footer .calendar.active a {
 }
 
 /* ----------footer end---------- */
+#clinic button.title {
+  color: #000;
+}

@@ -416,13 +416,25 @@ footer .calendar.active a {
 }
 #community .container .content a.clinic {
   background-image: url(../images/clinic.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #community .container .content a.chatting {
   background-image: url(../images/chatting.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #community .container .content a.site1 div {
   background-image: url(../images/site1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 #community .container .content a.site2 div {
   background-image: url(../images/site2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
