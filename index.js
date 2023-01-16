@@ -33,15 +33,9 @@ const stageFile = fs.readFileSync("stageData.json", "utf-8");
 const jsonStageData = JSON.parse(stageFile);
 stage = [...jsonStageData];
 
-// ----------clinic----------
-let clinic = [];
-const clinicFile = fs.readFileSync("clinicData.json", "utf-8");
-const jsonClinicData = JSON.parse(clinicFile);
-clinic = [...jsonClinicData];
-
 // ----------achieveDB----------
 let achievedbArr = [];
-const achievedbFile = fs.readFileSync("achieveDB.json", "utf-8");
+const achievedbFile = fs.readFileSync("achieveDBv2.json", "utf-8");
 const achievedbData = JSON.parse(achievedbFile);
 achievedbArr = [...achievedbData];
 
@@ -525,58 +519,58 @@ app.post("/delete", upload.single("img"), function (req, res) {
   res.redirect("/userinfo");
 });
 
-// ****업적 test*****
-app.get("/test", function (req, res) {
-  const now = new Date();
-  let nowY = now.getFullYear();
-  let nowM = now.getMonth() + 1;
-  let nowD = now.getDate();
+// // ****업적 test*****
+// app.get("/test", function (req, res) {
+//   const now = new Date();
+//   let nowY = now.getFullYear();
+//   let nowM = now.getMonth() + 1;
+//   let nowD = now.getDate();
 
-  if (nowM < 10) {
-    nowM = "0" + nowM;
-  }
-  if (nowD < 10) {
-    nowD = "0" + nowD;
-  }
+//   if (nowM < 10) {
+//     nowM = "0" + nowM;
+//   }
+//   if (nowD < 10) {
+//     nowD = "0" + nowD;
+//   }
 
-  const start = new Date(
-    userArr[0].EndYear,
-    userArr[0].EndMonth - 1,
-    userArr[0].EndDay,
-    userArr[0].EndHour,
-    userArr[0].EndMinute
-  );
-  const testPrice = test[0].Price;
-  const testDay = test[1].Day;
-  const testCount = test[2].Count;
-  const day = parseInt((now - start) / (60 * 60 * 24 * 1000));
+//   const start = new Date(
+//     userArr[0].EndYear,
+//     userArr[0].EndMonth - 1,
+//     userArr[0].EndDay,
+//     userArr[0].EndHour,
+//     userArr[0].EndMinute
+//   );
+//   const testPrice = test[0].Price;
+//   const testDay = test[1].Day;
+//   const testCount = test[2].Count;
+//   const day = parseInt((now - start) / (60 * 60 * 24 * 1000));
 
-  let testPriceArr = testPrice.filter((e) => {
-    return e.condition <= day * userArr[0].Price;
-  });
-  let testDayArr = testDay.filter((e) => {
-    return e.condition <= day;
-  });
-  let testCountArr = testCount.filter((e) => {
-    return e.condition <= day * userArr[0].CountPerDay;
-  });
+//   let testPriceArr = testPrice.filter((e) => {
+//     return e.condition <= day * userArr[0].Price;
+//   });
+//   let testDayArr = testDay.filter((e) => {
+//     return e.condition <= day;
+//   });
+//   let testCountArr = testCount.filter((e) => {
+//     return e.condition <= day * userArr[0].CountPerDay;
+//   });
 
-  if (testPriceArr.at(-1).date == undefined) {
-    testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
-  }
-  if (testDayArr.at(-1).date == undefined) {
-    testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
-  }
-  if (testCountArr.at(-1).date == undefined) {
-    testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
-  }
+//   if (testPriceArr.at(-1).date == undefined) {
+//     testPriceArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+//   }
+//   if (testDayArr.at(-1).date == undefined) {
+//     testDayArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+//   }
+//   if (testCountArr.at(-1).date == undefined) {
+//     testCountArr.at(-1).date = `${nowY}-${nowM}-${nowD}`;
+//   }
 
-  let totalLength =
-    testPriceArr.length + testDayArr.length + testCountArr.length;
+//   let totalLength =
+//     testPriceArr.length + testDayArr.length + testCountArr.length;
 
-  fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
-  res.render("pages/test.ejs", { test, totalLength });
-});
+//   fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
+//   res.render("pages/test.ejs", { test, totalLength });
+// });
 
 // ----------calendar----------
 app.get("/calendar", function (req, res) {
