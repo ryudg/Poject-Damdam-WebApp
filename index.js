@@ -206,9 +206,17 @@ app.post("/BrithDayData", (req, res) => {
 app.get("/main", (req, res) => {
   // 현재시간
   const now = new Date();
-  let nowY = now.getFullYear();
-  let nowM = now.getMonth() + 1;
-  let nowD = now.getDate();
+  // 서버 한국 시간
+  const korea = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate(),
+    now.getHours() + 9,
+    now.getMinutes()
+  );
+  let nowY = korea.getFullYear();
+  let nowM = korea.getMonth() + 1;
+  let nowD = korea.getDate();
   // 월,일 0보다 작으면 0추가
   if (nowM < 10) {
     nowM = "0" + nowM;
@@ -225,7 +233,7 @@ app.get("/main", (req, res) => {
     userArr[0].EndMinute
   );
   // 지난시간(분)
-  const pass = Math.floor((now - start) / (1000 * 60));
+  const pass = Math.floor((korea - start) / (1000 * 60));
 
   // 현재 단계 구하기
   let stageCount = stage
@@ -241,7 +249,7 @@ app.get("/main", (req, res) => {
   const testCount = test[2].Count;
 
   // 금연 진행 날짜
-  const day = parseInt((now - start) / (60 * 60 * 24 * 1000));
+  const day = parseInt((korea - start) / (60 * 60 * 24 * 1000));
 
   // 각 조건condition에 맞는 데이터 불러오기
   let testPriceArr = testPrice.filter(
@@ -300,6 +308,7 @@ app.get("/NoMoreInfo", (req, res) => {
 app.get("/stage", function (req, res) {
   // 현재시간
   const now = new Date().getTime();
+
   // 시작시간
   const start = new Date(
     userArr[0].EndYear,
@@ -309,8 +318,8 @@ app.get("/stage", function (req, res) {
     userArr[0].EndMinute
   ).getTime();
   // 지난시간(분)
-  const pass = Math.floor((now - start) / (1000 * 60));
-
+  let pass = Math.floor((now - start) / (1000 * 60));
+  pass += 9 * 60;
   // 현재 단계 구하기
   let stageCount = stage
     .map((e) => {
@@ -335,9 +344,17 @@ app.get("/symptom", function (req, res) {
 app.get("/achievement", function (req, res) {
   // 현재 시간 구하기
   const now = new Date();
-  let nowY = now.getFullYear();
-  let nowM = now.getMonth() + 1;
-  let nowD = now.getDate();
+  // 서버 한국 시간
+  const korea = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate(),
+    now.getHours() + 9,
+    now.getMinutes()
+  );
+  let nowY = korea.getFullYear();
+  let nowM = korea.getMonth() + 1;
+  let nowD = korea.getDate();
 
   // 월,일이 0보다 작으면 0추가하기
   if (nowM < 10) {
@@ -360,7 +377,7 @@ app.get("/achievement", function (req, res) {
   const testDay = test[1].Day;
   const testCount = test[2].Count;
   // 금연 진행 날짜
-  const day = parseInt((now - start) / (60 * 60 * 24 * 1000));
+  const day = parseInt((korea - start) / (60 * 60 * 24 * 1000));
 
   let testPriceArr = testPrice.filter((e) => {
     return e.condition <= day * userArr[0].Price;
