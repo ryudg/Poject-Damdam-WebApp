@@ -31,6 +31,8 @@
 ```
 
 ## 페이지별 주요 기능
+<details>
+    <summary>페이지 주요 기능 </summary>
 
 ### 1. Splash
 - 페이지 접속시 처음으로 보여질 화면
@@ -57,10 +59,12 @@ setTimeout(() => {
   사용자가 처음 이용시(사용자 정보가 없으면) 이름 입력 페이지로, <br>
   이름 정보가 있다면 간단한 메인 페이지로, <br>
   사용자 정보가 모두 있다면(금연을 시작했다면) 메인페이지로 넘어감<br>
+  
 
 ### 2. 정보 입력 페이지
 - 이름 : 어플 첫 이용시 입력
 - 흡연 시작 날짜, 금연 시작 날짜, 흡연량, 담배 가격, 생일: 업적, 금연 일자 계산 및 서비스 이용을 위한 정보 입력
+
 
 ### 3. 메인 페이지
 - 이름 정보만 있을 때 정보 입력 버튼을 클릭 하면 정보 입력 화면으로 넘어가면서 정보 입력을 진행
@@ -136,8 +140,81 @@ fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
 - 업적 josn 파일에서 `condition`에 맞는 조건을 계산해서 조건과 계산값이 일치(달성)하면 `date` property value를 달성 날짜로 추가
 
 ### 7. 금단증상
-- 
-
+- 사용자가 느끼는 금단 증상을 클릭하면 상세 증상과 대처 방법 출력
 
 ### 8. 변화단계
+- 1단계 ~ 20단계까지 사용자의 금단 진행 상황에 따라 단계별로 체크
+```javacript
+// (index.js)
+// ...
+// 현재시간
+const now = new Date().getTime();
+
+  // 금연 시작 시간
+const start = new Date(
+  userArr[0].EndYear,
+  userArr[0].EndMonth - 1,
+  userArr[0].EndDay,
+  userArr[0].EndHour,
+  userArr[0].EndMinute
+).getTime();
+
+// 진행 시간(분)
+let pass = Math.floor((now - start) / (1000 * 60));
+pass += 9 * 60;
+
+// 현재 단계 구하기
+let stageCount = stage
+  .map((e) => {
+    return e.min <= pass; // 진행 시간이 단계 조건에 부합한 배열
+  })
+  .filter((e) => e == true).length; // 단계 구하기
+// ...
+```
+
 ### 9. 지식정보
+- 흡연자들에게 유용한 정보 제공
+  
+### 10. 커뮤니티
+  
+#### 10.1 채팅
+- 
+  
+  
+#### 10.2 금연 클리닉
+- [카카오 지도 API](https://apis.map.kakao.com/web/) 활용 
+- 사용자가 위치 정보를 허용하지 않으면 허용 요청 문구 출력
+- 금연 클리닉 센터 데이터는 json 파일에 저장
+```json
+[
+  {
+    "region": "서울",
+    "name": "서울금연지원센터",
+    "add": "서울특별시 서초구 반도대로222 가톨릭대학교 의생명산업연구원 2001호(2층)",
+    "tel": "02-592-9030",
+    "lat": 37.5000744557682,
+    "lon": 127.005238316462,
+    "url": "http://kko.to/E7UmUXtN9d"
+  },
+  {
+    "region": "부산",
+    "name": "부산금연지원센터",
+    "add": "부산광역시 서구 구덕로193번길 12-2 (부민동2가) 부산장애인구강진료센터 5층",
+    "tel": "051-242-9030",
+    "lat": 35.1008208738374,
+    "lon": 129.018729457763,
+    "url": "http://kko.to/4Ykaaryz3J"
+  },
+]
+```
+- 사용자가 위치 정보를 허용했다면 사용자 위치에서 가장 가까운 금연 클리닉 센터 정보 출력
+  
+  
+#### 10.3 금연 길라잡이 사이트
+- https://www.nosmokeguide.go.kr/index.do
+  
+  
+#### 10.4 금연 두드림 사이트
+- https://nosmk.khealth.or.kr/nsk/ntcc/index.do
+
+</details>
