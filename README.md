@@ -32,7 +32,7 @@
 
 ## 페이지별 주요 기능
 
-### 1. [Splash](https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/)
+### 1. Splash
 - 페이지 접속시 처음으로 보여질 화면
 ```javascript
 //.....
@@ -58,14 +58,17 @@ setTimeout(() => {
   사용자 정보가 모두 있다면(금연을 시작했다면) 메인페이지로 넘어감<br>
 
 ### 2. 정보 입력 페이지
-- [이름](https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/UserName) : 어플 첫 이용시 입력
-- [흡연 시작 날짜](https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/StartDate), [금연 시작 날짜](https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/EndDate),[흡연량](https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/CountPerDay), [담배 가격](https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/Price), [생일](https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/BrithDay) : 업적, 금연 일자 계산 및 서비스 이용을 위한 정보 입력
+- 이름 : 어플 첫 이용시 입력
+- 흡연 시작 날짜, 금연 시작 날짜, 흡연량, 담배 가격, 생일: 업적, 금연 일자 계산 및 서비스 이용을 위한 정보 입력
 
-### 3. [메인 페이지](https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/main)
+### 3. 메인 페이지
 - 이름 정보만 있을 때 정보 입력 버튼을 클릭 하면 정보 입력 화면으로 넘어가면서 정보 입력을 진행
 - 사용자가 입력한 정보를 계산 금연 진행 날짜가 출력됨
 - 업적 서브페이지에서 달성 업적 데이터를 가져와 출력
-- [금단 증상 서브페이지](#금단증상)
+- [금단 증상 극복 서브페이지](#금단증상)
+- 현재 변화 단계와 이전, 이후 변화 단계 출력
+- [변화단계 알아보기](#변화단계)
+- 
 
-
-### 8. 금단증상
+### 7. 금단증상
+### 8. 변화단계
