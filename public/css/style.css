@@ -38,6 +38,12 @@ a {
 }
 #main .container .header .info-setting a {
   color: var(--main-color);
+  display: flex;
+}
+#main .container .header .info-setting a img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }
 #main .container .header .info-setting .info,
 #main .container .header .info-setting .setting {

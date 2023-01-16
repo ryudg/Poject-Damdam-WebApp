@@ -156,3 +156,25 @@ footer .community.active a,
 footer .calendar.active a {
   color: var(--main-color);
 }
+
+/* 추가 css */
+#userinfo .container .inputbox-name .imgUp {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  display: none;
+}
+
+#userinfo .container .inputbox-name .userImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+#userinfo .container .inputbox-name .userName {
+  margin-left: 20px;
+  font-size: 28px;
+  width: 100px;
+  border-style: none;
+}

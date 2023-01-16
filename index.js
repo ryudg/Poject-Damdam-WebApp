@@ -63,6 +63,21 @@ const chattingdbFile = fs.readFileSync("chattingDB.json", "utf-8");
 const chattingdbData = JSON.parse(chattingdbFile);
 chattingdbArr = [...chattingdbData];
 
+// 이미지 추가
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, "./public/images"); // 저장 위치
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname); // 원래 이미지명으로 저장
+  },
+});
+const upload = multer({
+  storage: storage,
+});
+
 // ----------splash----------
 app.get("/", function (req, res) {
   res.render("pages/index.ejs", { userArr });
@@ -481,7 +496,7 @@ app.post("/allReset", (req, res) => {
   res.redirect("/");
 });
 // ----------사용자 정보 수정----------
-app.post("/delete", function (req, res) {
+app.post("/delete", upload.single("img"), function (req, res) {
   const newData = {
     userName: req.body.userName,
     BrithDayYear: req.body.BrithDayYear,
@@ -499,9 +514,13 @@ app.post("/delete", function (req, res) {
     EndDay: req.body.EndDay,
     EndHour: req.body.EndHour,
     EndMinute: req.body.EndMinute,
-    img: req.body.img,
   };
+  if (req.file) {
+    newData.img = req.file.filename;
+  }
+
   userArr.splice(0, 1, newData);
+
   fs.writeFileSync("userData.json", JSON.stringify(userArr));
   res.redirect("/userinfo");
 });
@@ -596,7 +615,7 @@ app.get("/community", (req, res) => {
 
 // ----------chatting (채팅) 페이지----------
 app.get("/chatting", function (req, res) {
-  res.render("pages/chatting.ejs", { chattingdbArr });
+  res.render("pages/chatting.ejs", { chattingdbArr, userArr });
 });
 // ----------chatting (채팅) create----------
 app.post("/chattingcreate", function (req, res) {

@@ -15,7 +15,7 @@
         </a>
         <h1 class="userinfo-title-main">내 정보</h1>
       </div>
-      <form action="/delete" method="post">
+      <form action="/delete" method="post" enctype="multipart/form-data">
         <div class="inputbox-name">
           <input
           class="imgUp"
@@ -24,6 +24,7 @@
             multiple
             style="display: none"
             name="img"
+            onchange="readURL(this)"
           />
           <img class="userImg" src="/images/mdi_user.png" alt="기본사진" />
           <input
@@ -235,6 +236,28 @@
        const upload = document.querySelector(".userImg");
       const realUpload = document.querySelector(".imgUp");
       upload.addEventListener("click", () => realUpload.click());
+
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          console.log(reader);
+          reader.onload = function (e) {
+            upload.src = e.target.result;
+          };
+
+          reader.readAsDataURL(input.files[0]);
+          console.log(input.files[0]);
+        } else {
+          upload.src = "/images/mdi_user.png";
+          console.log("123");
+        }
+      }
+      let src = "<%= userArr[0].img %>";
+      if (src) {
+        upload.setAttribute("src", `/images/${src}`);
+      } else {
+        upload.setAttribute("src", "/images/mdi_user.png");
+      }
     </script>
   </body>
   

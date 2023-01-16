@@ -277,5 +277,11 @@
       crossorigin="anonymous"
     >
     </script>
+    <script>
+      let userImage = document.querySelector(".info-setting .info a")
+      if("<%= userArr[0].img %>"){
+        userImage.innerHTML = `<img src="images/<%= userArr[0].img %>" alt="user" />`
+      }
+    </script>
   </body>
 </html>
