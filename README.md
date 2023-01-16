@@ -16,7 +16,7 @@
 
 ## 업무 분담
 - 김민수 : 지식 + , 변화 단계, 지도
-- 김명아 : 캘린더
+- 김명아 : 달력, 달력 메모장
 - 안정원 : 금단증상 극복, 업적, 채팅
 - 유동균 : 메인
 - 최정호 : 내 정보, 설정
@@ -24,6 +24,7 @@
 ## SEO 최적화
 - favicon 및 meta tag 최적화
 - 모바일 브라우저 toolbar 영역 색상 main color로 변경
+
 ```javascript
 //...
 <meta name="theme-color" content="#1fab89" />
@@ -178,8 +179,10 @@ let stageCount = stage
 ### 10. 커뮤니티
   
 #### 10.1 채팅
-- 
-  
+- 사용자가 채팅 메세지 입력시 메세지 박스 색 메인컬러, 타 사용자의 메세지 박스는 #fff
+- 메세지를 입력하지 않고 전송 시 메세지 입력 알림창 출력
+- soket io 활용 채팅 서버 구현 예정
+
   
 #### 10.2 금연 클리닉
 - [카카오 지도 API](https://apis.map.kakao.com/web/) 활용 
@@ -208,13 +211,130 @@ let stageCount = stage
 ]
 ```
 - 사용자가 위치 정보를 허용했다면 사용자 위치에서 가장 가까운 금연 클리닉 센터 정보 출력
+```javascript
+  function panTo(lat, lon) {
+    fetch("json/clinicData.json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        map.setLevel(4);
+        // 현재위치 기준 가까운 클리닉 찾기
+        let gap = [];
+        for (let i = 0; i < data.length; i++) {
+          gap[i] =
+            Math.abs(data[i].lat - lat) + Math.abs(data[i].lon - lon);
+        }
+
+        let minGap = Math.min(...gap);
+
+        let nearId = gap.indexOf(minGap, 0);
+
+        let choosedClinic = data[nearId];
+
+        const nameEl = document.querySelector(
+          ".clinic-info .clinic-name p"
+        );
+        const addEl = document.querySelector(".clinic-info .clinic-add p");
+        const telEl = document.querySelector(".clinic-info .clinic-tel p");
+        nameEl.innerHTML = choosedClinic.name;
+        addEl.innerHTML = choosedClinic.add;
+        telEl.innerHTML = choosedClinic.tel;
+
+        var moveLatLon = new kakao.maps.LatLng(
+          choosedClinic.lat,
+          choosedClinic.lon
+        );
+      // ....
+      }
+```
   
   
 #### 10.3 금연 길라잡이 사이트
 - https://www.nosmokeguide.go.kr/index.do
   
-  
 #### 10.4 금연 두드림 사이트
 - https://nosmk.khealth.or.kr/nsk/ntcc/index.do
 
+### 11. 달력
+- 평년, 윤년 달력 구현
+```javascript
+// (calendar.ejs > main.js)
+
+// 달력 날짜 테이블
+let calendarBody = document.querySelector("#calendar-body");
+// 오늘 날짜
+let today = new Date();
+// 현재 월의 1일
+let first = new Date(today.getFullYear(), today.getMonth(), 1);
+// 요일 정보
+let dayList = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday",];
+// 월 정보
+let monthList = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12",];
+// 평년 정보
+let leapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+// 윤년 정보
+let notleapYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+// 평년 윤년 조건
+let pageYear;
+if (first.getFullYear() % 4 === 0) {
+  pageYear = leapYear;
+} else {
+  pageYear = notleapYear;
+}
+```
+- 달력 메모는 json 파일에 저장됨
+```json
+[
+  {
+    "D20230116": [
+      {
+        "감정": "4",
+        "욕구": "4",
+        "제목": "오늘의 메모",
+        "내용": "1월 16일...",
+        "날짜": "2023-01-16"
+      }
+    ]
+  }
+]
+
+```
+- 메모가 있는 날짜에 스타일 추가
+```javascript
+// 메모 정보가 있는 날짜에 표시하기
+// memo.json 불러오기
+fetch("json/memo.json")
+.then((res) => res.json())
+.then((data) => {
+  // memo.json 데이터 배열 중에서 데이터가 있는 값 찾기
+  [...data].filter((e) => {
+    // 데이터 안의 년도 찾기
+    let strokeYear = Object.values(e)[0][0].날짜.split("-")[0];
+    // 달력 테이블에서의 년도
+    let calendarYear = document.querySelector(".current-year").innerHTML;
+
+    // 데이터 안의 월 찾기
+    let strokeMonth = Object.values(e)[0][0].날짜.split("-")[1];
+    // 달력 테이블에서의 월
+    let calendarMonth = document.querySelector(".current-month").innerHTML;
+
+    // 데이터 안에서의 날짜
+    let strokeDay = Object.values(e)[0][0].날짜.split("-")[2];
+    // 데이터 안에서의 날짜가 10보다 작으면 0 삭제
+    if ([...strokeDay][0] == "0") {
+      strokeDay = [...strokeDay].pop();
+    }
+
+    // 만약 데이터 상의 날짜가 존재하고  테이블 상의 날짜가 일치하면 정보가 있는 테이블의 날짜에 스타일 추가
+    if (strokeYear == calendarYear && strokeMonth == calendarMonth) {
+      let stroke = document.getElementById(`${strokeDay}`);
+      stroke.style.borderBottom = "1px solid #000";
+      stroke.style.borderRadius = "50%";
+      stroke.style.boxShadow = "1px 1px 4px rgba(0,0,0,0.2)";
+    }
+  });
+});
+```
 </details>
