@@ -99,17 +99,17 @@ function showCalendar() {
   let memoDate = document.querySelector(".memoDate");
 
   // 메모 작성 날짜 0보다 작으면 0 추가
-  let addZeroM = today.getMonth();
+  let addZeroM = today.getMonth() + 1;
   if (addZeroM < 10) {
-    addZeroM = "" + addZeroM;
+    addZeroM = "0" + addZeroM;
   }
   let addZeroD = today.getDate();
   if (addZeroD < 10) {
-    addZeroD = "" + addZeroD;
+    addZeroD = "0" + addZeroD;
   }
 
   // 메모 작성 날짜 입력
-  titleDate.innerHTML = `${today.getFullYear()}-${addZeroM + 1}-${addZeroD}`;
+  titleDate.innerHTML = `${today.getFullYear()}-${addZeroM}-${addZeroD}`;
   // 메모 작성 날짜 입력 (모달창)
   memoDate.value = titleDate.innerHTML;
   // 달력 날짜 선택
