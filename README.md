@@ -1,12 +1,17 @@
-# Damdam 금연 앱 제작
-> Link : https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/
 
+# 금연 앱 제작
+> Link : https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/
 > 시안 : https://www.figma.com/file/zDxduSGMj8QbVyKRWfuUov/%EA%B8%88%EC%97%B0%EC%95%B1?node-id=0%3A1
 
 # Description
 - 금연 동기 부여 웹 앱
 - Node.js(express, ejs)를 이용해서 구현함
 - 클라우드 타입을 통해 배포함
+# Stack
+<img src="https://img.shields.io/badge/Html5-E34F26?style=for-the-badge&logo=Html5&logoColor=white"><img src="https://img.shields.io/badge/Css3-1572B6?style=for-the-badge&logo=Css3&logoColor=white"><img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white"><img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"><img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=Express&logoColor=white"><img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white">
+
+# Tools
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">
 
 # 구현 이미지 
 ![화면 캡처 2023-01-13 121553](https://user-images.githubusercontent.com/103430498/212229183-4ab12a5c-d78c-4a5f-a18f-12a621b6b070.png)
