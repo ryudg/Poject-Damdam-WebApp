@@ -57,7 +57,7 @@ const chattingdbFile = fs.readFileSync("chattingDB.json", "utf-8");
 const chattingdbData = JSON.parse(chattingdbFile);
 chattingdbArr = [...chattingdbData];
 
-// 이미지 추가
+// ----------multer----------
 const multer = require("multer");
 
 const storage = multer.diskStorage({
