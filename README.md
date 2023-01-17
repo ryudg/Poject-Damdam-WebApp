@@ -38,6 +38,12 @@
 <meta name="theme-color" content="#1fab89" />
 //...
 ```
+- 사용자에 의한 모바일 뷰포트 크기(scale) 조정 불
+```javascript
+//...
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+//...
+```
 
 ## 페이지별 주요 기능
 <details>
