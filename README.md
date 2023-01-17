@@ -38,7 +38,7 @@
 <meta name="theme-color" content="#1fab89" />
 //...
 ```
-- 사용자에 의한 모바일 뷰포트 크기(scale) 조정 불
+- 사용자에 의한 모바일 뷰포트 크기(scale) 조정 불가
 ```javascript
 //...
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -47,7 +47,7 @@
 
 ## 페이지별 주요 기능
 <details>
-    <summary>페이지 주요 기능 </summary>
+    <summary>페이지별 주요 기능 자세히 </summary>
 
 ### 1. Splash
 - 페이지 접속시 처음으로 보여질 화면
