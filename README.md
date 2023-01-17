@@ -18,7 +18,9 @@
 ![화면 캡처 2023-01-13 121553](https://user-images.githubusercontent.com/103430498/212229183-4ab12a5c-d78c-4a5f-a18f-12a621b6b070.png)
 
 ## 제작 일정
+- 제작 기간 : 2023-01-09 ~ 2023-01-18
 ![화면_캡처_2023-01-09_165431](https://user-images.githubusercontent.com/103430498/211432717-74ccbc91-0f07-4abd-8fba-7d24654256f9.png)
+
 
 ## 업무 분담
 - 김민수 : 지식 + , 변화 단계, 지도
