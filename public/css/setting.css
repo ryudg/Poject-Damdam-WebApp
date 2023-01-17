@@ -165,6 +165,8 @@ body {
 footer {
   position: fixed;
   bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
   max-width: 768px;
   width: 100%;
