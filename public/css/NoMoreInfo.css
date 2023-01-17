@@ -19,6 +19,8 @@ a {
   text-decoration: none;
 }
 .container {
+  max-width: 768px;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 /* ----------header start---------- */

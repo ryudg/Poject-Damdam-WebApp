@@ -23,11 +23,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#1fab89" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
     <title>Community</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/black.css" />
   </head>
-  <body id="community">
+  <body id="community" class="<%= modeArr[0].mode %>">
     <div class="container">
       <div class="title">
         <a href="/main"><img src="./images/achieve_1.png" alt="back" /></a>
@@ -53,23 +55,23 @@
           <div></div>
         </a>
       </div>
+      <!-- footer -->
+      <footer>
+        <div class="footer-home">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="footer-achievement">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="footer-community active">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="footer-calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
     </div>
 
-    <!-- footer -->
-    <footer>
-      <div class="home">
-        <a href="/main"><i class="fa-solid fa-house"></i></a>
-      </div>
-      <div class="achievement">
-        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
-      </div>
-      <div class="community active">
-        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
-      </div>
-      <div class="calendar">
-        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
-      </div>
-    </footer>
     <!-- fontA -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"

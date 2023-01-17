@@ -23,31 +23,43 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#1fab89" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
     <title>Setting</title>
     <link rel="stylesheet" href="/css/setting.css" />
+    <link rel="stylesheet" href="/css/black.css" />
   </head>
-  <body>
+  <body class="<%= modeArr[0].mode %>">
     <div class="container">
-      <a href="/main" class="setting-backbutton">
-        <img src="/images/ion_arrow-back.png" alt="뒤로가기" />
-      </a>
-      <h1 class="setting-title">설정</h1>
+      <div class="title">
+        <a href="/main" class="setting-backbutton">
+          <img src="/images/achieve_1.png" alt="뒤로가기" />
+        </a>
+        <h1 class="setting-title">설정</h1>
+        <h1></h1>
+      </div>
 
-      <div class="setting-layout-small">
+      <div class="box setting-layout-small theme">
         <div class="setting-icontitle">
-          <img src="/images/mdi_theme-light-dark.png" alt="발기조절" />
+          <img src="/images/mdi_theme-light-dark.png" alt="밝기조절" />
           <h3>테마</h3>
         </div>
         <div class="setting-icon">
           <img src="/images/ph_sun-bold.png" alt="밝음" />
           <div class="setting-movebun">
-            <div class="setting-ellipse"></div>
+            <form action="theme" method="post">
+              <input
+                class="setting-ellipse"
+                type="submit"
+                name="mode"
+                value=""
+              />
+            </form>
           </div>
           <img src="/images/ph_moon-stars.png" alt="어두움" />
         </div>
       </div>
-      <div class="setting-layout-small">
+      <div class="box setting-layout-small">
         <div class="setting-icontitle">
           <img src="/images/material-symbols_language.png" alt="언어아이콘" />
           <h3>언어</h3>
@@ -60,7 +72,7 @@
           <p>English</p>
         </div>
       </div>
-      <div class="setting-layout-big">
+      <div class="box setting-layout-big">
         <div class="setting-icontitle">
           <img
             src="/images/mdi_trash-can-outline.png"
@@ -114,7 +126,7 @@
           </div>
         </div>
       </div>
-      <div class="setting-layout-small">
+      <div class="box setting-layout-small">
         <div class="setting-icontitle">
           <img
             src="/images/material-symbols_mail-outline.png"
@@ -130,8 +142,8 @@
           />
         </div>
       </div>
-      <div class="setting-layout-normal">
-        <div class="setting-icontitl">
+      <div class="box setting-layout-normal">
+        <div class="setting-icontitle">
           <img
             src="/images/material-symbols_info-outline-rounded.png"
             alt="앱정보 아이콘"
@@ -159,22 +171,23 @@
           </div>
         </div>
       </div>
+      <footer>
+        <div class="home">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="achievement">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="community">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
     </div>
     <!-- container -->
-    <footer>
-      <div class="home">
-        <a href="/main"><i class="fa-solid fa-house"></i></a>
-      </div>
-      <div class="achievement">
-        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
-      </div>
-      <div class="community">
-        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
-      </div>
-      <div class="calendar">
-        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
-      </div>
-    </footer>
+
     <!-- fontA -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"

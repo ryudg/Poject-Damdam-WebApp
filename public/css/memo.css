@@ -17,6 +17,8 @@ body {
   margin-bottom: 60px;
 }
 #calendar .container {
+  max-width: 768px;
+  margin: 0 auto;
   padding: 30px 20px;
 }
 /* ----------title start---------- */
@@ -38,9 +40,9 @@ body {
 footer {
   position: fixed;
   bottom: 0;
-  left: 0;
-  z-index: 999;
+  max-width: 768px;
   width: 100%;
+  z-index: 999;
   height: 60px;
   display: flex;
   border-top: 1px solid var(--main-color);
@@ -207,7 +209,8 @@ thead tr:last-child {
   height: 80%;
 }
 /*  title  */
-.writePopup .title {
+.writePopup .titles {
+  margin-top: 10px;
   width: 100%;
   height: 96px;
   position: relative;
@@ -215,7 +218,7 @@ thead tr:last-child {
   justify-content: center;
   align-items: center;
 }
-.writePopup .title .closeBtn {
+.writePopup .titles .closeBtn {
   width: 36px;
   height: 36px;
   position: absolute;
@@ -223,12 +226,12 @@ thead tr:last-child {
   right: 20px;
   transform: translateY(-50%);
 }
-.writePopup .title .closeBtn > img {
+.writePopup .titles .closeBtn > img {
   width: 100%;
   height: 100%;
 }
 
-.writePopup .title h1 {
+.writePopup .titles h1 {
   font-weight: 400;
   font-size: 36px;
 }

@@ -55,7 +55,7 @@ $(function () {
   $("#symp_btn_0").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[0]);
+    $(".symp_contents_exception_4D h2").html(nameArr[0]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[0]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[0]);
     $(".symp_btn_remove").removeClass("active");
@@ -65,7 +65,7 @@ $(function () {
   $("#symp_btn_1").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[1]);
+    $(".symp_contents_exception_4D h2").html(nameArr[1]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[1]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[1]);
     $(".symp_btn_remove").removeClass("active");
@@ -75,7 +75,7 @@ $(function () {
   $("#symp_btn_2").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[2]);
+    $(".symp_contents_exception_4D h2").html(nameArr[2]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[2]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[2]);
     $(".symp_btn_remove").removeClass("active");
@@ -85,7 +85,7 @@ $(function () {
   $("#symp_btn_3").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[3]);
+    $(".symp_contents_exception_4D h2").html(nameArr[3]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[3]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[3]);
     $(".symp_btn_remove").removeClass("active");
@@ -95,7 +95,7 @@ $(function () {
   $("#symp_btn_4").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[4]);
+    $(".symp_contents_exception_4D h2").html(nameArr[4]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[4]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[4]);
     $(".symp_btn_remove").removeClass("active");
@@ -105,7 +105,7 @@ $(function () {
   $("#symp_btn_5").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[5]);
+    $(".symp_contents_exception_4D h2").html(nameArr[5]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[5]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[5]);
     $(".symp_btn_remove").removeClass("active");
@@ -115,7 +115,7 @@ $(function () {
   $("#symp_btn_6").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[6]);
+    $(".symp_contents_exception_4D h2").html(nameArr[6]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[6]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[6]);
     $(".symp_btn_remove").removeClass("active");
@@ -125,7 +125,7 @@ $(function () {
   $("#symp_btn_7").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[7]);
+    $(".symp_contents_exception_4D h2").html(nameArr[7]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[7]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[7]);
     $(".symp_btn_remove").removeClass("active");
@@ -135,7 +135,7 @@ $(function () {
   $("#symp_btn_8").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[8]);
+    $(".symp_contents_exception_4D h2").html(nameArr[8]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[8]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[8]);
     $(".symp_btn_remove").removeClass("active");
@@ -145,7 +145,7 @@ $(function () {
   $("#symp_btn_9").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[9]);
+    $(".symp_contents_exception_4D h2").html(nameArr[9]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[9]);
     $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[9]);
     $(".symp_btn_remove").removeClass("active");
@@ -155,7 +155,7 @@ $(function () {
   $("#symp_btn_10").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[10]);
+    $(".symp_contents_exception_4D h2").html(nameArr[10]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[10]);
     $(".symp_contents_exception_4D .contents_under p")
       .eq(1)
@@ -167,7 +167,7 @@ $(function () {
   $("#symp_btn_11").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[11]);
+    $(".symp_contents_exception_4D h2").html(nameArr[11]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[11]);
     $(".symp_contents_exception_4D .contents_under p")
       .eq(1)
@@ -179,7 +179,7 @@ $(function () {
   $("#symp_btn_12").on("click", function () {
     $(".symp_contents_exception_4D").addClass("active");
     $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h1").html(nameArr[12]);
+    $(".symp_contents_exception_4D h2").html(nameArr[12]);
     $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[12]);
     $(".symp_contents_exception_4D .contents_under p")
       .eq(1)

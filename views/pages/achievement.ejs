@@ -23,6 +23,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#1fab89" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
     <!-- 제이쿼리  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -31,9 +32,10 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/achievement.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/black.css" />
     <title>Achievment</title>
   </head>
-  <body id="achievement">
+  <body id="achievement" class="<%= modeArr[0].mode %>">
     <div class="achiev_wrap">
       <!-- 업적 제목 -->
       <div class="achiev_title">
@@ -79,21 +81,22 @@
           <% } %>
         </div>
       </div>
+      <footer>
+        <div class="home">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="achievement active">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="community">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
     </div>
-    <footer>
-      <div class="home">
-        <a href="/main"><i class="fa-solid fa-house"></i></a>
-      </div>
-      <div class="achievement active">
-        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
-      </div>
-      <div class="community">
-        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
-      </div>
-      <div class="calendar">
-        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
-      </div>
-    </footer>
+
     <!-- fontA -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"

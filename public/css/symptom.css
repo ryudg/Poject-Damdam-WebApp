@@ -15,6 +15,8 @@ body {
 
 .symp_wrap {
   padding: 0 10px;
+  max-width: 768px;
+  margin: 0 auto;
 }
 
 /* 금단증상 제목 */
@@ -84,7 +86,7 @@ body {
   margin: 0;
 }
 
-.symp_contents_wrap h1 {
+.symp_contents_wrap h2 {
   font-size: 20px;
   font-weight: 500;
   margin: 0 0 20px 0;
@@ -122,7 +124,7 @@ body {
 
 /* 4D가 아닌 금단증상들 */
 
-.symp_contents_exception_4D h1 {
+.symp_contents_exception_4D h2 {
   font-size: 28px;
   font-weight: 500;
   margin: 0 0 20px 0;
@@ -185,7 +187,7 @@ body {
 footer {
   position: fixed;
   bottom: 0;
-  left: 0;
+  max-width: 768px;
   z-index: 999;
   width: 100%;
   height: 60px;

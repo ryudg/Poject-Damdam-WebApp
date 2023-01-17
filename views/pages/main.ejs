@@ -20,13 +20,16 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#1fab89">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
 
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/black.css" />
 
     <title>Damdam</title>
   </head>
-  <body id="main">
+  <body id="main" class="<%= modeArr[0].mode %>">
     <div class="container">
       <!-- header -->
       <div class="header">
@@ -163,22 +166,7 @@
           <div><h1>나의 변화</h1></div>
         </div>
         <div class="change-contents">
-          <div class="prev">
-            <div>
-              <% if((stageCount-1)== -1){ %>
-              <p>0 단계</p>
-              <% }  else { %>
-              <p><%= stage[stageCount-1].stage %></p>
-              <p>
-                <%= stage[stageCount-1].goal %> - <%=
-                stage[stageCount-1].stageTxt %>
-              </p>
-              <% } %>
-            </div>
-          </div>
-          <div class="arrow">
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
+
           <div class="now">
             <div>
               <p><%= stage[stageCount].stage %></p>
@@ -199,18 +187,7 @@
               <p><%= gage %>%</p>
             </div>
           </div>
-          <div class="arrow">
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
-          <div class="next">
-            <div>
-              <p><%= stage[stageCount+1].stage %></p>
-              <p>
-                <%= stage[stageCount+1].goal %> - <%=
-                stage[stageCount+1].stageTxt %>
-              </p>
-            </div>
-          </div>
+
           <div class="contour"></div>
         </div>
         <div class="change-seemore">
@@ -258,22 +235,24 @@
           </div>
         </div>
       </section>
-    </div>
-    <!-- footer -->
-    <footer>
-      <div class="home active">
+      <!-- footer -->
+      <footer>
+      <div class="footer-home active">
         <a href="/main"><i class="fa-solid fa-house"></i></a>
       </div>
-      <div class="achievement">
+      <div class="footer-achievement">
         <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
       </div>
-      <div class="community">
+      <div class="footer-community">
         <a href="/community"><i class="fa-solid fa-user-group"></i></a>
       </div>
-      <div class="calendar">
+      <div class="footer-calendar">
         <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
       </div>
     </footer>
+    </div>
+
+    
     <!-- fontA -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"

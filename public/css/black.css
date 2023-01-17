@@ -1,0 +1,52 @@
+body.black {
+  background-color: rgba(0, 0, 0, 1);
+}
+body.black h1 {
+  color: white;
+}
+body.black .setting-backbutton img {
+  filter: invert(100%);
+}
+body.black .theme .setting-ellipse {
+  transform: translate(30px);
+}
+body.black .container .title img,
+body.black .chat_title img,
+body.black .symp_title img,
+body.black .wrap header a img {
+  filter: invert(100%);
+}
+body.black .inputbox-name {
+  color: white;
+  background: transparent;
+}
+body.black .calendarBox #calendar {
+  background-color: #e9f3ef;
+}
+body.black .achiev_left_arrow img {
+  filter: invert(100%);
+}
+body.black .achiev_title .achiev_price span {
+  filter: invert(100%);
+}
+body.black .main-timer .main-timer-day {
+  filter: invert(100%);
+}
+body.black .main-timer .main-timer-hour {
+  filter: invert(100%);
+}
+body.black .main-timer .main-timer-minute {
+  filter: invert(100%);
+}
+body.black .achievement-title h1 {
+  color: #000;
+}
+body.black .result h1 {
+  color: #000;
+}
+body.black .change h1 {
+  color: #000;
+}
+body.black .knowledge h1 {
+  color: #000;
+}

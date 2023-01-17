@@ -23,12 +23,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#1fab89" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/memo.css" />
+    <link rel="stylesheet" href="./css/black.css" />
     <title>Calendar</title>
   </head>
-  <body id="calendar">
+  <body id="calendar" class="<%= modeArr[0].mode %>">
     <div class="container">
       <!-- title -->
       <div class="title">
@@ -84,11 +87,11 @@
 
       <!-- writePopup -->
       <div class="writePopup">
-        <div class="title">
+        <div class="titles">
           <div class="closeBtn">
             <img src="/images/close.png" alt="close" />
           </div>
-          <h1>메모 작성</h1>
+          <h2>메모 작성</h1>
         </div>
 
         <!--title-->

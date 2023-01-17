@@ -23,9 +23,11 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#1fab89" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
     <title>Clinic</title>
     <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/black.css" />
     <!-- kakaomap API -->
     <script
       type="text/javascript"
@@ -42,7 +44,7 @@
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e56122c28647b1223c462053019bef80&libraries=services"
     ></script>
   </head>
-  <body id="clinic">
+  <body id="clinic" class="<%= modeArr[0].mode %>">
     <div class="wrap">
       <header>
         <a href="/community"
@@ -81,23 +83,24 @@
           </div>
         </div>
       </main>
+
+      <!-- footer -->
+      <footer>
+        <div class="home">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="achievement">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="community active">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
     </div>
 
-    <!-- footer -->
-    <footer>
-      <div class="home">
-        <a href="/main"><i class="fa-solid fa-house"></i></a>
-      </div>
-      <div class="achievement">
-        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
-      </div>
-      <div class="community active">
-        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
-      </div>
-      <div class="calendar">
-        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
-      </div>
-    </footer>
     <!-- fontA -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"

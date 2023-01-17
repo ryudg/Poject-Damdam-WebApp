@@ -72,6 +72,12 @@ const upload = multer({
   storage: storage,
 });
 
+// ----------다크모드----------
+let modeArr = [];
+const modereadfile = fs.readFileSync("black.json", "utf-8");
+const modeArrData = JSON.parse(modereadfile);
+modeArr = [...modeArrData];
+
 // ----------splash----------
 app.get("/", function (req, res) {
   res.render("pages/index.ejs", { userArr });
@@ -79,7 +85,7 @@ app.get("/", function (req, res) {
 
 // ----------UserName----------
 app.get("/UserName", (req, res) => {
-  res.render("pages/UserName.ejs");
+  res.render("pages/UserName.ejs", { modeArr });
 });
 // ----------InpuUserNameData----------
 app.post("/UserNameData", (req, res) => {
@@ -304,6 +310,7 @@ app.get("/main", (req, res) => {
     testPriceArr,
     testDayArr,
     testCountArr,
+    modeArr,
   });
 });
 
@@ -336,17 +343,17 @@ app.get("/stage", function (req, res) {
     })
     .filter((e) => e == true).length;
 
-  res.render("pages/stage.ejs", { stage, pass, stageCount });
+  res.render("pages/stage.ejs", { stage, pass, stageCount, modeArr });
 });
 
 // --------------------knowledge--------------------
 app.get("/knowledge", function (req, res) {
-  res.render("pages/knowledge.ejs", { knowledge104 });
+  res.render("pages/knowledge.ejs", { knowledge104, modeArr });
 });
 
 // ----------symptom (금단증상) 페이지----------
 app.get("/symptom", function (req, res) {
-  res.render("pages/symptom.ejs");
+  res.render("pages/symptom.ejs", { modeArr });
 });
 
 // ----------achievement (업적) 페이지----------
@@ -431,19 +438,30 @@ app.get("/achievement", function (req, res) {
     achievedbArr,
     userArr,
     allLength,
+    modeArr,
   });
 });
 
 // ----------userinfo----------
 app.get("/userinfo", async function (req, res) {
-  res.render("pages/userinfo.ejs", { userArr });
+  res.render("pages/userinfo.ejs", { userArr, modeArr });
 });
 app.get("/title", function (req, res) {
   res.render("pages/title.ejs");
 });
 // ----------setting----------
 app.get("/setting", function (req, res) {
-  res.render("pages/setting.ejs");
+  res.render("pages/setting.ejs", { modeArr });
+});
+// ----------다크모드----------
+app.post("/theme", function (req, res) {
+  if (modeArr[0].mode == "black") {
+    modeArr[0].mode = "white";
+  } else {
+    modeArr[0].mode = "black";
+  }
+  fs.writeFileSync("black.json", JSON.stringify(modeArr));
+  res.redirect("/setting");
 });
 
 // ----------데이터 reset----------
@@ -516,7 +534,7 @@ app.post("/delete", upload.single("img"), function (req, res) {
   userArr.splice(0, 1, newData);
 
   fs.writeFileSync("userData.json", JSON.stringify(userArr));
-  res.redirect("/userinfo");
+  res.redirect("/main");
 });
 
 // // ****업적 test*****
@@ -574,7 +592,7 @@ app.post("/delete", upload.single("img"), function (req, res) {
 
 // ----------calendar----------
 app.get("/calendar", function (req, res) {
-  res.render("pages/calendar.ejs", { memoArr });
+  res.render("pages/calendar.ejs", { memoArr, modeArr });
 });
 // ----------create----------
 // 달력 정보 추가
@@ -604,12 +622,12 @@ app.post("/create", function (req, res) {
 
 // ----------community 이동 페이지----------
 app.get("/community", (req, res) => {
-  res.render("pages/community.ejs");
+  res.render("pages/community.ejs", { modeArr });
 });
 
 // ----------chatting (채팅) 페이지----------
 app.get("/chatting", function (req, res) {
-  res.render("pages/chatting.ejs", { chattingdbArr, userArr });
+  res.render("pages/chatting.ejs", { chattingdbArr, userArr, modeArr });
 });
 // ----------chatting (채팅) create----------
 app.post("/chattingcreate", function (req, res) {
@@ -624,7 +642,7 @@ app.post("/chattingcreate", function (req, res) {
 // ----------clinic----------
 app.get("/clinic", function (req, res) {
   let name = userArr[0].userName;
-  res.render("pages/clinic.ejs", { name });
+  res.render("pages/clinic.ejs", { name, modeArr });
 });
 
 // ----------listen----------

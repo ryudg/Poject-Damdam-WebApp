@@ -23,6 +23,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#1fab89" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
 
     <!-- 제이쿼리  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -31,9 +33,10 @@
     <!-- css -->
     <link rel="stylesheet" href="./css/symptom.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/black.css" />
     <title>Symptom</title>
   </head>
-  <body>
+  <body class="<%= modeArr[0].mode %>">
     <div class="symp_wrap">
       <!-- 금단증상 제목 -->
       <div class="symp_title">
@@ -73,7 +76,7 @@
       <div class="symp_contents_wrap">
         <!-- 4D 금단증상 내용 -->
         <div class="symp_contents_4D active">
-          <h1>기억하세요 "4D", 흡연 욕구 참기!</h1>
+          <h2>기억하세요 "4D", 흡연 욕구 참기!</h1>
           <ul>
             <li>
               <div class="contents_upper">
@@ -132,7 +135,7 @@
         </div>
         <!-- 4D가 아닌 금단증상 내용 -->
         <div class="symp_contents_exception_4D">
-          <h1>신경과민</h1>
+          <h2>신경과민</h2>
           <ul>
             <li>
               <div class="contents_upper">
@@ -173,22 +176,23 @@
           </ul>
         </div>
       </div>
+      <footer>
+        <div class="home active">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="achievement">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="community">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
     </div>
     <!-- footer -->
-    <footer>
-      <div class="home active">
-        <a href="/main"><i class="fa-solid fa-house"></i></a>
-      </div>
-      <div class="achievement">
-        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
-      </div>
-      <div class="community">
-        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
-      </div>
-      <div class="calendar">
-        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
-      </div>
-    </footer>
+    
     <!-- fontA -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"

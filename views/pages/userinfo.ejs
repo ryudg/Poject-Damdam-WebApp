@@ -7,7 +7,10 @@
 
     <!-- SEO -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/" />
+    <meta
+      property="og:url"
+      content="https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/"
+    />
     <meta property="og:title" content="담담" />
     <meta property="og:image" content="https://i.ibb.co/qCCd1X7/Frame-2.png" />
     <meta property="og:description" content="금연 웹앱" />
@@ -20,22 +23,24 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#1fab89" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
     <title>MyInfo</title>
     <link rel="stylesheet" href="/css/userinfo.css" />
+    <link rel="stylesheet" href="/css/black.css" />
   </head>
-  <body id="userinfo">
+  <body id="userinfo" class="<%= modeArr[0].mode %>">
     <div class="container">
       <div class="title">
         <a href="/main" class="backbutton">
-          <img src="/images/ion_arrow-back.png" alt="뒤로가기" />
+          <img src="/images/achieve_1.png" alt="뒤로가기" />
         </a>
         <h1 class="userinfo-title-main">내 정보</h1>
       </div>
       <form action="/delete" method="post" enctype="multipart/form-data">
         <div class="inputbox-name">
           <input
-          class="imgUp"
+            class="imgUp"
             type="file"
             accept="image/*"
             multiple
@@ -221,13 +226,10 @@
           </div>
         </div>
         <!-- inputbox-end -->
-
-          <button class="input-userinfo-button" type="submit" name="delete">
-            수정
-          </button>
-        </div>
+        <button class="input-userinfo-button" type="submit" name="delete">
+          수정
+        </button>
       </form>
-
       <footer>
         <div class="home">
           <a href="/main"><i class="fa-solid fa-house"></i></a>
@@ -243,6 +245,7 @@
         </div>
       </footer>
     </div>
+
     <!-- container -->
     <!-- fontA -->
     <script
@@ -250,7 +253,7 @@
       crossorigin="anonymous"
     ></script>
     <script>
-       const upload = document.querySelector(".userImg");
+      const upload = document.querySelector(".userImg");
       const realUpload = document.querySelector(".imgUp");
       upload.addEventListener("click", () => realUpload.click());
 
@@ -277,5 +280,4 @@
       }
     </script>
   </body>
-  
 </html>

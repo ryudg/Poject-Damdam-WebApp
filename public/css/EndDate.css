@@ -22,6 +22,10 @@ a {
   padding: 90px 20px 30px 20px;
   text-align: center;
 }
+#EndDate .EndDate-container {
+  max-width: 768px;
+  margin: 0 auto;
+}
 #EndDate .EndDate-container .title,
 #EndDate .EndDate-container .subtitle {
   padding: 10px;

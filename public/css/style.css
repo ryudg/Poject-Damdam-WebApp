@@ -19,6 +19,8 @@ a {
   text-decoration: none;
 }
 .container {
+  max-width: 768px;
+  margin: 0 auto;
   margin-bottom: 90px;
 }
 /* ----------header start---------- */
@@ -232,11 +234,15 @@ a {
   gap: 10px;
   text-align: center;
 }
-#main .change .change-contents .prev,
+/* #main .change .change-contents .prev,
 #main .change .change-contents .next {
   font-size: 10px;
   margin: 10px 0;
   width: 80%;
+} */
+#main .change .change-contents .now div:first-child p {
+  font-size: 20px;
+  margin-top: 20px;
 }
 #main .change .change-contents .now .progress {
   width: 100%;
@@ -355,34 +361,35 @@ a {
 footer {
   position: fixed;
   bottom: 0;
-  left: 0;
+
   z-index: 999;
+  max-width: 768px;
   width: 100%;
   height: 60px;
   display: flex;
   border-top: 1px solid var(--main-color);
   background: #fff;
 }
-footer .home,
-footer .achievement,
-footer .community,
-footer .calendar {
+footer .footer-home,
+footer .footer-achievement,
+footer .footer-community,
+footer .footer-calendar {
   flex: 1;
   font-size: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer .home a,
-footer .achievement a,
-footer .community a,
-footer .calendar a {
+footer .footer-home a,
+footer .footer-achievement a,
+footer .footer-community a,
+footer .footer-calendar a {
   color: var(--main-color-opacity30);
 }
-footer .home.active a,
-footer .achievement.active a,
-footer .community.active a,
-footer .calendar.active a {
+footer .footer-home.active a,
+footer .footer-achievement.active a,
+footer .footer-community.active a,
+footer .footer-calendar.active a {
   color: var(--main-color);
 }
 
