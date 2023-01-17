@@ -153,7 +153,7 @@ fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
 
 ### 8. 변화단계
 - 1단계 ~ 20단계까지 사용자의 금단 진행 상황에 따라 단계별로 체크
-```javacript
+```javascript
 // (index.js)
 // ...
 // 현재시간
