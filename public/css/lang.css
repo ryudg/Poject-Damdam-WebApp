@@ -1,0 +1,27 @@
+.container,
+.symp_wrap,
+.wrap {
+  display: none;
+}
+.container.yes,
+.symp_wrap.yes,
+.wrap.yes {
+  display: block;
+}
+
+.container.en .setting-layout-small.lang .setting-ellipse {
+  transform: translate(30px);
+}
+.symp_wrap.en .symp_button_wrap ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.symp_wrap.en .symp_button_wrap ul li {
+  margin: 0;
+}
+.symp_wrap.en .symp_title h1 {
+  font-size: 28px;
+}

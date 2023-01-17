@@ -50,3 +50,7 @@ body.black .change h1 {
 body.black .knowledge h1 {
   color: #000;
 }
+body#userinfo.black .userName {
+  background: none;
+  color: #fff;
+}

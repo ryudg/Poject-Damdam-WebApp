@@ -25,7 +25,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 
-
     <!-- 제이쿼리  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- js -->
@@ -34,10 +33,11 @@
     <link rel="stylesheet" href="./css/symptom.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/black.css" />
+    <link rel="stylesheet" href="/css/lang.css" />
     <title>Symptom</title>
   </head>
   <body class="<%= modeArr[0].mode %>">
-    <div class="symp_wrap">
+    <div class="symp_wrap <%= langArr[0].lang[0].kor%>">
       <!-- 금단증상 제목 -->
       <div class="symp_title">
         <div class="symp_left_arrow">
@@ -76,7 +76,7 @@
       <div class="symp_contents_wrap">
         <!-- 4D 금단증상 내용 -->
         <div class="symp_contents_4D active">
-          <h2>기억하세요 "4D", 흡연 욕구 참기!</h1>
+          <h2>기억하세요 "4D", 흡연 욕구 참기!</h2>
           <ul>
             <li>
               <div class="contents_upper">
@@ -191,8 +191,146 @@
         </div>
       </footer>
     </div>
+    <div class="symp_wrap <%= langArr[0].lang[1].en%> en">
+      <!-- 금단증상 제목 -->
+      <div class="symp_title">
+        <div class="symp_left_arrow">
+          <a href="/main"
+            ><img src="./images/symptom_1.png" alt="symptom_img"
+          /></a>
+        </div>
+        <h1>Overcoming symptoms</h1>
+      </div>
+      <!-- 금단증상 버튼 -->
+      <div class="symp_button_wrap">
+        <ul>
+          <li>
+            <p id="symp_btn_4D" class="symp_btn_remove active">4D</p>
+          </li>
+          <li>
+            <p id="symp_btn_0" class="symp_btn_remove">Too nervous</p>
+          </li>
+          <li><p id="symp_btn_1" class="symp_btn_remove">Depression</p></li>
+          <li><p id="symp_btn_2" class="symp_btn_remove">Anxious</p></li>
+          <li><p id="symp_btn_3" class="symp_btn_remove">Headache</p></li>
+          <li>
+            <p id="symp_btn_4" class="symp_btn_remove">
+              Thirst, sore throat, gums and tongue
+            </p>
+          </li>
+          <li>
+            <p id="symp_btn_5" class="symp_btn_remove">Less concentration</p>
+          </li>
+          <li>
+            <p id="symp_btn_6" class="symp_btn_remove">Digestion</p>
+          </li>
+          <li><p id="symp_btn_7" class="symp_btn_remove">Cough</p></li>
+
+          <li>
+            <p id="symp_btn_8" class="symp_btn_remove">Hunger</p>
+          </li>
+          <li><p id="symp_btn_9" class="symp_btn_remove">Insomnia</p></li>
+          <li><p id="symp_btn_10" class="symp_btn_remove">Tired</p></li>
+          <li>
+            <p id="symp_btn_11" class="symp_btn_remove">
+              It feels like it's stings
+            </p>
+          </li>
+        </ul>
+      </div>
+      <!-- 금단증상 내용 -->
+      <div class="symp_contents_wrap">
+        <!-- 4D 금단증상 내용 -->
+        <div class="symp_contents_4D active">
+          <h2>Keep this in mind. "4D", the patience of smoking!</h2>
+          <ul>
+            <li>
+              <div class="contents_upper">
+                <div class="contents_img_wrap">
+                  <img src="./images/symptom_2.png" alt="symptom_img" />
+                </div>
+                <p>Delay</p>
+              </div>
+              <div class="contents_under">
+                <p>
+                  The desire to smoke lasts for three to five minutes. Try to
+                  delay time, such as eating snacks, meditating, etc.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="contents_upper">
+                <div class="contents_img_wrap">
+                  <img src="./images/symptom_3.png" alt="symptom_img" />
+                </div>
+                <p>Drink</p>
+              </div>
+              <div class="contents_under">
+                <p>
+                  Sufficient water intake reduces the desire to smoke and lowers
+                  the nicotine concentration.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="contents_upper">
+                <div class="contents_img_wrap">
+                  <img src="./images/symptom_4.png" alt="symptom_img" />
+                </div>
+                <p>Do something different</p>
+              </div>
+              <div class="contents_under">
+                <p>
+                  If you focus on other things, you can get distracted and
+                  forget about smoking.Start something else.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="contents_upper">
+                <div class="contents_img_wrap">
+                  <img src="./images/symptom_5.png" alt="symptom_img" />
+                </div>
+                <p>Deep breathing</p>
+              </div>
+              <div class="contents_under">
+                <p>Take a deep breath to relieve your stress.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- 4D가 아닌 금단증상 내용 -->
+        <div class="symp_contents_exception_4D">
+          <h2></h2>
+          <ul>
+            <li>
+              <div class="contents_upper">
+                <div class="contents_img_wrap">
+                  <img src="./images/symptom_6.png" alt="symptom_img" />
+                </div>
+                <p>Symptom</p>
+              </div>
+              <div class="contents_under">
+                <p></p>
+              </div>
+            </li>
+            <li>
+              <div class="contents_upper">
+                <div class="contents_img_wrap">
+                  <img src="./images/symptom_7.png" alt="symptom_img" />
+                </div>
+                <p>Method</p>
+              </div>
+              <div class="contents_under">
+                <p></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <!-- footer -->
-    
+
     <!-- fontA -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"

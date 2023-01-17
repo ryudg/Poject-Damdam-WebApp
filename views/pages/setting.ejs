@@ -28,9 +28,10 @@
     <title>Setting</title>
     <link rel="stylesheet" href="/css/setting.css" />
     <link rel="stylesheet" href="/css/black.css" />
+    <link rel="stylesheet" href="/css/lang.css" />
   </head>
   <body class="<%= modeArr[0].mode %>">
-    <div class="container">
+    <div class="container <%= langArr[0].lang[0].kor %>">
       <div class="title">
         <a href="/main" class="setting-backbutton">
           <img src="/images/achieve_1.png" alt="뒤로가기" />
@@ -67,7 +68,14 @@
         <div class="setting-icon">
           <p>한국어</p>
           <div class="setting-movebun">
-            <div class="setting-ellipse"></div>
+            <form action="lang" method="post">
+              <input
+                class="setting-ellipse"
+                type="submit"
+                name="lang"
+                value=""
+              />
+            </form>
           </div>
           <p>English</p>
         </div>
@@ -167,6 +175,169 @@
           </div>
           <div class="space-between">
             <p>앱 버전</p>
+            <p>v 0.1</p>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="home">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="achievement">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="community">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
+    </div>
+    <div class="container en <%= langArr[0].lang[1].en %>">
+      <div class="title">
+        <a href="/main" class="setting-backbutton">
+          <img src="/images/achieve_1.png" alt="뒤로가기" />
+        </a>
+        <h1 class="setting-title">Setting</h1>
+        <h1></h1>
+      </div>
+
+      <div class="box setting-layout-small theme">
+        <div class="setting-icontitle">
+          <img src="/images/mdi_theme-light-dark.png" alt="밝기조절" />
+          <h3>Theme</h3>
+        </div>
+        <div class="setting-icon">
+          <img src="/images/ph_sun-bold.png" alt="밝음" />
+          <div class="setting-movebun">
+            <form action="theme" method="post">
+              <input
+                class="setting-ellipse"
+                type="submit"
+                name="mode"
+                value=""
+              />
+            </form>
+          </div>
+          <img src="/images/ph_moon-stars.png" alt="어두움" />
+        </div>
+      </div>
+      <div class="box setting-layout-small lang">
+        <div class="setting-icontitle">
+          <img src="/images/material-symbols_language.png" alt="언어아이콘" />
+          <h3>Language</h3>
+        </div>
+        <div class="setting-icon">
+          <p>Korean</p>
+          <div class="setting-movebun">
+            <form action="lang" method="post">
+              <input
+                class="setting-ellipse"
+                type="submit"
+                name="lang"
+                value=""
+              />
+            </form>
+          </div>
+          <p>English</p>
+        </div>
+      </div>
+      <div class="box setting-layout-big">
+        <div class="setting-icontitle">
+          <img
+            src="/images/mdi_trash-can-outline.png"
+            alt="데이더비우기 아이콘"
+          />
+          <h3>Data</h3>
+        </div>
+        <div class="reset-div">
+          <div class="setting-resetBtn">
+            <button type="submit">Diary Initialization</button>
+          </div>
+          <div class="setting-modal-bg">
+            <div class="setting-modal">
+              <h2>Whoops!</h2>
+              <h2>Are you sure you want</h2>
+              <h2>to reset your diary?</h2>
+              <form action="/memoReset" method="post">
+                <button type="submit">Check</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="reset-div">
+          <div class="setting-resetBtn">
+            <button>Initialize user information</button>
+          </div>
+          <div class="setting-modal-bg">
+            <div class="setting-modal">
+              <h2>Whoops!</h2>
+              <h2>Are you sure you want to</h2>
+              <h2>initialize user information?</h2>
+              <form action="/userReset" method="post">
+                <button type="submit">Check</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="reset-div">
+          <div class="setting-resetBtn">
+            <button>Full initialization</button>
+          </div>
+          <div class="setting-modal-bg">
+            <div class="setting-modal">
+              <h2>Whoops!</h2>
+              <h2>Are you sure you want to</h2>
+              <h2>do a full initialization?</h2>
+              <form action="/allReset" method="post">
+                <button type="submit">Check</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box setting-layout-small">
+        <div class="setting-icontitle">
+          <img
+            src="/images/material-symbols_mail-outline.png"
+            alt="개발자메일 아이콘"
+          />
+          <h3>Developer Information</h3>
+        </div>
+        <div class="setting-icon space-between">
+          <a href="#">asdf@gmail.com</a>
+          <img
+            src="/images/material-symbols_arrow-forward-ios-rounded.png"
+            alt="더보기"
+          />
+        </div>
+      </div>
+      <div class="box setting-layout-normal">
+        <div class="setting-icontitle">
+          <img
+            src="/images/material-symbols_info-outline-rounded.png"
+            alt="앱정보 아이콘"
+          />
+          <h3>About the app</h3>
+        </div>
+        <div class="setting-vision">
+          <div class="space-between">
+            <a href="#">Terms and Conditions of Service</a>
+            <img
+              src="/images/material-symbols_arrow-forward-ios-rounded.png"
+              alt="더보기"
+            />
+          </div>
+          <div class="space-between">
+            <a href="#">Privacy Policy</a>
+            <img
+              src="/images/material-symbols_arrow-forward-ios-rounded.png"
+              alt="더보기"
+            />
+          </div>
+          <div class="space-between">
+            <p>App Version</p>
             <p>v 0.1</p>
           </div>
         </div>

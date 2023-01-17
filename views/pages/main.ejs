@@ -26,11 +26,12 @@
     <!-- css -->
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/black.css" />
+    <link rel="stylesheet" href="/css/lang.css" />
 
     <title>Damdam</title>
   </head>
   <body id="main" class="<%= modeArr[0].mode %>">
-    <div class="container">
+    <div class="container <%= langArr[0].lang[0].kor%>">
       <!-- header -->
       <div class="header">
         <div class="user-name">
@@ -236,6 +237,227 @@
         </div>
       </section>
       <!-- footer -->
+      <footer>
+      <div class="footer-home active">
+        <a href="/main"><i class="fa-solid fa-house"></i></a>
+      </div>
+      <div class="footer-achievement">
+        <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+      </div>
+      <div class="footer-community">
+        <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+      </div>
+      <div class="footer-calendar">
+        <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+      </div>
+    </footer>
+    </div>
+
+    <div class="container  <%= langArr[0].lang[1].en%>">
+      <!-- header -->
+      <div class="header">
+        <div class="user-name">
+          <h1>Hello <%= userArr[0].userName %> sir</h1>
+        </div>
+        <div class="info-setting">
+          <div class="info">
+            <a href="/userinfo"><i class="fa-solid fa-circle-user"></i></a>
+          </div>
+          <div class="setting">
+            <a href="/setting"><i class="fa-solid fa-gear"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- main- -->
+      <div class="main-timer">
+        <div><img src="/images/main-timer.png" alt="timer-img" /></div>
+        <div>
+          <div class="main-timer-day">
+            <%  startDate = new
+            Date(userArr[0].EndYear,userArr[0].EndMonth-1,userArr[0].EndDay,userArr[0].EndHour,userArr[0].EndMinute);
+            %> <%  nowDate = new Date;  korea = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),nowDate.getHours()+9,nowDate.getMinutes());  currDay = 24 * 60 * 60 * 1000; 
+            diff = korea - startDate;  day = parseInt(diff/currDay) ; %>
+            <%= day %>D
+          </div>
+
+          <div class="main-timer-clock">
+            <div class="main-timer-hour">
+              <%  hour = parseInt(diff/(1000 * 60 * 60));  upH = hour -
+              day*24; if(upH <10) {upH = ""+upH} %> <%= upH %>H
+            </div>
+            <div class="main-timer-minute">
+              <%  minute = parseInt(diff/(1000 * 60)) %> <%  upM = minute
+              - day*24*60 - (hour - day*24)*60; if(upM <10){upM = "" + upM} %>
+              <%= upM %>M
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- section achievement -->
+      <section class="achievement">
+        <div class="achievement-title">
+          <div class="achievement-icon"><i class="fa-solid fa-trophy"></i></div>
+          <div><h1>my accomplishments</h1></div>
+          <div><h3><%= totalLength %> / <%= allLength %></h3></div>
+        </div>
+        <div class="achievement-contents">
+          <%  randomPrice = Math.floor(Math.random()*testPriceArr.length); %>
+          <%  randomDay = Math.floor(Math.random()*testDayArr.length); %> 
+          <%  randomCount = Math.floor(Math.random()*testCountArr.length); %> 
+          <% if(testPriceArr.length>0) { %>
+            <div class="achievement-content">
+              <img src="<%= testPriceArr[randomPrice].img %>" alt="01">
+              <div class="achievement-content-text"><%= testPriceArr[randomPrice].content %></div>
+            </p>
+          </div>
+          <% } %>
+          <% if(testDayArr.length>0) { %>
+            <div class="achievement-content">
+              <img src="<%= testDayArr[randomDay].img %>" alt="01">
+              <div class="achievement-content-text"><%= testDayArr[randomDay].content %></div>
+            </p>
+          </div>
+          <% } %>
+          <% if(testCountArr.length>0) { %>
+            <div class="achievement-content">
+              <img src="<%= testCountArr[randomCount].img %>" alt="01">
+              <div class="achievement-content-text"><%= testCountArr[randomCount].content %></div>
+            </p>
+          </div>
+          <% } %>
+          <div class="achievement-content">
+            <p>
+              <a href="/achievement">See All</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- section result -->
+      <section class="result">
+        <div class="result-title">
+          <div class="result-icon">
+            <i class="fa-regular fa-rectangle-list"></i>
+          </div>
+          <div><h1>My achievements.</h1></div>
+        </div>
+        <div class="result-contents">
+          <div class="count">
+            <div class="count-icon"><i class="fa-solid fa-smoking"></i></div>
+            <div class="count-content">
+              <h3>unsmoked cigarettes</h3>
+              <h1><%= parseInt(userArr[0].CountPerDay * (hour/24)) %>ea</h1>
+
+              
+              
+            </div>
+          </div>
+          <div class="save">
+            <div class="save-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+            <div class="save-content">
+              <h3>saving money</h3>
+              <h1><%= parseInt(userArr[0].Price * (hour/24))  %>&#8361;</h1>
+            </div>
+          </div>
+          <div class="time">
+            <div class="time-icon">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+            </div>
+            <div class="time-content">
+              <h3>Save time</h3>
+              <h1><%= parseInt(minute/24)%>M</h1>
+            </div>
+          </div>
+          <div class="contour"></div>
+          <div class="overcome">
+            <div class="overcome-icon">
+              <i class="fa-solid fa-hand-fist"></i>
+            </div>
+            <div class="overcome-content">
+              <a href="/symptom"
+                ><h1>Overcoming withdrawal</h1>
+                <span><i class="fa-solid fa-chevron-right"></i></span
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section changes -->
+      <section class="change">
+        <div class="change-title">
+          <div class="change-icon"><i class="fa-solid fa-recycle"></i></div>
+          <div><h1>My change.</h1></div>
+        </div>
+        <div class="change-contents">
+
+          <div class="now">
+            <div>
+              <p><%= stageEn[stageCount].stage %></p>
+              <p>
+                <%= stageEn[stageCount].goal %> - <%= stageEn[stageCount].stageTxt
+                %>
+              </p>
+            </div>
+            <div class="progress">
+              <%  gage = Math.floor((pass/stageEn[stageCount].min)*100) %> <%
+              if(gage >= 100){ gage = 100} %>
+              <progress
+                id="progress"
+                value="<%= gage %>"
+                min="0"
+                max="100"
+              ></progress>
+              <p><%= gage %>%</p>
+            </div>
+          </div>
+
+          <div class="contour"></div>
+        </div>
+        <div class="change-seemore">
+          <div class="change-seemore-icon">
+            <i class="fa-solid fa-hand-fist"></i>
+          </div>
+          <div class="change-seemore-content">
+            <a href="/stage">
+              <h1>Find out the stage of change</h1>
+              <span><i class="fa-solid fa-chevron-right"></i></span
+            ></a>
+          </div>
+        </div>
+      </section>
+      <!-- knowledge -->
+      <section class="knowledge">
+        <div class="knowledge-title">
+          <div class="knowledge-icon">
+            <i class="fa-regular fa-lightbulb"></i>
+          </div>
+          <div><h1>Knowledge +</h1></div>
+        </div>
+        <div class="knowledge-content">
+          <h2>
+            <%  randomArr =
+            knowledgeEn104[Math.floor(Math.random()*knowledgeEn104.length)]; %> <%=
+            randomArr.categoryTxt; %>
+          </h2>
+          <h4>
+            <%=
+            randomArr.contents[Math.floor(Math.random()*randomArr.contents.length)].txt
+            %>
+          </h4>
+        </div>
+        <div class="contour"></div>
+        <div class="knowledge-seemore">
+          <div class="knowledge-seemore-icon">
+            <i class="fa-solid fa-hand-fist"></i>
+          </div>
+          <div class="knowledge-seemore-content">
+            <a href="/knowledge">
+              <h1>Check all information</h1>
+              <span><i class="fa-solid fa-chevron-right"></i></span
+            ></a>
+          </div>
+        </div>
+      </section>
       <footer>
       <div class="footer-home active">
         <a href="/main"><i class="fa-solid fa-house"></i></a>

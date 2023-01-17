@@ -28,9 +28,10 @@
     <title>Knowledge</title>
     <link rel="stylesheet" href="css/style2.css" />
     <link rel="stylesheet" href="css/black.css" />
+    <link rel="stylesheet" href="css/lang.css" />
   </head>
   <body id="knowledge" class="<%= modeArr[0].mode %>">
-    <div class="wrap">
+    <div class="wrap <%= langArr[0].lang[0].kor%>">
       <header>
         <a href="/main">
           <img src="images/icon_arrow-back.svg" alt="back" />
@@ -71,6 +72,45 @@
       </footer>
     </div>
 
+    <div class="wrap <%= langArr[0].lang[1].en%>">
+      <header>
+        <a href="/main">
+          <img src="images/icon_arrow-back.svg" alt="back" />
+        </a>
+        <h1>Knowledge+</h1>
+      </header>
+      <main>
+        <h2 class="know-title">104 Reasons to Stop Smoking</h2>
+
+        <% for( let i = 0; i < knowledgeEn104.length; i++ ) { %>
+        <div class="content-box">
+          <h3><%= knowledgeEn104[i].categoryTxt %></h3>
+          <ul>
+            <% for( let j = 0; j < knowledgeEn104[i].contents.length; j++ ) { %>
+            <li>
+              <%= knowledgeEn104[i].contents[j].num %>. <%=
+              knowledgeEn104[i].contents[j].txt %>
+            </li>
+            <% } %>
+          </ul>
+        </div>
+        <% } %>
+      </main>
+      <footer>
+        <div class="home active">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="achievement">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="community">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
+    </div>
     <!-- fontA -->
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"

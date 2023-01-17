@@ -169,6 +169,7 @@ function showCalendar() {
                   </div>
                   <div class="sub2"><p>${e[memoDay][0].내용}</p></div>
                 </div>
+                <div class="delete"><form action="memoDelete" method="post"><button>삭제</button></form></div>
               </div>
               `;
             });
@@ -217,9 +218,9 @@ function showCalendar() {
         // 만약 데이터 상의 날짜가 존재하고  테이블 상의 날짜가 일치하면 정보가 있는 테이블의 날짜에 스타일 추가
         if (strokeYear == calendarYear && strokeMonth == calendarMonth) {
           let stroke = document.getElementById(`${strokeDay}`);
-          stroke.style.borderBottom = "1px solid #000";
-          stroke.style.borderRadius = "50%";
-          stroke.style.boxShadow = "1px 1px 4px rgba(0,0,0,0.2)";
+          stroke.style.borderBottom = "1px solid #1fab89";
+          stroke.style.borderRadius = "10px";
+          stroke.style.boxShadow = "1px 1px 4px #1fab896e";
         }
       });
     });

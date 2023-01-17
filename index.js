@@ -78,6 +78,23 @@ const modereadfile = fs.readFileSync("black.json", "utf-8");
 const modeArrData = JSON.parse(modereadfile);
 modeArr = [...modeArrData];
 
+// ----------영문----------
+let langArr = [];
+const langreadfile = fs.readFileSync("lang.json", "utf-8");
+const langArrData = JSON.parse(langreadfile);
+langArr = [...langArrData];
+
+// ----------en----------
+let stageEn = [];
+const stageEnFile = fs.readFileSync("stageDataEn.json", "utf-8");
+const jsonStageDataEn = JSON.parse(stageEnFile);
+stageEn = [...jsonStageDataEn];
+
+let knowledgeEn104 = [];
+const knowledgeEnFile = fs.readFileSync("knowledgeDataEn.json", "utf-8");
+const jsonKnowEnData = JSON.parse(knowledgeEnFile);
+knowledgeEn104 = [...jsonKnowEnData];
+
 // ----------splash----------
 app.get("/", function (req, res) {
   res.render("pages/index.ejs", { userArr });
@@ -311,6 +328,9 @@ app.get("/main", (req, res) => {
     testDayArr,
     testCountArr,
     modeArr,
+    langArr,
+    stageEn,
+    knowledgeEn104,
   });
 });
 
@@ -343,17 +363,29 @@ app.get("/stage", function (req, res) {
     })
     .filter((e) => e == true).length;
 
-  res.render("pages/stage.ejs", { stage, pass, stageCount, modeArr });
+  res.render("pages/stage.ejs", {
+    stage,
+    pass,
+    stageCount,
+    modeArr,
+    langArr,
+    stageEn,
+  });
 });
 
 // --------------------knowledge--------------------
 app.get("/knowledge", function (req, res) {
-  res.render("pages/knowledge.ejs", { knowledge104, modeArr });
+  res.render("pages/knowledge.ejs", {
+    knowledge104,
+    modeArr,
+    langArr,
+    knowledgeEn104,
+  });
 });
 
 // ----------symptom (금단증상) 페이지----------
 app.get("/symptom", function (req, res) {
-  res.render("pages/symptom.ejs", { modeArr });
+  res.render("pages/symptom.ejs", { modeArr, langArr });
 });
 
 // ----------achievement (업적) 페이지----------
@@ -439,19 +471,20 @@ app.get("/achievement", function (req, res) {
     userArr,
     allLength,
     modeArr,
+    langArr,
   });
 });
 
 // ----------userinfo----------
 app.get("/userinfo", async function (req, res) {
-  res.render("pages/userinfo.ejs", { userArr, modeArr });
+  res.render("pages/userinfo.ejs", { userArr, modeArr, langArr });
 });
 app.get("/title", function (req, res) {
   res.render("pages/title.ejs");
 });
 // ----------setting----------
 app.get("/setting", function (req, res) {
-  res.render("pages/setting.ejs", { modeArr });
+  res.render("pages/setting.ejs", { modeArr, langArr });
 });
 // ----------다크모드----------
 app.post("/theme", function (req, res) {
@@ -463,7 +496,18 @@ app.post("/theme", function (req, res) {
   fs.writeFileSync("black.json", JSON.stringify(modeArr));
   res.redirect("/setting");
 });
-
+// ----------언어 변경----------
+app.post("/lang", function (req, res) {
+  if (langArr[0].lang[1].en == "yes") {
+    langArr[0].lang[0].kor = "yes";
+    langArr[0].lang[1].en = "";
+  } else {
+    langArr[0].lang[0].kor = "";
+    langArr[0].lang[1].en = "yes";
+  }
+  fs.writeFileSync("lang.json", JSON.stringify(langArr));
+  res.redirect("/setting");
+});
 // ----------데이터 reset----------
 // ----------달력 정보 초기화----------
 app.post("/memoReset", (req, res) => {

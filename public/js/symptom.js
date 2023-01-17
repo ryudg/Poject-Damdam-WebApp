@@ -1,6 +1,48 @@
 // 금단증상 버튼 클릭 이벤트 (버튼 색 변경과 내용 변화가 함께 들어있음)
 
 $(function () {
+  let nameArrEn = [
+    "Too nervous",
+    "Depression",
+    "Anxious",
+    "Headache",
+    "Thirst, sore throat, gums and tongue",
+    "Less concentration",
+    "Digestion",
+    "Cough",
+    "Hunger",
+    "Insomnia",
+    "Tired",
+    "It feels like it's stings",
+  ];
+  let symArrEn = [
+    " Nicotine gives you a sense of stability and has the effect of relieving tension. Once you smoke for a long time and become addicted, you quit smoking, causing great confusion in the nervous system when the supply of nicotine is cut off. As a result, you are likely to be nervous and sensitive. It lasts for several days and then disappears.",
+    " It is a common phenomenon that you feel depressed after quitting smoking. These symptoms last for several days and then disappear. However, if you start smoking again because of depression, you can become more depressed with frustration and guilt. ",
+    " It is a symptom caused by dissonance of autonomic nerves and endocrine system after smoking cessation. It can also appear with symptoms such as anxiety, anxiety, frustration, and anger. It is often difficult to realize that it is a withdrawal symptom because it is usually connected to what you go through in your life. It lasts for several days and then disappears.",
+    " It is a symptom that can occur in one in four people who usually quit smoking. It is a symptom that occurs because the blood circulation speed slows down a little and you don't get enough blood and oxygen to the brain. It disappears within a few weeks.",
+    " These symptoms are tamed by chemicals that have always been present and affected in the mouth and then persist for weeks as the tissues of the mouth recover.",
+    " There are people who can't work because they can't concentrate after quitting smoking. This is also one of the symptoms of withdrawal, and usually disappears within two to several weeks after quitting smoking.",
+    " Your bowel movement may slow down. It can cause indigestion, constipation, and gas. It can usually last a week or two.",
+    " Coughing is not associated with nicotine withdrawal symptoms. This is a normal defense process for the body to block the airways and remove phlegm and tar that made breathing difficult. It lasts for several days after quitting smoking and then disappears.",
+    " It is a symptom that most people can feel after quitting smoking, and it is common to see that they tend to eat more than usual, and gain weight as they adapt well to food. It disappears within a few weeks.",
+    "Withdrawal symptoms can cause sleep disorders, or symptoms such as headaches, nervousness, and coughing.",
+    " You can easily feel tired, along with various withdrawal symptoms.",
+    " Tingling sensation (especially legs and arms) is a phenomenon that occurs when oxygen supply is normal again.",
+  ];
+  let methodArrEn = [
+    "1) Take a rest and take a walk in fresh air <br> 2) Start exercising <br> 3) Relax by taking a deep breath <br> 4) Think of the quiet and peaceful scenes you experienced",
+    "1) Work out to sweat, drink a lot of water <br> 2) Relax your body to lie down comfortably <br> 3) Take a warm shower <br> 4) Drink fruit juice <br> 5) Think of fun",
+    "1) bathing or showering in hot water <br> 2) taking a light walk or exercising <br> 3) lying down <br> 4) thinking of quiet and peaceful scenes you experienced",
+    "1) Drink a lot of water and reduce coffee. <br> 2) Light exercise <br> 3) Bath or shower in hot water <br> 4) Open windows or take a light walk for fresh air <br> 5) Lie down and relax for 5 minutes",
+    "1) Take a sip of ice water or juice <br> 2) Chewing gum helps <br> 3) Breathing deeply <br> 4) Brushing teeth",
+    "1) It is helpful to take a rest, relax, and take a deep breath. <br> 2) If you're having a hard time, it's better to stop working for a while and wake up altogether.",
+    "1) Avoid eating high-fat foods, sweet foods, foods high in caffeine, etc. <br> 2) Avoid stimulating food. <br> 3) Eat foods high in fiber",
+    "1) Drink lots of water <br> 2) Do not use antibiotics. <br> 3) Reduce cough as much as possible.",
+    "1) Every time, drinking snacks or drinks with low calories and exercising moderately are helpful.",
+    "1) Avoid drinking caffeine-containing drinks after 6 p.m., relax, and try to meditate. <br> 2) Taking a warm shower before going to bed also helps you sleep well.",
+    "1) For two weeks when withdrawal symptoms are severe, it may be helpful to avoid excessive work and sleep briefly. <br> 2) Ask for understanding in advance and inform the surrounding people that withdrawal symptoms and fatigue may occur.",
+    "1) Take a warm bath. <br> 2) Massage the stinging area. <br> 3) Take a light walk.",
+  ];
   let nameArr = [
     "신경과민",
     "우울감",
@@ -45,146 +87,92 @@ $(function () {
     "1) 따뜻한 물로 목욕을 한다 <br> 2) 따끔거리는 곳을 마사지 해준다 <br> 3) 가벼운 산책을 한다.",
   ];
 
-  $("#symp_btn_4D").on("click", function () {
-    $(".symp_contents_4D").addClass("active");
-    $(".symp_contents_exception_4D").removeClass("active");
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
+  let btnActive = document.querySelectorAll(".symp_wrap.yes .symp_btn_remove");
+  let form4d = document.querySelector(".symp_wrap.yes .symp_contents_4D");
+  let form4dExcep = document.querySelector(
+    ".symp_wrap.yes .symp_contents_exception_4D"
+  );
+  let sympTitle = document.querySelector(
+    ".symp_wrap.yes .symp_contents_exception_4D h2"
+  );
+  let sympContnets = document.querySelectorAll(
+    ".symp_wrap.yes .symp_contents_exception_4D .contents_under p"
+  );
+  console.log(sympContnets);
 
-  $("#symp_btn_0").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[0]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[0]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[0]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
+  let title = document.querySelector(".yes .symp_title h1");
 
-  $("#symp_btn_1").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[1]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[1]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[1]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_2").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[2]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[2]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[2]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_3").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[3]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[3]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[3]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_4").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[4]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[4]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[4]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_5").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[5]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[5]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[5]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_6").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[6]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[6]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[6]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_7").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[7]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[7]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[7]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_8").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[8]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[8]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[8]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_9").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[9]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[9]);
-    $(".symp_contents_exception_4D .contents_under p").eq(1).html(methodArr[9]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_10").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[10]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[10]);
-    $(".symp_contents_exception_4D .contents_under p")
-      .eq(1)
-      .html(methodArr[10]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_11").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[11]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[11]);
-    $(".symp_contents_exception_4D .contents_under p")
-      .eq(1)
-      .html(methodArr[11]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
-
-  $("#symp_btn_12").on("click", function () {
-    $(".symp_contents_exception_4D").addClass("active");
-    $(".symp_contents_4D").removeClass("active");
-    $(".symp_contents_exception_4D h2").html(nameArr[12]);
-    $(".symp_contents_exception_4D .contents_under p").eq(0).html(symArr[12]);
-    $(".symp_contents_exception_4D .contents_under p")
-      .eq(1)
-      .html(methodArr[12]);
-    $(".symp_btn_remove").removeClass("active");
-    $(this).addClass("active");
-  });
+  if (title.innerHTML == "금단증상 극복") {
+    for (i = 0; i < btnActive.length; i++) {
+      // 4D가 아닌 요소들에게 적용되는 이벤트들
+      if (i >= 1) {
+        btnActive[i].addEventListener("click", eventExcep4d);
+        function eventExcep4d() {
+          // 버튼 색변경 이벤트
+          for (i = 0; i < btnActive.length; i++) {
+            btnActive[i].classList.remove("active");
+          }
+          this.classList.add("active");
+          //  4D가 아닌 양식을 선택
+          form4d.classList.remove("active");
+          form4dExcep.classList.add("active");
+          // 4D가 아닌 양식에 내용 삽입
+          let idArr = this.id.split("_");
+          let idLastNum = idArr[idArr.length - 1];
+          sympTitle.innerHTML = nameArr[idLastNum];
+          sympContnets[0].innerHTML = symArr[idLastNum];
+          sympContnets[1].innerHTML = methodArr[idLastNum];
+        }
+      } // 4D 요소에게 적용되는 이벤트들
+      else {
+        btnActive[i].addEventListener("click", event4d);
+        function event4d() {
+          // 버튼 색변경 이벤트
+          for (i = 0; i < btnActive.length; i++) {
+            btnActive[i].classList.remove("active");
+          }
+          this.classList.add("active");
+          //   4D 양식을 선택
+          form4dExcep.classList.remove("active");
+          form4d.classList.add("active");
+        }
+      }
+    }
+  } else {
+    for (i = 0; i < btnActive.length; i++) {
+      // 4D가 아닌 요소들에게 적용되는 이벤트들
+      if (i >= 1) {
+        btnActive[i].addEventListener("click", eventExcep4d);
+        function eventExcep4d() {
+          // 버튼 색변경 이벤트
+          for (i = 0; i < btnActive.length; i++) {
+            btnActive[i].classList.remove("active");
+          }
+          this.classList.add("active");
+          //  4D가 아닌 양식을 선택
+          form4d.classList.remove("active");
+          form4dExcep.classList.add("active");
+          // 4D가 아닌 양식에 내용 삽입
+          let idArr = this.id.split("_");
+          let idLastNum = idArr[idArr.length - 1];
+          sympTitle.innerHTML = nameArrEn[idLastNum];
+          sympContnets[0].innerHTML = symArrEn[idLastNum];
+          sympContnets[1].innerHTML = methodArrEn[idLastNum];
+        }
+      } // 4D 요소에게 적용되는 이벤트들
+      else {
+        btnActive[i].addEventListener("click", event4d);
+        function event4d() {
+          // 버튼 색변경 이벤트
+          for (i = 0; i < btnActive.length; i++) {
+            btnActive[i].classList.remove("active");
+          }
+          this.classList.add("active");
+          //   4D 양식을 선택
+          form4dExcep.classList.remove("active");
+          form4d.classList.add("active");
+        }
+      }
+    }
+  }
 });

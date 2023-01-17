@@ -1,0 +1,122 @@
+[
+  {
+    "stage": "stage 1",
+    "goal": "20minutes",
+    "min": 20,
+    "stageTxt": "Blood pressure, pulse rate, and body temperature of hands and feet return to normal."
+  },
+  {
+    "stage": "stage 2",
+    "goal": "8hours",
+    "min": 480,
+    "stageTxt": "Compared to the highest nicotine level in the bloodstream, it is removed by 93.75% and reduced to 6.25%."
+  },
+  {
+    "stage": "stage 3",
+    "goal": "12hours",
+    "min": 720,
+    "stageTxt": "The amount of oxygen in the blood rises to the normal level and the amount of carbon monoxide decreases to the normal level."
+  },
+  {
+    "stage": "stage 4",
+    "goal": "24hours",
+    "min": 1440,
+    "stageTxt": "The intensity of anxiety peaks and recovers to before smoking cessation about two weeks later."
+  },
+  {
+    "stage": "stage 5",
+    "goal": "48hours",
+    "min": 2880,
+    "stageTxt": "The damaged nerve endings begin to recover, and the sense of smell and taste begins to return to normal. The anger and nervousness caused by quitting smoking peak."
+  },
+  {
+    "stage": "stage 6",
+    "goal": "72hours",
+    "min": 4320,
+    "stageTxt": "Nicotine tests show that there is 100% no nicotine, and 90% of nicotine metabolites are removed through urine. The withdrawal phenomenon peaks, such as losing calm. For non-smokers who had an average amount of smoking, the number of times they feel a strong desire to smoke per day peaks throughout the smoking cessation period. The bronchial tubes leading to the alveoli begin to feel comfortable. Breathing becomes easier and lung function begins to improve."
+  },
+  {
+    "stage": "stage 7",
+    "goal": "5-8days",
+    "min": 11520,
+    "stageTxt": "Non-smokers who had an average amount of smoking experience an intense desire to smoke about three times a day on average. A few minutes may feel like hours, but in fact, one intense desire to smoke does not exceed three minutes. It is recommended to endure for three minutes by using the timer function of a watch or cell phone."
+  },
+  {
+    "stage": "stage 8",
+    "goal": "10days",
+    "min": 14400,
+    "stageTxt": "Non-smokers who had an average amount of smoking feel a strong desire to smoke about twice a day, less than three minutes at a time."
+  },
+  {
+    "stage": "stage 9",
+    "goal": "10days-2weeks",
+    "min": 20160,
+    "stageTxt": "The recovery progresses considerably and reaches a point where symptoms of addiction are not painful. Blood circulation in the gums and teeth is similar to that of non-smokers."
+  },
+  {
+    "stage": "stage 10",
+    "goal": "2-4weeks",
+    "min": 40320,
+    "stageTxt": "The withdrawal symptoms of anger, anxiety, decreased concentration, anxiety, insomnia, lack of calm, and depression end. If these symptoms are still felt, you should seek a doctor."
+  },
+  {
+    "stage": "stage 11",
+    "goal": "1month",
+    "min": 43200,
+    "stageTxt": "The number of up-regulated nicotine receptors throughout the brain, from the cerebrum to the limbic system, decreases, making it similar to that of non-smokers."
+  },
+  {
+    "stage": "stage 12",
+    "goal": "2weeks-1month",
+    "min": 43200,
+    "stageTxt": "The probability of having a heart attack decreases. Lung function begins to improve."
+  },
+  {
+    "stage": "stage 13",
+    "goal": "3weeks-3month",
+    "min": 129600,
+    "stageTxt": "The circulation function is substantially improved. It makes walking easier. If you have a chronic cough, it disappears. See a doctor as soon as possible if it doesn't disappear. It could be a sign of lung cancer."
+  },
+  {
+    "stage": "stage 14",
+    "goal": "6month",
+    "min": 259200,
+    "stageTxt": "On average, there will be 2.7kg of weight gain, but insulin resistance returns to normal."
+  },
+  {
+    "stage": "stage 15",
+    "goal": "1-9month",
+    "min": 388800,
+    "stageTxt": "The symptoms of nasal congestion, fatigue, and shortness of breath from smoking disappear. The cilia of the lungs grows again, handles phlegm, etc., keeps the lungs clean, and prevents infection. Overall fitness increases."
+  },
+  {
+    "stage": "stage 16",
+    "goal": "1years",
+    "min": 525600,
+    "stageTxt": "The risk of cardiovascular disease is reduced by half of smokers."
+  },
+  {
+    "stage": "stage 17",
+    "goal": "2years",
+    "min": 1051200,
+    "stageTxt": "Smoking completely removes phlegm from the lungs."
+  },
+  {
+    "stage": "stage 18",
+    "goal": "5-10years",
+    "min": 5256000,
+    "stageTxt": "The risk of having a stroke becomes similar to that of a non-smoker"
+  },
+  {
+    "stage": "stage 19",
+    "goal": "10years",
+    "min": 5256000,
+    "stageTxt": "The probability of dying from lung cancer is reduced by half compared to smokers who smoke one pack a day. Cancer in the mouth, neck, and esophagus also decreases."
+  },
+  {
+    "stage": "stage 20",
+    "goal": "15years",
+    "min": 7884000,
+    "stageTxt": "The risk of cardiovascular disease becomes similar to that of a person who has never smoked."
+  }
+]

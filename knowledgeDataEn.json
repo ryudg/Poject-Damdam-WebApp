@@ -1,0 +1,541 @@
+[
+  {
+    "categoryId": 1,
+    "categoryTxt": "COVID-19 Risk",
+    "contents": [
+      {
+        "num": 1,
+        "txt": "Smokers are at greater risk of developing severe cases and dying from COVID-19 than non-smokers."
+      }
+    ]
+  },
+  {
+    "categoryId": 2,
+    "categoryTxt": "Smoking has an immediate effect on appearance.",
+    "contents": [
+      {
+        "num": 2,
+        "txt": "Everything smells like cigarettes."
+      },
+      {
+        "num": 3,
+        "txt": "Cigarettes discolor teeth yellow and produce excessive dental plaque (also called plaques, a colorless bacterial membrane that continuously forms on the surface of teeth, which is the main cause of periodontal disease)."
+      },
+      {
+        "num": 4,
+        "txt": "Smoking can cause bad breath even if it is smoke-free."
+      },
+      {
+        "num": 5,
+        "txt": "Cigarettes promote wrinkles on the skin, making you look old for your age. Smoking accelerates skin aging by eliminating proteins related to skin elasticity and depleting vitamin A, which interferes with smooth blood flow."
+      },
+      {
+        "num": 6,
+        "txt": "These wrinkles are more pronounced around the mouth and around the eyes, and cigarettes also make the skin very dry, like leather."
+      },
+      {
+        "num": 7,
+        "txt": "Smoking increases the risk of developing Psoriasis (non-inflammatory inflammatory skin disease that causes itching and red spots all over the body)."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 3,
+    "categoryTxt": "Smoking threatens the health of not only the smoker himself but also his friends and family.",
+    "contents": [
+      {
+        "num": 8,
+        "txt": "Secondhand smoke kills more than 1 million people every year."
+      },
+      {
+        "num": 9,
+        "txt": "Non-smokers exposed to second-hand smoke are at risk of developing lung cancer."
+      },
+      {
+        "num": 10,
+        "txt": "Cigarettes are reported as one of the main causes of accidental fire and death."
+      },
+      {
+        "num": 11,
+        "txt": "E-cigarettes also expose nicotine and other harmful chemicals to non-smokers and people around them."
+      },
+      {
+        "num": 12,
+        "txt": "In the case of latent tuberculosis (infected with tuberculosis bacteria but not at risk of symptoms or spread) exposure to secondhand smoke increases the risk of developing active tuberculosis (communicable with disease and related symptoms caused by tuberculosis bacteria)."
+      },
+      {
+        "num": 13,
+        "txt": "Second-hand smoke exposure is reported to be associated with type 2 diabetes (a disease in which blood sugar increases due to insulin secretion disorder)."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 4,
+    "categoryTxt": "Smoking or using e-cigarettes harm children's health and safety.",
+    "contents": [
+      {
+        "num": 14,
+        "txt": "Smokers' children are constantly affected in the form of chronic respiratory diseases in adulthood due to reduced lung function."
+      },
+      {
+        "num": 15,
+        "txt": "Child exposure to e-cigarette nicotine solutions can pose a serious risk. In particular, there is a risk of nicotine solution leaking from e-cigarette devices or swallowing liquids by children."
+      },
+      {
+        "num": 16,
+        "txt": "E-cigarettes can cause fire or explosion and cause serious injuries such as burns."
+      },
+      {
+        "num": 17,
+        "txt": "School-age children exposed to second-hand smoke (referring to elementary school students aged 8 to 13) are at risk of developing asthma due to inflammation of the airways to the lungs."
+      },
+      {
+        "num": 18,
+        "txt": "Infants under the age of 2 who are exposed to secondhand smoke at home can develop middle-income diseases and can lead to hearing impairment and hearing loss."
+      },
+      {
+        "num": 19,
+        "txt": "Smoking cessation reduces the risk of many diseases such as respiratory diseases (such as asthma) and ear infections that can occur in children due to secondhand smoke."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 5,
+    "categoryTxt": "Tobacco use has negative social consequences.",
+    "contents": [
+      {
+        "num": 20,
+        "txt": "You want to be a good person or an example to your children, friends, or loved ones, but tobacco use interferes with this."
+      },
+      {
+        "num": 21,
+        "txt": "Also, it can negatively affect social interaction or human relationships."
+      },
+      {
+        "num": 22,
+        "txt": "Quitting smoking means you're free from space restrictions. Even if you don't feel isolated or go out to smoke, you can get along well socially."
+      },
+      {
+        "num": 23,
+        "txt": "Quitting smoking increases productivity. You don't have to stop trying to smoke."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 6,
+    "categoryTxt": "It's expensive. The price of cigarettes saved by quitting smoking can be invested in more important things.",
+    "contents": [
+      {
+        "num": 24,
+        "txt": "According to some studies, each smoker spends an average of $1.4 million (about 1.56 billion won). These include the cost of purchasing cigarettes, medical expenses and low wages for diseases caused by exposure to smoking and second-hand smoke."
+      },
+      {
+        "num": 25,
+        "txt": "Tobacco use affects workers' health and productivity, so it tends to lead to loss of working hours."
+      },
+      {
+        "num": 26,
+        "txt": "In addition, basic expenditures such as food, clothing, and shelter are replaced by tobacco purchase costs, which can also cause household poverty."
+      },
+      {
+        "num": 27,
+        "txt": "Globally, the loss of human resources and medical costs due to diseases and deaths from smoking are estimated to be around $1.4 trillion (about 1,565 trillion won), a burden on the global economy."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 7,
+    "categoryTxt": "Smoking lowers reproductive ability.",
+    "contents": [
+      {
+        "num": 28,
+        "txt": "Smokers are more likely to become infertile. Quitting smoking reduces the risk of infertility, premature birth, underweight babies, and miscarriages."
+      },
+      {
+        "num": 29,
+        "txt": "Smoking can cause erectile dysfunction in men. Impotence is more common in smokers because smoking interferes with blood flow to the penis. Also, if you don't stop using cigarettes early, the symptoms of erectile dysfunction are very likely to persist permanently."
+      },
+      {
+        "num": 30,
+        "txt": "Smoking also reduces the number, mobility, and shape of sperm in men."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 8,
+    "categoryTxt": "All types of cigarettes are deadly.",
+    "contents": [
+      {
+        "num": 31,
+        "txt": "More than 8 million people die from cigarettes every year."
+      },
+      {
+        "num": 32,
+        "txt": "Half of smokers die from cigarettes. The use of cigarettes of any kind or form causes diseases that lose health and become weak."
+      },
+      {
+        "num": 33,
+        "txt": "Water cigarettes are just as harmful as other cigarettes."
+      },
+      {
+        "num": 34,
+        "txt": "In particular, chewing tobacco can cause oral cancer, tooth loss, tooth discoloration, oral vitiligo, and gum disease."
+      },
+      {
+        "num": 35,
+        "txt": "Nicotine contained in smokeless cigarettes is absorbed more easily than cigarettes (general cigarettes) and increases addiction."
+      },
+      {
+        "num": 36,
+        "txt": "Cigarette growers not only absorb nicotine through their skin, but also expose them to toxic pesticides and cigarette dust, which is harmful to their health."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 9,
+    "categoryTxt": "Buying cigarettes is like financially supporting an industry that exploits farmers and children and leads to disease and death.",
+    "contents": [
+      {
+        "num": 37,
+        "txt": "Even now, children are employed in tobacco farms in some countries, which affects their studies as well as their health."
+      },
+      {
+        "num": 38,
+        "txt": "Tobacco use can exacerbate poverty by greatly increasing the risk of getting sick and dying early from cancer, heart attacks, respiratory diseases, or other tobacco-related diseases, depriving families of income for a living and charging additional costs for health care."
+      },
+      {
+        "num": 39,
+        "txt": "While the majority of people employed in the entire tobacco industry have little income, large tobacco companies are making huge profits."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 10,
+    "categoryTxt": "Heated cigarettes are bad for your health.",
+    "contents": [
+      {
+        "num": 40,
+        "txt": "Users of heated cigarettes are exposed to toxic substances that can cause various cancers."
+      },
+      {
+        "num": 41,
+        "txt": "Since heated cigarettes are also cigarettes, changing products from existing tobacco products such as cigarettes to heated cigarettes is not the same as \"smoking\" that completely stops using cigarettes."
+      },
+      {
+        "num": 42,
+        "txt": "There is not enough evidence to support the claim that heated cigarettes are less toxic than regular cigarettes."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 11,
+    "categoryTxt": "E-cigarettes are unhealthy and unsafe.",
+    "contents": [
+      {
+        "num": 43,
+        "txt": "Children and teenagers who use e-cigarettes are at least twice as likely to smoke cigarettes (normal cigarettes) later."
+      },
+      {
+        "num": 44,
+        "txt": "Using e-cigarettes increases the risk of heart and lung-related diseases."
+      },
+      {
+        "num": 45,
+        "txt": "Nicotine contained in e-cigarettes is a highly addictive drug that can damage children's developing brains."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 12,
+    "categoryTxt": "Cigarette use, especially soft cigarettes, takes your breath away",
+    "contents": [
+      {
+        "num": 46,
+        "txt": "Tobacco use accounts for about 25 percent of the world's cancer deaths."
+      },
+      {
+        "num": 47,
+        "txt": "It is known that smokers are up to 22 times more likely to develop lung cancer in their lifetime than non-smokers. Smoking is the leading cause of lung cancer, which causes more than two-thirds of lung cancer deaths worldwide."
+      },
+      {
+        "num": 48,
+        "txt": "Chronic obstructive pulmonary disease (COPD) occurred in one in five smokers. In particular, smokers who started smoking in their childhood and teens greatly slow down the growth and development of their lungs due to cigarette smoke."
+      },
+      {
+        "num": 49,
+        "txt": "Smoking can worsen asthma in adults. Asthma exacerbation can increase the risk of activity restrictions, disabilities, and severe asthma attacks that require emergency treatment."
+      },
+      {
+        "num": 50,
+        "txt": "About a quarter of the world's population suffers from latent tuberculosis (an infectious but disease-causing condition), and smoking exacerbates the natural progression of such tuberculosis. Smoking more than doubles the risk of conversion of latent tuberculosis to active tuberculosis."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 13,
+    "categoryTxt": "Smoking makes the heart sick.",
+    "contents": [
+      {
+        "num": 51,
+        "txt": "The risk of heart disease increases even with one to two cigarettes a day or occasional smoking or exposure to second-hand smoke."
+      },
+      {
+        "num": 52,
+        "txt": "Smokers have up to twice the risk of stroke and four times the risk of heart disease."
+      },
+      {
+        "num": 53,
+        "txt": "Cigarette smoke damages the coronary arteries (vessels on the surface of the heart). Various chemicals in cigarettes can lead to cholesterol and other impurities accumulation and blood clot formation, limiting blood flow, and eventually causing cardiovascular diseases such as heart attacks and strokes."
+      },
+      {
+        "num": 54,
+        "txt": "The use of nicotine and tobacco increases the risk of cardiovascular disease."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 14,
+    "categoryTxt": "Cigarettes cause more than 20 types of cancer.",
+    "contents": [
+      {
+        "num": 55,
+        "txt": "Smoking and smokeless tobacco use cause oral cancer, lip cancer, throat cancer (pharynx and larynx) and esophageal cancer."
+      },
+      {
+        "num": 56,
+        "txt": "In the event of laryngeal cancer due to tobacco use, a tracheotomy (surgery to remove the laryngeal) may be required for the patient's comfortable breathing during the treatment process."
+      },
+      {
+        "num": 57,
+        "txt": "Smokers have a much greater risk of developing acute myeloid leukemia; nasal and sinus cancers; colon, kidney, liver, pancreas, stomach and ovarian cancers; lower urinary tract cancer (including bladder, ureter and renal stomach)."
+      },
+      {
+        "num": 58,
+        "txt": "Some studies have demonstrated a link between smoking and increased risk of breast cancer, particularly in women who smoke heavily and women who started smoking before their first pregnancy."
+      },
+      {
+        "num": 59,
+        "txt": "Smoking increases the risk of cervical cancer in women infected with the human papilloma virus, which is known to be an important cause of cervical cancer."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 15,
+    "categoryTxt": "Smokers are more likely to lose sight and hearing than non-smokers.",
+    "contents": [
+      {
+        "num": 60,
+        "txt": "Smoking causes many eye diseases, which can lead to permanent vision loss if left untreated."
+      },
+      {
+        "num": 61,
+        "txt": "Smokers are known to have a higher risk of senile macular degeneration, which leads to untreatable blindness than non-smokers."
+      },
+      {
+        "num": 62,
+        "txt": "Smokers are at greater risk of cataracts (eye disease in which the lens of the eye becomes cloudy and the front appears foggy). Cataract causes vision damage, and surgery is the only way to restore vision."
+      },
+      {
+        "num": 63,
+        "txt": "According to some evidence, smoking also causes glaucoma, which can increase eye pressure and damage vision."
+      },
+      {
+        "num": 64,
+        "txt": "Adult smokers are more likely to lose their hearing."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 16,
+    "categoryTxt": "Cigarettes harm almost every organ in the body.",
+    "contents": [
+      {
+        "num": 65,
+        "txt": "Lifetime smokers have a short life span of at least 10 years on average."
+      },
+      {
+        "num": 66,
+        "txt": "Every time you smoke, toxic substances and carcinogens are delivered to your body, and at least 70 kinds of chemicals in cigarettes are known to cause cancer."
+      },
+      {
+        "num": 67,
+        "txt": "Increases your risk of developing diabetes."
+      },
+      {
+        "num": 68,
+        "txt": "Smoking is a risk factor for dementia in the disabled, which causes mental breakdown."
+      },
+      {
+        "num": 69,
+        "txt": "Alzheimer's disease is the most common form of dementia, and it is estimated that about 14% of Alzheimer's patients worldwide are caused by smoking."
+      },
+      {
+        "num": 70,
+        "txt": "Smoking women are more likely to experience menstrual pain and severe menopausal symptoms."
+      },
+      {
+        "num": 71,
+        "txt": "It reduces egg production, loses reproductive function, and reduces the resulting estrogen level, accelerating the menopause by about one to four years."
+      },
+      {
+        "num": 72,
+        "txt": "Cigarette smoke reduces the oxygen supply to body tissues."
+      },
+      {
+        "num": 73,
+        "txt": "Tobacco use interferes with blood circulation, and if left to that extent, necrosis (dying or dying of biological and cell tissues) can progress, leading to amputation of the affected area."
+      },
+      {
+        "num": 74,
+        "txt": "Smoking increases the risk of periodontal disease, a chronic inflammatory disease that causes tooth loss due to worn gums and damaged jaw bones."
+      },
+      {
+        "num": 75,
+        "txt": "Smokers have a much higher risk of postoperative complications than non-smokers."
+      },
+      {
+        "num": 76,
+        "txt": "Smokers have longer use of ventilators than non-smokers, and extended periods of intensive care unit (ICU) and overall hospitalization, which can lead to exposure to other infections."
+      },
+      {
+        "num": 77,
+        "txt": "Smokers may experience gastrointestinal diseases such as stomach ulcers, inflammatory bowel disease with abdominal cramps, persistent diarrhea, fever and rectal bleeding, stomach cancer, and colon cancer."
+      },
+      {
+        "num": 78,
+        "txt": "Smoking is likely to cause fractures easily due to decreased bone density, and serious complications such as delayed healing or not recovering are high."
+      },
+      {
+        "num": 79,
+        "txt": "Cigarette smoke weakens the body's immune system, making it vulnerable to lung infections."
+      },
+      {
+        "num": 80,
+        "txt": "In particular, smokers with genetic predisposition to autoimmune diseases increase the risk of various diseases such as rheumatoid arthritis, Crohn's disease (chronic inflammatory disease that can occur in the digestive tract), bacterial meningitis, postoperative infection, and cancer."
+      },
+      {
+        "num": 81,
+        "txt": "In addition, if you have weak immunity, such as cystic fibrosis (a rare disease in the lungs and digestive organs due to genetic defects), multiple sclerosis (a disease in which nerve cell plants in the central nervous system are eliminated), and cancer patients, you are at higher risk of related complications and early death."
+      },
+      {
+        "num": 82,
+        "txt": "The immunosuppressive effect of cigarettes increases the risk of developing Acquired Immunodeficiency Virus (HIV) infections. Among HIV-positive patients, smokers have an average life span of about 12.3 years, which is more than twice as long as non-smokers."
+      }
+    ]
+  },
+
+  {
+    "categoryId": 17,
+    "categoryTxt": "The use of cigarettes and nicotine harms your baby.",
+    "contents": [
+      {
+        "num": 83,
+        "txt": "Exposure to cigarette use and cigarette smoke during pregnancy increases fetal mortality."
+      },
+      {
+        "num": 84,
+        "txt": "Women exposed to smoking or secondhand smoke during pregnancy have an increased risk of miscarriage."
+      },
+      {
+        "num": 85,
+        "txt": "Cigarette smoke, nicotine in smokeless cigarettes, and carbon monoxide in cigarette smoke cause oxygen deficiency and placental abnormalities in the fetus, and can also lead to stillbirth."
+      },
+      {
+        "num": 86,
+        "txt": "Smokers are at greater risk of ectopic pregnancy, where fertilized eggs are attached to the outside of the uterus, causing potentially fatal complications to the mother."
+      },
+      {
+        "num": 87,
+        "txt": "Therefore, it is very important to practice smoking cessation and protect against exposure to second-hand smoke for pregnant women and pregnant women planning to get pregnant."
+      },
+      {
+        "num": 88,
+        "txt": "E-cigarettes can damage the growing fetus, posing a serious risk to pregnant women who use e-cigarettes."
+      },
+      {
+        "num": 89,
+        "txt": "Pregnant women exposed to smoking, tobacco use, or secondhand smoke are at higher risk of premature and underweight births."
+      },
+      {
+        "categoryId": 18,
+        "categoryTxt": "Cigarettes pollute the environment.",
+        "contents": [
+          {
+            "num": 90,
+            "txt": "The government and local governments are paying for the disposal of tobacco waste. Quit smoking for environmental protection."
+          }
+        ]
+      },
+      {
+        "num": 91,
+        "txt": "Cigarette butts are one of the most commonly thrown away trash in the world, and they are the most frequently collected trash on beaches and waterfront around the world."
+      },
+      {
+        "num": 92,
+        "txt": "Hazardous substances including arsenic, lead, nicotine, and formaldehyde were detected in cigarette butts. These substances flow from abandoned pike into aquatic environments and soil."
+      },
+      {
+        "num": 93,
+        "txt": "Cigarette smoke pollutes the city's atmosphere considerably."
+      },
+      {
+        "num": 94,
+        "txt": "Most cigarettes are lit using matches or lighters. If you estimate that six trillion cigarettes are burned every year around the world, one matchstick fires two cigarettes, three trillion matches must be produced, and for that, about nine million trees must be cut down."
+      },
+      {
+        "num": 95,
+        "txt": "E-cigarettes and heated tobacco products contain chemicals, packaging materials and other non-biodegradable materials (non-degradable substances in nature) and include batteries that require separate disposal."
+      },
+      {
+        "num": 96,
+        "txt": "Currently, most e-cigarette cartridges (containers for e-cigarette liquids) cannot be reused or recycled. Moreover, multinational tobacco companies tend to sell disposable cartridges to increase sales through repeat customers."
+      },
+      {
+        "num": 97,
+        "txt": "Tobacco production emissions are said to be similar to three million transatlantic flights."
+      },
+      {
+        "num": 98,
+        "txt": "Cigarette smoke contains three types of greenhouse gases: carbon dioxide, methane, and nitrous oxide, which pollute the indoor and outdoor environments."
+      },
+      {
+        "num": 99,
+        "txt": "Around 2,000 square kilometers of land is used every year for tobacco farming and tobacco drying."
+      },
+      {
+        "num": 100,
+        "txt": "Deforestation for tobacco cultivation has a serious impact on the environment, including loss of biodiversity, soil erosion and degradation, water pollution, and increased carbon dioxide in the atmosphere."
+      },
+      {
+        "num": 101,
+        "txt": "Chemicals such as pesticides, fertilizers, and growth regulators are generally used when growing cigarettes. These chemicals can flow from tobacco-growing areas and affect drinking water sources."
+      },
+      {
+        "num": 102,
+        "txt": "For every 300 cigarettes (about 1.5 cartons), it takes a tree to dry and process cigarettes."
+      },
+      {
+        "num": 103,
+        "txt": "It produces 6 trillion cigarettes a year, and about 300 billion packs of cigarettes (at a cost of 20 cigarettes per pack). Assuming that an empty pack of cigarettes weighs about 6 grams, the packaging waste consisting of paper, ink, cellophane, foil, and glue amounts to about 1.8 million tons. In addition, boxes used for distribution and packaging and waste from boxes generate at least 2 million tons of solid waste per year."
+      },
+      {
+        "num": 104,
+        "txt": "Also, cigarette smoke sticks to the surfaces of indoor wallpaper, flooring, clothes, furniture, and house dust, leaving toxic residues known as tertiary smoking. This residue can last for years without proper removal, especially for infants and children."
+      }
+    ]
+  }
+]
