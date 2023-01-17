@@ -133,6 +133,7 @@ test[2].Count.forEach((e) => {
 });
 fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
 ```
+- 사용자가 테마와 언어를 선택해서 사용할 수 있음
 
 ### 6. 업적
 ```json
