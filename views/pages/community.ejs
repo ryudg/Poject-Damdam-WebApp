@@ -28,9 +28,10 @@
     <title>Community</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/black.css" />
+    <link rel="stylesheet" href="/css/lang.css" />
   </head>
   <body id="community" class="<%= modeArr[0].mode %>">
-    <div class="container">
+    <div class="container <%= langArr[0].lang[0].kor %>">
       <div class="title">
         <a href="/main"><img src="./images/achieve_1.png" alt="back" /></a>
         <h1>커뮤니티</h1>
@@ -46,6 +47,47 @@
           <div>
             <h3>금연 클리닉</h3>
             <h2>근처 클리닉 센터의 도움을 받아보세요</h2>
+          </div>
+        </a>
+        <a class="site1" href="https://www.nosmokeguide.go.kr/index.do">
+          <div></div>
+        </a>
+        <a class="site2" href="https://nosmk.khealth.or.kr/nsk/ntcc/index.do">
+          <div></div>
+        </a>
+      </div>
+      <!-- footer -->
+      <footer>
+        <div class="footer-home">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="footer-achievement">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="footer-community active">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="footer-calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
+    </div>
+    <div class="container <%= langArr[0].lang[1].en %>">
+      <div class="title">
+        <a href="/main"><img src="./images/achieve_1.png" alt="back" /></a>
+        <h1>Community</h1>
+      </div>
+      <div class="content">
+        <a class="chatting" href="/chatting">
+          <div>
+            <h3>chatting</h3>
+            <h2>Share tips on quitting smoking.</h2>
+          </div>
+        </a>
+        <a class="clinic" href="/clinic">
+          <div>
+            <h3>a non-smoking clinic</h3>
+            <h2>Get help from the anti-smoking clinic center.</h2>
           </div>
         </a>
         <a class="site1" href="https://www.nosmokeguide.go.kr/index.do">

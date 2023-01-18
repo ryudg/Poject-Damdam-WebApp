@@ -1,11 +1,13 @@
 .container,
 .symp_wrap,
-.wrap {
+.wrap,
+.achiev_wrap {
   display: none;
 }
 .container.yes,
 .symp_wrap.yes,
-.wrap.yes {
+.wrap.yes,
+.achiev_wrap.yes {
   display: block;
 }
 

@@ -95,6 +95,11 @@ const knowledgeEnFile = fs.readFileSync("knowledgeDataEn.json", "utf-8");
 const jsonKnowEnData = JSON.parse(knowledgeEnFile);
 knowledgeEn104 = [...jsonKnowEnData];
 
+let achievedbEnArr = [];
+const achievedbEnFile = fs.readFileSync("achieveDBv2En.json", "utf-8");
+const achievedbDataEn = JSON.parse(achievedbEnFile);
+achievedbEnArr = [...achievedbDataEn];
+
 // ----------splash----------
 app.get("/", function (req, res) {
   res.render("pages/index.ejs", { userArr });
@@ -424,22 +429,44 @@ app.get("/achievement", function (req, res) {
   const testPrice = test[0].Price;
   const testDay = test[1].Day;
   const testCount = test[2].Count;
+  const achievedbEnArrPirce = achievedbEnArr[0].Price;
+  const achievedbEnArrDay = achievedbEnArr[1].Day;
+  const achievedbEnArrCount = achievedbEnArr[2].Count;
+
   // 금연 진행 날짜
   const day = parseInt((korea - start) / (60 * 60 * 24 * 1000));
 
   let testPriceArr = testPrice.filter((e) => {
     return e.condition <= day * userArr[0].Price;
   });
+  let achievedbEnArrPirceArr = achievedbEnArrPirce.filter((e) => {
+    return e.condition <= day * userArr[0].Price;
+  });
+
   let testDayArr = testDay.filter((e) => {
     return e.condition <= day;
   });
+  let achievedbEnArrDayArr = achievedbEnArrDay.filter((e) => {
+    return e.condition <= day;
+  });
+
   let testCountArr = testCount.filter((e) => {
+    return e.condition <= day * userArr[0].CountPerDay;
+  });
+  let achievedbEnArrCountArr = achievedbEnArrCount.filter((e) => {
     return e.condition <= day * userArr[0].CountPerDay;
   });
 
   if (testPriceArr.length > 0) {
     if (testPriceArr.at(-1).date == undefined) {
       testPriceArr.forEach((e) => {
+        e.date = `${nowY}-${nowM}-${nowD}`;
+      });
+    }
+  }
+  if (achievedbEnArrPirceArr.length > 0) {
+    if (achievedbEnArrPirceArr.at(-1).date == undefined) {
+      achievedbEnArrPirceArr.forEach((e) => {
         e.date = `${nowY}-${nowM}-${nowD}`;
       });
     }
@@ -451,9 +478,23 @@ app.get("/achievement", function (req, res) {
       });
     }
   }
+  if (achievedbEnArrDayArr.length > 0) {
+    if (achievedbEnArrDayArr.at(-1).date == undefined) {
+      achievedbEnArrDayArr.forEach((e) => {
+        e.date = `${nowY}-${nowM}-${nowD}`;
+      });
+    }
+  }
   if (testCountArr.length > 0) {
     if (testCountArr.at(-1).date == undefined) {
       testCountArr.forEach((e) => {
+        e.date = `${nowY}-${nowM}-${nowD}`;
+      });
+    }
+  }
+  if (achievedbEnArrCountArr.length > 0) {
+    if (achievedbEnArrCountArr.at(-1).date == undefined) {
+      achievedbEnArrCountArr.forEach((e) => {
         e.date = `${nowY}-${nowM}-${nowD}`;
       });
     }
@@ -472,6 +513,7 @@ app.get("/achievement", function (req, res) {
     allLength,
     modeArr,
     langArr,
+    achievedbEnArr,
   });
 });
 
@@ -636,7 +678,7 @@ app.post("/delete", upload.single("img"), function (req, res) {
 
 // ----------calendar----------
 app.get("/calendar", function (req, res) {
-  res.render("pages/calendar.ejs", { memoArr, modeArr });
+  res.render("pages/calendar.ejs", { memoArr, modeArr, langArr });
 });
 // ----------calendar 메모 삭제----------
 app.post("/memoDelete/:day/:id", (req, res) => {
@@ -678,12 +720,17 @@ app.post("/create", function (req, res) {
 
 // ----------community 이동 페이지----------
 app.get("/community", (req, res) => {
-  res.render("pages/community.ejs", { modeArr });
+  res.render("pages/community.ejs", { modeArr, langArr });
 });
 
 // ----------chatting (채팅) 페이지----------
 app.get("/chatting", function (req, res) {
-  res.render("pages/chatting.ejs", { chattingdbArr, userArr, modeArr });
+  res.render("pages/chatting.ejs", {
+    chattingdbArr,
+    userArr,
+    modeArr,
+    langArr,
+  });
 });
 // ----------chatting (채팅) create----------
 app.post("/chattingcreate", function (req, res) {
@@ -698,7 +745,7 @@ app.post("/chattingcreate", function (req, res) {
 // ----------clinic----------
 app.get("/clinic", function (req, res) {
   let name = userArr[0].userName;
-  res.render("pages/clinic.ejs", { name, modeArr });
+  res.render("pages/clinic.ejs", { name, modeArr, langArr });
 });
 
 // ----------listen----------

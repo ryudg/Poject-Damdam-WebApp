@@ -38,7 +38,7 @@
         <div>
           <a href="/main"><img src="./images/back.png" alt="back" /></a>
         </div>
-        <div><h1>캘린더</h1></div>
+        <div><h1 class="<%= langArr[0].lang[1].en %> kortitle">캘린더</h1></div>
         <div><h1></h1></div>
       </div>
 
@@ -51,8 +51,8 @@
                 <label id="prev"><i class="fa-solid fa-angle-left"></i></label>
               </td>
               <td id="current-year-month" colspan="5">
-                <span class="current-year"></span>년
-                <span class="current-month"></span>월
+                <span class="current-year "></span><span class="<%= langArr[0].lang[1].en %> korYear">년</span> 
+                <span class="current-month "></span><span class="<%= langArr[0].lang[1].en %> korMonth">월</span> 
               </td>
               <td>
                 <label id="next"><i class="fa-solid fa-angle-right"></i></label>
@@ -79,7 +79,7 @@
         </div>
         <div class="contents"></div>
           <div class="writeBtn">
-            <button class="writeBtn">
+            <button class="writeBtn <%= langArr[0].lang[1].en %> korBtn">
               메모 작성
             </button>
           </div>
@@ -91,7 +91,7 @@
           <div class="closeBtn">
             <img src="/images/close.png" alt="close" />
           </div>
-          <h2>메모 작성</h1>
+          <h2 class="<%= langArr[0].lang[1].en %> korPopuptitle">메모 작성</h1>
         </div>
 
         <!--title-->
@@ -100,7 +100,7 @@
             <input class="memoDate" value="2002-10-12" name="date" readonly />
           </div>
           <div class="box1">
-            <h2>감정</h2>
+            <h2 class="<%= langArr[0].lang[1].en %> korEmotion">감정</h2>
             <div class="emotion-box">
               <!-- 이미지에 클래스를 줘서 해당 이미지를 선택하면 특정 값(숫자)가 되도록 한 후 input의 value 값에 넣어준 후 폼으로 전송 (그 후 input은 type="hidden"으로 하기 ) -->
               <!--text -> hidden으로 변경하기-->
@@ -132,7 +132,7 @@
           <!--box1-->
 
           <div class="box1">
-            <h2>흡연 욕구</h2>
+            <h2 class="<%= langArr[0].lang[1].en %> korSmoking">흡연 욕구</h2>
             <div class="battery-box">
               <input
                 class="memo_2"
@@ -156,11 +156,11 @@
           <!--box1-->
 
           <div class="box2">
-            <h2>메모</h2>
+            <h2 class="<%= langArr[0].lang[1].en %> korPopupmemo">메모</h2>
             <div class="memo-box">
               <div class="memo-box2">
                 <input
-                  class="memo_title"
+                  class="memo_title <%= langArr[0].lang[1].en %> korPopupBoxtilte"
                   type="text"
                   name="제목"
                   placeholder="제목을 입력해주세요"
@@ -169,7 +169,7 @@
                   autocomplete="off"
                 />
                 <textarea
-                  class="memo_contents"
+                  class="memo_contents <%= langArr[0].lang[1].en %> korPopupBoxcontent"
                   name="내용"
                   cols="0"
                   rows="8"
@@ -184,7 +184,7 @@
             <!--memo-box-->
           </div>
           <!--box2-->
-          <input class="write-finish-btn" type="submit" value="작성 완료" />
+          <input class="write-finish-btn <%= langArr[0].lang[1].en %> korPopupBtn" type="submit" value="작성 완료" />
         </form>
       </div>
 
@@ -213,5 +213,33 @@
       <!-- myscript -->
       <script src="./js/main.js"></script>
     </div>
+   <script>
+    let kortitle = document.querySelector(".kortitle")
+    let korYear = document.querySelector(".korYear")
+    let korMonth = document.querySelector(".korMonth")
+    let korBtn = document.querySelector(".korBtn")
+    let korPopuptitle = document.querySelector(".korPopuptitle")
+    let korEmotion = document.querySelector(".korEmotion")
+    let korSmoking = document.querySelector(".korSmoking")
+    let korPopupmemo = document.querySelector(".korPopupmemo")
+    let korPopupBoxtilte = document.querySelector(".korPopupBoxtilte")
+    let korPopupBoxcontent = document.querySelector(".korPopupBoxcontent")
+    let korPopupBtn = document.querySelector(".korPopupBtn")
+
+    if(kortitle.classList.contains("yes")){
+      kortitle.innerHTML= "calendar"
+      korYear.innerHTML ="Y"
+      korMonth.innerHTML ="M"
+      korBtn.innerHTML ="Create a note"
+      korPopuptitle.innerHTML ="Create a note"
+      korEmotion.innerHTML ="Emotion"
+      korSmoking.innerHTML ="smoking"
+      korPopupmemo.innerHTML ="note"
+      korPopupBoxtilte.setAttribute('placeholder','Please enter a title')
+      korPopupBoxcontent.setAttribute('placeholder','Please enter the content')
+      korPopupBtn.innerHTML ="Completed writing" 
+    }
+    
+   </script>
   </body>
 </html>

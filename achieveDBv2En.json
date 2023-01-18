@@ -1,0 +1,59 @@
+[
+  {
+    "Price": [
+      {
+        "content": "Savings reached 10,000 won",
+        "condition": 10000,
+        "img": "./images/achieve_3_color.png"
+      },
+      {
+        "content": "Savings reached 100,000 won",
+        "condition": 100000,
+        "img": "./images/achieve_4_color.png"
+      },
+      {
+        "content": "Savings reached 500,000 won",
+        "condition": 500000,
+        "img": "./images/500000.png"
+      },
+      {
+        "content": "Savings reached 1,000,000 won",
+        "condition": 1000000,
+        "img": "./images/achieve_5_color.png"
+      }
+    ]
+  },
+  {
+    "Day": [
+      {
+        "content": "Achieving a Week Since Quitting Smoking",
+        "condition": 7,
+        "img": "./images/achieve_6_color.png"
+      },
+      {
+        "content": "Achieving fifteen days Since Quitting Smoking",
+        "condition": 15,
+        "img": "./images/achieve_7_color.png"
+      },
+      {
+        "content": "Achieving a month since quitting smoking",
+        "condition": 30,
+        "img": "./images/achieve_8_color.png"
+      }
+    ]
+  },
+  {
+    "Count": [
+      {
+        "content": "Achieving 100 Unsmoked Cigarettes",
+        "condition": 100,
+        "img": "./images/achieve_13.png"
+      },
+      {
+        "content": "Achieving 1000 Unsmoked Cigarettes",
+        "condition": 1000,
+        "img": "./images/achieve_13_color.png"
+      }
+    ]
+  }
+]

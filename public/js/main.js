@@ -152,7 +152,9 @@ function showCalendar() {
           // 메모 정보 배열로 만들기
           let newMemoArr = [...data].filter((e) => e[memoDay]);
           // 메모 입력 박스
+
           let memoBox = document.querySelector(".memo .contents");
+
           // 메모 정보가 있다면
           if (newMemoArr.length > 0) {
             // 기본 메모 박스는 빈값
@@ -175,7 +177,12 @@ function showCalendar() {
             });
           } else {
             // 메모 정보가 없다면 출력할 메세지
-            memoBox.innerHTML = `<div class="content"><p class="text">메모를 입력해주세요</p></div>`;
+            let kortitle = document.querySelector(".kortitle");
+            if (kortitle.classList.contains("yes")) {
+              memoBox.innerHTML = `<div class="content"><p class="text">Please Enter Memo</p></div>`;
+            } else {
+              memoBox.innerHTML = `<div class="content"><p class="text">메모를 입력해주세요</p></div>`;
+            }
           }
         });
     });

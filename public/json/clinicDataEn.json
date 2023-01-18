@@ -1,0 +1,821 @@
+[
+  {
+    "region": "서울",
+    "name": "Seoul Non-smoking Support Center",
+    "add": "Room 2001 (2nd floor) of the Institute of Medical Life Industry, Catholic University of Korea 222, Bando-daero, Seocho-gu, Seoul",
+    "tel": "02-592-9030",
+    "lat": 37.5000744557682,
+    "lon": 127.005238316462,
+    "url": "http://kko.to/E7UmUXtN9d"
+  },
+  {
+    "region": "부산",
+    "name": "Busan Non-smoking Support Center",
+    "add": "Gudeok-ro 193beon-gil, Seo-gu, Busan (Bumin-dong 2-ga) Busan Disabled Gugang Medical Center 5th floor",
+    "tel": "051-242-9030",
+    "lat": 35.1008208738374,
+    "lon": 129.018729457763,
+    "url": "http://kko.to/4Ykaaryz3J"
+  },
+  {
+    "region": "대구",
+    "name": "Daegu Non-smoking Support Center",
+    "add": "1st floor of the Regional Respiratory Disease Center at Yeungnam University Hospital, 170 Hyeonchung-ro, Nam-gu, Daegu (Daemyeong-dong)",
+    "tel": "053-623-9030",
+    "lat": 35.8467157127139,
+    "lon": 128.585384312231,
+    "url": "http://kko.to/ALX7E2T4TN"
+  },
+  {
+    "region": "인천",
+    "name": "Incheon Non-smoking Support Center",
+    "add": "Inha University Hospital, 27 Inhang-ro, Jung-gu, Incheon, 3rd floor",
+    "tel": "032-451-9030",
+    "lat": 37.4588371476034,
+    "lon": 126.634288533153,
+    "url": "http://kko.to/k_bAzt1prc"
+  },
+  {
+    "region": "광주",
+    "name": "Gwangju Non-smoking Support Center",
+    "add": "2nd floor of Chosun University Hospital Main Building, 365 Pilmun-daero, Dong-gu, Gwangju",
+    "tel": "062-222-9030",
+    "lat": 35.1389542963677,
+    "lon": 126.92652544156,
+    "url": "http://kko.to/R5I6ZaTRWH"
+  },
+  {
+    "region": "대전",
+    "name": "Daejeon Sejong Non-smoking Support Center",
+    "add": "266, Munhwa-ro, Jung-gu, Daejeon (Munhwa-dong) Chungnam National University Medical School Medical Book-dong (M3) 402.",
+    "tel": "042-580-8383",
+    "lat": 36.3167319051998,
+    "lon": 127.413509694245,
+    "url": "http://kko.to/IzsHvttoTB"
+  },
+  {
+    "region": "울산",
+    "name": "Ulsan Non-smoking Support Center",
+    "add": "Ulsan Non-smoking Support Center on the 4th floor of 30 Daehakwon-ro (Seoseo-dong), Dong-gu, Ulsan",
+    "tel": "052-233-9030",
+    "lat": 35.5207285211618,
+    "lon": 129.428683846394,
+    "url": "http://kko.to/HTsA0eq3pX"
+  },
+  {
+    "region": "경기",
+    "name": "Gyeonggi Nambu Non-smoking Support Center",
+    "add": "6th floor of Professor Research Building (4th Annex), Hallym University Seongsim Hospital, 14, Gwanpyeong-ro 176beon-gil, Dongan-gu, Anyang-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-385-9030",
+    "lat": 37.3915033789562,
+    "lon": 126.961817315424,
+    "url": "http://kko.to/Trpd7aN65y"
+  },
+  {
+    "region": "경기",
+    "name": "Gyeonggi Northern Smoking Support Center",
+    "add": "6th floor of National Cancer Prevention Examination Building, 323, Ilsan-ro, Ilsan-dong-gu, Goyang-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-924-9030",
+    "lat": 37.6632510158068,
+    "lon": 126.783368121919,
+    "url": "http://kko.to/_sKiUyy8zy"
+  },
+  {
+    "region": "강원",
+    "name": "Gangwon Non-smoking Support Center",
+    "add": "4th floor, Ilsan-ro 29th floor, Wonju-si, Gangwon-do",
+    "tel": "033-746-9030",
+    "lat": 37.3484817376412,
+    "lon": 127.947812299444,
+    "url": "http://kko.to/nuv4yA8y7C"
+  },
+  {
+    "region": "충북",
+    "name": "Chungbuk Non-smoking Support Center",
+    "add": "Chungdae-ro 1, Seowon-gu, Cheongju-si, Chungcheongbuk-do (Gaesin-dong) Chungbuk National University Natural University Hall 3 (S1-3) 105",
+    "tel": "043-278-9030",
+    "lat": 36.6266446456238,
+    "lon": 127.456480320002,
+    "url": "http://kko.to/u3FNtZaP-2"
+  },
+  {
+    "region": "충남",
+    "name": "Chungnam Non-smoking Support Center",
+    "add": "Room 519, Soonchunhyang University of Medicine, 31, Soonchunhyang 6-gil, Dongnam-gu, Cheonan-si, Chungcheongnam-do",
+    "tel": "041-577-9030",
+    "lat": 36.8027298563385,
+    "lon": 127.134624042461,
+    "url": "http://kko.to/J1F8aTmv4V"
+  },
+  {
+    "region": "전북",
+    "name": "Jeonbuk Non-smoking Support Center",
+    "add": "460, Iksan-daero, Iksan-si, Jeollabuk-do, Jeonbuk Non-smoking Support Center",
+    "tel": "1833-9030",
+    "lat": 35.9657497132496,
+    "lon": 126.955500204528,
+    "url": "http://kko.to/1stynVorBd"
+  },
+  {
+    "region": "전남",
+    "name": "Jeonnam Non-smoking Support Center",
+    "add": "1st floor of Gwangju Jeonnam Regional Cancer Center, Hwasun Chonnam National University Hospital, 322 Seo-ro, Hwasun-eup, Hwasun-gun, Jeollanam-do",
+    "tel": "061-372-9030",
+    "lat": 35.0585960661329,
+    "lon": 127.003231639554,
+    "url": "http://kko.to/86qCHJN_Az"
+  },
+  {
+    "region": "경북",
+    "name": "Gyeongbuk Non-smoking Support Center",
+    "add": "55, Taesa 2-gil, Andong-si, Gyeongsangbuk-do, 5th floor of Andong Medical Center",
+    "tel": "080-888-9030",
+    "lat": 36.5682477648293,
+    "lon": 128.732093677038,
+    "url": "http://kko.to/ZwmVgoG-D_"
+  },
+  {
+    "region": "경남",
+    "name": "Gyeongnam Non-smoking Support Center",
+    "add": "Gyeongnam Non-smoking Support Center on the 2nd floor of 20 Jinju-daero 816beon-gil, Jinju-si, Gyeongsangnam-do, Republic of Korea",
+    "tel": "055-759-9030",
+    "lat": 35.17713706497,
+    "lon": 128.095387407123,
+    "url": "http://kko.to/gZFkfPlap7"
+  },
+  {
+    "region": "제주",
+    "name": "Jeju Non-smoking Support Center",
+    "add": "5th floor of Asa Building, 175, Seogwang-ro, Jeju-si, Jeju-do",
+    "tel": "064-758-9030",
+    "lat": 33.4613288300025,
+    "lon": 126.533239912257,
+    "url": "http://kko.to/o_dHJl9TgR"
+  },
+  {
+    "region": "서울",
+    "name": "Korea Health Promotion Development Institute",
+    "add": "8-10 floors of the Health and Welfare Administration Town 400 Neungdong-ro, Gwangjin-gu, Seoul",
+    "tel": "02-3781-3500",
+    "lat": 37.5648875892674,
+    "lon": 127.084492300606,
+    "url": "http://kko.to/EyGgnzIVsY"
+  },
+  {
+    "region": "서울",
+    "name": "Gangbuk-gu Health Center in Seoul",
+    "add": "897, Hancheon-ro, Gangbuk-gu, Seoul (Hancheon-ro 897) (Beon-dong, Bun 2-dong Community Center)",
+    "tel": "02-901-7668",
+    "lat": 37.632154225775,
+    "lon": 127.038745036729,
+    "url": "http://kko.to/RNmq4xB_cE"
+  },
+  {
+    "region": "서울",
+    "name": "Gwanak-gu Health Center in Seoul",
+    "add": "Gwanak-ro 145, Gwanak-gu, Seoul (Bongcheon-dong, Gwanak-gu Office)",
+    "tel": "02-879-7043",
+    "lat": 37.4786636327244,
+    "lon": 126.950896885488,
+    "url": "http://kko.to/ERK02ZcxHB"
+  },
+  {
+    "region": "서울",
+    "name": "Gangdong-gu Health Center in Seoul",
+    "add": "45 Seongnae-ro, Gangdong-gu, Seoul (541-2 Seongnae-dong)",
+    "tel": "02-3425-6750",
+    "lat": 37.5292615673201,
+    "lon": 127.125610151521,
+    "url": "http://kko.to/hCv2qVaAM1"
+  },
+  {
+    "region": "서울",
+    "name": "Gwangjin-gu Health Center in Seoul",
+    "add": "117, Jayang-ro, Gwangjin-gu, Seoul, Republic of Korea",
+    "tel": "02-450-1569",
+    "lat": 37.538537023407,
+    "lon": 127.081905419506,
+    "url": "http://kko.to/oivjFJ-iz5"
+  },
+  {
+    "region": "서울",
+    "name": "Gangnam-gu Health Center in Seoul",
+    "add": "668, Seolleung-ro, Gangnam-gu, Seoul (Samsung-dong, Gangnam-gu International Education Center)",
+    "tel": "02-3423-7236",
+    "lat": 37.5163103117045,
+    "lon": 127.042304720872,
+    "url": "http://kko.to/Aac8CAWIiQ"
+  },
+  {
+    "region": "서울",
+    "name": "Guro-gu Health Center in Seoul",
+    "add": "66, Guro Jungang-ro 28-gil, Guro-gu, Seoul (109-4, Guro-dong)",
+    "tel": "02-860-2177",
+    "lat": 37.5001056126747,
+    "lon": 126.889316787858,
+    "url": "http://kko.to/NrPS4dT9MY"
+  },
+  {
+    "region": "서울",
+    "name": "Gangseo-gu Health Center in Seoul",
+    "add": "561 Gonghang-daero, Gangseo-gu, Seoul (275-12, Yeomchang-dong)",
+    "tel": "02-2600-5920",
+    "lat": 37.5493943356669,
+    "lon": 126.868534908135,
+    "url": "http://kko.to/O5t9wwr785"
+  },
+  {
+    "region": "서울",
+    "name": "Jungnang-gu Health Center in Seoul",
+    "add": "179, Bonghwasan-ro, Jungnang-gu, Seoul (662, Sinnae-dong)",
+    "tel": "02-2094-0126",
+    "lat": 37.6068711733092,
+    "lon": 127.092852404839,
+    "url": "http://kko.to/gVCctHWsbZ"
+  },
+  {
+    "region": "서울",
+    "name": "Jongno-gu Health Center in Seoul",
+    "add": "36 Jahamun-ro 19-gil, Jongno-gu, Seoul (Jasugung-gil) (45-30th, Okin-dong)",
+    "tel": "02-2148-3621",
+    "lat": 37.5818272851704,
+    "lon": 126.969215045478,
+    "url": "http://kko.to/HYPi7vU730"
+  },
+  {
+    "region": "서울",
+    "name": "Seoul Jung-gu Health Center",
+    "add": "16, Dasan-ro 39-gil, Muhak-dong, Jung-gu, Seoul, Republic of Korea",
+    "tel": "02-3396-6340",
+    "lat": 37.5645744807449,
+    "lon": 127.015085585303,
+    "url": "http://kko.to/GrZH-maKFr"
+  },
+  {
+    "region": "서울",
+    "name": "Mapo-gu Health Center in Seoul",
+    "add": "212 World Cup-ro, Mapo-gu, Seoul (Seongsan-dong)",
+    "tel": "02-3153-9115",
+    "lat": 37.5669421072265,
+    "lon": 126.901850051589,
+    "url": "http://kko.to/dd7YbIFeJP"
+  },
+  {
+    "region": "서울",
+    "name": "Seongbuk-gu Health Center in Seoul",
+    "add": "63, Hwarang-ro, Seongbuk-gu, Seoul, Seongbuk-gu Health Center (Trism) (Hawolgok-dong)",
+    "tel": "02-2241-5956",
+    "lat": 37.6027024687412,
+    "lon": 127.039522471533,
+    "url": "http://kko.to/YQSqayRMvr"
+  },
+  {
+    "region": "서울",
+    "name": "Seocho-gu Health Center in Seoul",
+    "add": "2584 Nambu Circulation-ro, Seocho-gu, Seoul (Seocho-dong, Seocho-gu Health Center)",
+    "tel": "02-2155-8078",
+    "lat": 37.4835922001418,
+    "lon": 127.033498863973,
+    "url": "http://kko.to/wVYU9m-4sG"
+  },
+  {
+    "region": "서울",
+    "name": "Seodaemun-gu Health Center in Seoul",
+    "add": "165-2 Yeonhui-dong, Seodaemun-gu, Seoul (165-2 Yeonhui-dong)",
+    "tel": "02-330-8598",
+    "lat": 37.5786065549923,
+    "lon": 126.936263672732,
+    "url": "http://kko.to/gQu7BUxQ9v"
+  },
+  {
+    "region": "서울",
+    "name": "Seongdong-gu Health Center in Seoul",
+    "add": "10, Majang-ro 23-gil, Seongdong-gu, Seoul, Republic of Korea",
+    "tel": "02-2286-7131",
+    "lat": 37.5670863545086,
+    "lon": 127.033210228834,
+    "url": "http://kko.to/RTVqwxt1u8"
+  },
+  {
+    "region": "서울",
+    "name": "Yangcheon-gu Health Center in Seoul",
+    "add": "Yangcheon-gu Health Center, 339 Mokdong-seo, Yangcheon-gu, Seoul",
+    "tel": "02-2620-3904",
+    "lat": 37.5175860068713,
+    "lon": 126.865853321246,
+    "url": "http://kko.to/wuE7Oypy3O"
+  },
+  {
+    "region": "서울",
+    "name": "Seoul Yeongdeungpo-gu Health Center",
+    "add": "123, Dangsan-ro, Yeongdeungpo-gu, Seoul (Dangsan-dong 3-ga, Yeongdeungpo-gu Health Center)",
+    "tel": "02-2670-4780",
+    "lat": 37.5263376603571,
+    "lon": 126.895500155031,
+    "url": "http://kko.to/FmY85ogs5D"
+  },
+  {
+    "region": "서울",
+    "name": "Yongsan-gu Health Center in Seoul",
+    "add": "150 Noksapyeong-daero, Yongsan-gu, Seoul",
+    "tel": "02-2199-8153",
+    "lat": 37.5325824094921,
+    "lon": 126.990609479609,
+    "url": "http://kko.to/wuwCgw2-fM"
+  },
+  {
+    "region": "서울",
+    "name": "Dobong-gu Health Center in Seoul",
+    "add": "117, Banghak-ro 3-gil, Dobong-gu, Seoul (Ssangmun-dong, Ssangmun 2-dong Community Center)",
+    "tel": "02-2091-4628",
+    "lat": 37.6579115232367,
+    "lon": 127.038835481376,
+    "url": "http://kko.to/jDSC4onN2U"
+  },
+  {
+    "region": "서울",
+    "name": "Seoul Dongdaemun-gu Health Center",
+    "add": "145, Cheonho-daero, Dongdaemun-gu, Seoul (39-9, Yongdu-dong)",
+    "tel": "02-2127-5460",
+    "lat": 37.5746885747512,
+    "lon": 127.040218573125,
+    "url": "http://kko.to/Vnbr1bITVV"
+  },
+  {
+    "region": "서울",
+    "name": "Seoul Dongjak-gu Health Center",
+    "add": "42, Jangseungbaegi-ro 10-gil, Dongjak-gu, Seoul, Republic of Korea (176-3 Sangdo-dong)",
+    "tel": "02-820-1454",
+    "lat": 37.5044495921672,
+    "lon": 126.941108480318,
+    "url": "http://kko.to/e1T3i3VYXo"
+  },
+  {
+    "region": "서울",
+    "name": "Eunpyeong-gu Health Center in Seoul",
+    "add": "195, Eunpyeong-ro, Eunpyeong-gu, Seoul (Nokbeon-dong, Eunpyeong-gu Office)",
+    "tel": "02-351-8240",
+    "lat": 37.6024533608046,
+    "lon": 126.92881449391,
+    "url": "http://kko.to/B7FaYv3t2R"
+  },
+  {
+    "region": "서울",
+    "name": "Nowon-gu Health Center in Seoul",
+    "add": "437, Nohae-ro, Nowon-gu, Seoul, Republic of Korea ",
+    "tel": "02-2116-4538",
+    "lat": 37.6546534112416,
+    "lon": 127.056979182849,
+    "url": "http://kko.to/E4I-lmd2rK"
+  },
+  {
+    "region": "서울",
+    "name": "Songpa-gu Health Center in Seoul",
+    "add": "326, Olympic-ro, Songpa-gu, Seoul (Shincheon-dong)",
+    "tel": "02-2147-3514",
+    "lat": 37.5145687337068,
+    "lon": 127.106551112164,
+    "url": "http://kko.to/eg14YiOx1C"
+  },
+  {
+    "region": "서울",
+    "name": "Geumcheon-gu Health Center in Seoul",
+    "add": "70 Siheung-daero 73-gil, Geumcheon-gu, Seoul (Siheung-dong, Geumcheon-gu, Seoul)",
+    "tel": "02-2627-2677",
+    "lat": 37.4570687377675,
+    "lon": 126.896062276653,
+    "url": "http://kko.to/PZBI6SjmbA"
+  },
+  {
+    "region": "경기",
+    "name": "Bundang-gu Health Center, Seongnam-si, Gyeonggi-do",
+    "add": "Bundang-gu Health Center, 306, Yanghyeon-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-729-3975",
+    "lat": 37.411067982013,
+    "lon": 127.124739316973,
+    "url": "http://kko.to/ankQllyBUY"
+  },
+  {
+    "region": "경기",
+    "name": "Dongan-gu Health Center in Anyang, Gyeonggi Province",
+    "add": "1111 Bisan-dong, Dongan-gu, Anyang-si, Gyeonggi-do (Bisan-dong)",
+    "tel": "031-8045-4823",
+    "lat": 37.3930315565782,
+    "lon": 126.952041430621,
+    "url": "http://kko.to/SpYEoHQpeQ"
+  },
+  {
+    "region": "경기",
+    "name": "Dongducheon City Health Center in Gyeonggi Province",
+    "add": "167, Jungang-ro, Dongducheon-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-860-3410",
+    "lat": 37.8964600652918,
+    "lon": 127.051830571849,
+    "url": "http://kko.to/IIgLgzCJ65"
+  },
+  {
+    "region": "경기",
+    "name": "Danwon Health Center in Ansan, Gyeonggi Province",
+    "add": "Hwarang-ro 250 (Choji-dong), Danwon-gu, Ansan-si, Gyeonggi-do, 387 Ansan-si Danwon Health Center (515, Gojan-dong)",
+    "tel": "031-481-6752",
+    "lat": 37.3206308951906,
+    "lon": 126.815177859546,
+    "url": "http://kko.to/9bGkh8R4jK"
+  },
+  {
+    "region": "경기",
+    "name": "Deokyang-gu Health Center in Goyang-si, Gyeonggi-do",
+    "add": "Deokyang-gu Health Center (603, Bishop-dong), 28, Wondang-ro 33beon-gil, Deokyang-gu, Goyang-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-8075-4052",
+    "lat": 37.6577862781046,
+    "lon": 126.831163234935,
+    "url": "http://kko.to/LgqRRnwUP6"
+  },
+  {
+    "region": "경기",
+    "name": "Uijeongbu City Health Center in Gyeonggi Province",
+    "add": "131, Beomgol-ro, Uijeongbu-si, Gyeonggi-do (516, Uijeongbu-dong)",
+    "tel": "031-870-6063",
+    "lat": 37.7361484433568,
+    "lon": 127.039511620119,
+    "url": "http://kko.to/UDb-6SXJaU"
+  },
+  {
+    "region": "경기",
+    "name": "Uiwang City Health Center in Gyeonggi-do Province",
+    "add": "34 Obong-ro, Uiwang-si, Gyeonggi-do (108, Gocheon-dong)",
+    "tel": "031-345-3547",
+    "lat": 37.3437662759862,
+    "lon": 126.972111295192,
+    "url": "http://kko.to/pDerd6Is1I"
+  },
+  {
+    "region": "경기",
+    "name": "Gwacheon City Health Center in Gyeonggi-do Province",
+    "add": "69, Gwanmun-ro, Gwacheon-si, Gyeonggi-do, Republic of Korea 69, Gwanmun-ro, Gwacheon City Hall (Jungang-dong) (1-3 Jungang-",
+    "tel": "02-3679-7575",
+    "lat": 37.4373611739497,
+    "lon": 126.973197515168,
+    "url": "http://kko.to/sFvhN6f0cW"
+  },
+  {
+    "region": "경기",
+    "name": "Anseong City Health Center in Gyeonggi Province",
+    "add": "18, Gangbyeon-ro 74beon-gil, Anseong-si, Gyeonggi-do (67-21, Dogi-dong)",
+    "tel": "031-678-5352",
+    "lat": 37.0001821425771,
+    "lon": 127.269807679275,
+    "url": "http://kko.to/RG13vqTJ88"
+  },
+  {
+    "region": "경기",
+    "name": "Guri Health Center in Gyeonggi Province",
+    "add": "84, Geonwon-daero 34beon-gil, Guri-si, Gyeonggi-do, Republic of Korea (Inchang-dong)",
+    "tel": "031-550-8661",
+    "lat": 37.6047246382622,
+    "lon": 127.145070611983,
+    "url": "http://kko.to/upBw856zTB"
+  },
+  {
+    "region": "경기",
+    "name": "Gyeonggi Hwaseong Public Health Center",
+    "add": "1055, 31,000 Se-ro, Hyangnam-eup, Hwaseong-si, Gyeonggi-do (Hwaseong Public Health Center)",
+    "tel": "031-5189-3595",
+    "lat": 37.1292424552552,
+    "lon": 126.904547338934,
+    "url": "http://kko.to/ungkHv-t26"
+  },
+  {
+    "region": "경기",
+    "name": "Ilsan Seo-gu Health Center in Goyang-si, Gyeonggi-do",
+    "add": "54, Iljung-ro, Ilsan-dong, Ilsanseo-gu, Goyang-si, Gyeonggi-do (1680-6)",
+    "tel": "031-8075-4204",
+    "lat": 37.6844747241684,
+    "lon": 126.775801389943,
+    "url": "http://kko.to/WmORcNNwEr"
+  },
+  {
+    "region": "경기",
+    "name": "Ilsan Donggu Health Center in Goyang, Gyeonggi Province",
+    "add": "1228, Jungang-ro, Ilsandong-gu, Goyang-si, Gyeonggi-do (1010, Madu-dong)",
+    "tel": "031-8075-4129",
+    "lat": 37.6556873453469,
+    "lon": 126.776159956366,
+    "url": "http://kko.to/03MvznSWiA"
+  },
+  {
+    "region": "경기",
+    "name": "Jangan-gu Health Center in Suwon, Gyeonggi Province",
+    "add": "101, Songwon-ro, Jangan-gu, Suwon-si, Gyeonggi-do (Jowon-dong, Jangan-gu Office)",
+    "tel": "031-228-5828",
+    "lat": 37.3043615365635,
+    "lon": 127.010286994918,
+    "url": "http://kko.to/hV9JS5XpgR"
+  },
+  {
+    "region": "경기",
+    "name": "Jungwon-gu Health Center in Seongnam-si, Gyeonggi-do",
+    "add": "137, Geumsang-ro, Jungwon-gu, Seongnam-si, Gyeonggi-do (269-10 Sangdaewon-dong)",
+    "tel": "031-729-3918",
+    "lat": 37.4419874313097,
+    "lon": 127.170746342105,
+    "url": "http://kko.to/hRl6LAYD1w"
+  },
+  {
+    "region": "경기",
+    "name": "Kimpo Public Health Center in Gyeonggi Province",
+    "add": "108, Saujung-ro, Gimpo-si, Gyeonggi-do, Gimpo Health Center (869, Sau-dong)",
+    "tel": "031-980-5018",
+    "lat": 37.6237156470937,
+    "lon": 126.722947939744,
+    "url": "http://kko.to/R2hx_pQFzg"
+  },
+  {
+    "region": "경기",
+    "name": "Gwonseon-gu Health Center in Suwon, Gyeonggi Province",
+    "add": "22-50, Homaesil-ro, Top-dong, Gwonseon-gu, Suwon-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-228-6421",
+    "lat": 37.2587406337726,
+    "lon": 126.971119103308,
+    "url": "http://kko.to/sXAxDVzRXZ"
+  },
+  {
+    "region": "경기",
+    "name": "Manan-gu Health Center in Anyang, Gyeonggi Province",
+    "add": "48, Munhak-ro Manan-gu, Anyang-si, Gyeonggi-do, Republic of Korea ",
+    "tel": "031-8045-3167",
+    "lat": 37.3858321097594,
+    "lon": 126.932949339361,
+    "url": "http://kko.to/gcEK24en9h"
+  },
+  {
+    "region": "경기",
+    "name": "Osan City Health Center, Gyeonggi Province",
+    "add": "59, Gyeonggi-do, Osan-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-8036-6078",
+    "lat": 37.1594300479297,
+    "lon": 127.077815500186,
+    "url": "http://kko.to/1SchqPk6Lz"
+  },
+  {
+    "region": "경기",
+    "name": "Pocheon City Health Center in Gyeonggi Province",
+    "add": "1612 Pocheon-ro, Pocheon-si, Gyeonggi-do (164-3 Sineup-dong)",
+    "tel": "031-538-3676",
+    "lat": 37.9007645424759,
+    "lon": 127.201235393914,
+    "url": "http://kko.to/sUx6uHQMS4"
+  },
+  {
+    "region": "경기",
+    "name": "Pyeongtaek Health Center in Pyeongtaek, Gyeonggi Province",
+    "add": "56, Pyeongtaek 5-ro, Pyeongtaek-si, Gyeonggi-do, 56) (Vision-dong)",
+    "tel": "031-8024-4417",
+    "lat": 36.9909206253921,
+    "lon": 127.11188211677,
+    "url": "http://kko.to/hoOJAU74gp"
+  },
+  {
+    "region": "경기",
+    "name": "Sangnoksu Health Center in Ansan, Gyeonggi Province",
+    "add": "5, Chadolbaegi-ro 1-gil, Sangnok-gu, Ansan-si, Gyeonggi-do (Sadong, Sangnoksu Health Center)",
+    "tel": "031-481-5899",
+    "lat": 37.3003247954095,
+    "lon": 126.845026634028,
+    "url": "http://kko.to/zhByzhIZph"
+  },
+  {
+    "region": "경기",
+    "name": "Sosa Health Center in Gyeonggi Province",
+    "add": "73, Gyeongin Old-ro, Bucheon-si, Gyeonggi-do (Sosabon-dong) ",
+    "tel": "032-625-4287",
+    "lat": 37.4800005665231,
+    "lon": 126.800192358326,
+    "url": "http://kko.to/-hV5tqsM_6"
+  },
+  {
+    "region": "경기",
+    "name": "Songtan Health Center in Pyeongtaek, Gyeonggi Province",
+    "add": "295, Seojeong-ro, Pyeongtaek-si, Gyeonggi-do, 295 Seojeong-ro (Seojeong-dong)",
+    "tel": "031-8024-7262",
+    "lat": 37.0655136471704,
+    "lon": 127.066263938083,
+    "url": "http://kko.to/May79UnBx7"
+  },
+  {
+    "region": "경기",
+    "name": "Public Health Center in Bucheon, Gyeonggi Province",
+    "add": "16 Oksan-ro 10-beon-gil, Bucheon-si, Gyeonggi-do (Jungdong) ",
+    "tel": "032-625-4412",
+    "lat": 37.4942672384774,
+    "lon": 126.780953241081,
+    "url": "http://kko.to/o6fPCG3sHY"
+  },
+  {
+    "region": "경기",
+    "name": "Gyeonggi Yangju Public Health Center",
+    "add": "1533 Buheung-ro, Yangju-si, Gyeonggi-do, Republic of Korea ",
+    "tel": "031-8082-4180",
+    "lat": 37.7855440141901,
+    "lon": 127.04662629934,
+    "url": "http://kko.to/oTClzGS4Zq"
+  },
+  {
+    "region": "경기",
+    "name": "Yeoncheon-gun Health and Medical Center in Gyeonggi Province",
+    "add": "95, Eundaeseong-ro, Jeongok-eup, Yeoncheon-gun, Gyeonggi-do, Republic of Korea (577-36, Eundae-ri)",
+    "tel": "031-839-4067",
+    "lat": 38.0235164183733,
+    "lon": 127.060980991873,
+    "url": "http://kko.to/GdmlvUBC_7"
+  },
+  {
+    "region": "경기",
+    "name": "Yeoju City Health Center in Gyeonggi Province",
+    "add": "14, Yeoheung-ro 160beon-gil, Yeoju-si, Gyeonggi-do (Sangdong, Yeoju-si Health Center)",
+    "tel": "031-887-3632",
+    "lat": 37.3135365290346,
+    "lon": 127.602414383442,
+    "url": "http://kko.to/5YfMlnHsA_"
+  },
+  {
+    "region": "경기",
+    "name": "Cheoin-gu Health Center in Yongin, Gyeonggi Province",
+    "add": "1199 Jungbu-daero, Cheoin-gu, Yongin-si, Gyeonggi-do (Samga-dong, Yongin City Hall)",
+    "tel": "031-324-4957",
+    "lat": 37.2409815535266,
+    "lon": 127.176120785174,
+    "url": "http://kko.to/XELiN2Nipc"
+  },
+  {
+    "region": "경기",
+    "name": "Suji-gu Health Center in Yongin, Gyeonggi Province",
+    "add": "435, Poeun-daero, Suji-gu, Yongin-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-324-8897",
+    "lat": 37.3221556550897,
+    "lon": 127.096815305042,
+    "url": "http://kko.to/Knhpbaevon"
+  },
+  {
+    "region": "경기",
+    "name": "Yangpyeong County Health Center in Gyeonggi Province",
+    "add": "17, Maryusan-ro, Yangpyeong-eup, Yangpyeong-gun, Gyeonggi-do, Republic",
+    "tel": "031-770-3529",
+    "lat": 37.4970286111901,
+    "lon": 127.486676202999,
+    "url": "http://kko.to/tIt8zBZvgC"
+  },
+  {
+    "region": "경기",
+    "name": "Gwangmyeong City Health Center in Gyeonggi Province",
+    "add": "613 Ori-ro 613 Ori-ro, Gwangmyeong-si, Gyeonggi-do (230-1, Haan-dong)",
+    "tel": "02-2680-2688",
+    "lat": 37.4566739134499,
+    "lon": 126.878842441903,
+    "url": "http://kko.to/3Hn2rV9rGT"
+  },
+  {
+    "region": "경기",
+    "name": "Gunpo City Health Center in Gyeonggi Province",
+    "add": "221, Gunpo-ro, Gunpo-si, Gyeonggi-do, Republic of Korea (770-1, Bugok-dong)",
+    "tel": "031-461-1720",
+    "lat": 37.3331286355188,
+    "lon": 126.925937003499,
+    "url": "http://kko.to/qh0oeBQIOw"
+  },
+  {
+    "region": "경기",
+    "name": "Gapyeong County Health Center in Gyeonggi Province",
+    "add": "155-18, Gahwa-ro, Gapyeong-eup, Gapyeong-gun, Gyeonggi-do (624-1, Eupnae-ri)",
+    "tel": "031-580-2841",
+    "lat": 37.8334760714376,
+    "lon": 127.510720133506,
+    "url": "http://kko.to/cP6kBCAKC0"
+  },
+  {
+    "region": "경기",
+    "name": "Dongtan Health Center in Hwaseong, Gyeonggi Province",
+    "add": "226-9 Nojak-ro, Hwaseong-si, Gyeonggi-do (60th, Seokwoo-dong)",
+    "tel": "031-5189-4371",
+    "lat": 37.1997731686947,
+    "lon": 127.086624802324,
+    "url": "http://kko.to/HjMvdo2uFk"
+  },
+  {
+    "region": "경기",
+    "name": "Eastern Health Center in Hwaseong, Gyeonggi Province",
+    "add": "2nd and 3rd floors of Rich Plaza (400-6, Byeongjeom-dong), 72-3 Rice Cake Hot Pot-ro, Hwaseong-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-5189-4817",
+    "lat": 37.2047951339916,
+    "lon": 127.034880218484,
+    "url": "http://kko.to/61Qgo1SnhA"
+  },
+  {
+    "region": "경기",
+    "name": "Hanam Health Center in Gyeonggi-do Province",
+    "add": "10, Daecheong-ro, Hanam-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-790-6033",
+    "lat": 37.5390715468929,
+    "lon": 127.215516276717,
+    "url": "http://kko.to/iRQcIoFky6"
+  },
+  {
+    "region": "경기",
+    "name": "Icheon City Health Center in Gyeonggi Province",
+    "add": "13, Jeungshin-ro 153beon-gil, Icheon-si, Gyeonggi-do (152-2, Jeungpo-dong)",
+    "tel": "031-644-4065",
+    "lat": 37.2889585414693,
+    "lon": 127.452335752333,
+    "url": "http://kko.to/besDkJUN2M"
+  },
+  {
+    "region": "경기",
+    "name": "Paju City Health Center in Gyeonggi Province",
+    "add": "13, Hugok-ro, Paju-si, Gyeonggi-do (953-1, Geumchon-dong)",
+    "tel": "031-940-5561",
+    "lat": 37.7563469353059,
+    "lon": 126.773905191932,
+    "url": "http://kko.to/Pt3tFl3li3"
+  },
+  {
+    "region": "경기",
+    "name": "Siheung City Health Center in Gyeonggi-do Province",
+    "add": "55, Hohyeon-ro, Siheung-si, Gyeonggi-do, Siheung City Health Center",
+    "tel": "031-310-5840",
+    "lat": 37.4452955421617,
+    "lon": 126.784847926019,
+    "url": "http://kko.to/zMfBN4AuTN"
+  },
+  {
+    "region": "경기",
+    "name": "Sujeong-gu Health Center, Seongnam-si, Gyeonggi-do",
+    "add": "526, Hope-ro, Sujeong-gu, Seongnam-si, Gyeonggi-do (2177, Sanseong-dong)",
+    "tel": "031-729-3887",
+    "lat": 37.4442790103134,
+    "lon": 127.144140993239,
+    "url": "http://kko.to/koadzkBjhh"
+  },
+  {
+    "region": "경기",
+    "name": "Ojeong Health Center in Bucheon, Gyeonggi Province",
+    "add": "172, Seongo-ro, Ojeong-gu, Bucheon-si, Gyeonggi-do (Ojeong-dong, Ojeong-gu Office)",
+    "tel": "031-625-4366",
+    "lat": 37.5282626995312,
+    "lon": 126.796411794014,
+    "url": "http://kko.to/Ig68QhT2Hm"
+  },
+  {
+    "region": "경기",
+    "name": "Namyangju Health Center in Gyeonggi Province",
+    "add": "522 Gyeongchun-ro, Namyangju-si, Gyeonggi-do, Namyangju City Hall 2nd Building (Gyeongchun-ro 522) (3159-7, Dasan-dong)",
+    "tel": "031-590-4456",
+    "lat": 37.6106394416076,
+    "lon": 127.171416577919,
+    "url": "http://kko.to/-y1SAmdSUX"
+  },
+  {
+    "region": "경기",
+    "name": "Yeongtong-gu Health Center in Suwon, Gyeonggi Province",
+    "add": "Yeongtong-gu, Suwon-si, Gyeonggi-do, 396 (Yeongtong-dong)",
+    "tel": "031-228-8828",
+    "lat": 37.2569216739814,
+    "lon": 127.069497350981,
+    "url": "http://kko.to/SZ5X1_qaXH"
+  },
+  {
+    "region": "경기",
+    "name": "Gwangju Health Center in Gyeonggi-do Province",
+    "add": "194 Pabal-ro (115, Gyeongan-dong), Gwangju-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-760-2365",
+    "lat": 37.4165307579723,
+    "lon": 127.250332527742,
+    "url": "http://kko.to/wALemxqBAS"
+  },
+  {
+    "region": "경기",
+    "name": "Paldal-gu Health Center in Suwon, Gyeonggi Province",
+    "add": "6 Paldalsan-ro, Paldalsan-ro, Paldal-gu, Suwon-si, Gyeonggi-do (56-1, Gyodong)",
+    "tel": "031-228-7756",
+    "lat": 37.2714770197662,
+    "lon": 127.012519418104,
+    "url": "http://kko.to/sKc-8xRis7"
+  },
+  {
+    "region": "경기",
+    "name": "Pungyang Health Center in Namyangju, Gyeonggi Province",
+    "add": "30-39, Hamil Yedang 1-ro, Jinjeop-eup, Namyangju-si, Gyeonggi-do, Republic of Korea ",
+    "tel": "031-590-4771",
+    "lat": 37.7032917107114,
+    "lon": 127.197416337628,
+    "url": "http://kko.to/z_Zp5yPkHg"
+  },
+  {
+    "region": "경기",
+    "name": "Giheung-gu Health Center, Yongin-si, Gyeonggi-do",
+    "add": "11, Singal-ro 58beon-gil, Giheung-gu, Yongin-si, Gyeonggi-do, Republic of Korea",
+    "tel": "031-324-6919",
+    "lat": 37.2726012261985,
+    "lon": 127.106394070204,
+    "url": "http://kko.to/X9VZNgwihw"
+  }
+]

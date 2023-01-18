@@ -33,10 +33,11 @@
     <link rel="stylesheet" href="./css/achievement.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/black.css" />
+    <link rel="stylesheet" href="./css/lang.css" />
     <title>Achievment</title>
   </head>
   <body id="achievement" class="<%= modeArr[0].mode %>">
-    <div class="achiev_wrap">
+    <div class="achiev_wrap <%= langArr[0].lang[0].kor %>">
       <!-- 업적 제목 -->
       <div class="achiev_title">
         <div class="achiev_left_arrow">
@@ -77,6 +78,74 @@
             <% } %>
             <div><img src="<%= test[2].Count[i].img %>" alt="Count" /></div>
             <p><%= test[2].Count[i].content %></p>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <footer>
+        <div class="home">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="achievement active">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="community">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
+    </div>
+    <div class="achiev_wrap <%= langArr[0].lang[1].en %>">
+      <!-- 업적 제목 -->
+      <div class="achiev_title">
+        <div class="achiev_left_arrow">
+          <a href="/main"><img src="./images/achieve_1.png" alt="arrow" /></a>
+        </div>
+        <h1>achievement</h1>
+        <div class="achiev_price">
+          <div class="achiev_price_img">
+            <img src="./images/achieve_2.png" alt="" />
+          </div>
+          <span class="achiev_score"><%= totalLength %></span><span>/</span
+          ><span><%= allLength %></span>
+        </div>
+      </div>
+      <!-- 업적 내용 -->
+      <div class="achiev_contents_wrap">
+        <div class="depth1">
+          <% for( let i = 0; i < achievedbEnArr[0].Price.length; i++ ) { %>
+          <div class="depth2">
+            <% if(achievedbEnArr[0].Price[i].date) { %>
+            <img class="checkBox" src="./images/checkBox.png" alt="checkBox" />
+            <% } %>
+            <div>
+              <img src="<%= achievedbEnArr[0].Price[i].img %>" alt="Price" />
+            </div>
+            <p><%= achievedbEnArr[0].Price[i].content %></p>
+          </div>
+          <% } %> <% for( let i = 0; i < achievedbEnArr[1].Day.length; i++ ) {
+          %>
+          <div class="depth2">
+            <% if(achievedbEnArr[1].Day[i].date) { %>
+            <img class="checkBox" src="./images/checkBox.png" alt="checkBox" />
+            <% } %>
+            <div>
+              <img src="<%= achievedbEnArr[1].Day[i].img %>" alt="Day" />
+            </div>
+            <p><%= achievedbEnArr[1].Day[i].content %></p>
+          </div>
+          <% } %> <% for( let i = 0; i < achievedbEnArr[2].Count.length; i++ ) {
+          %>
+          <div class="depth2">
+            <% if(achievedbEnArr[2].Count[i].date) { %>
+            <img class="checkBox" src="./images/checkBox.png" alt="checkBox" />
+            <% } %>
+            <div>
+              <img src="<%= achievedbEnArr[2].Count[i].img %>" alt="Count" />
+            </div>
+            <p><%= achievedbEnArr[2].Count[i].content %></p>
           </div>
           <% } %>
         </div>

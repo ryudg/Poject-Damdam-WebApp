@@ -4,29 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO -->
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/"
-    />
-    <meta property="og:title" content="담담" />
-    <meta property="og:image" content="https://i.ibb.co/qCCd1X7/Frame-2.png" />
-    <meta property="og:description" content="금연 웹앱" />
-    <meta property="og:site_name" content="DamDam" />
-    <meta property="og:locale" content="Kor" />
-    <meta name="keywords" content="금연, 웹앱" />
-    <meta name="author" content="이름" />
-    <meta name="description" content="DamDam 홈페이지입니다." />
-    <link rel="icon" href="/images/favicon.png" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="theme-color" content="#1fab89" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="#1fab89" />
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
     <title>Clinic</title>
     <link rel="stylesheet" href="css/style2.css" />
+    <link rel="stylesheet" href="css/lang.css" />
     <link rel="stylesheet" href="css/black.css" />
     <!-- kakaomap API -->
     <script
@@ -45,7 +25,7 @@
     ></script>
   </head>
   <body id="clinic" class="<%= modeArr[0].mode %>">
-    <div class="wrap">
+    <div class="wrap <%= langArr[0].lang[0].kor %>">
       <header>
         <a href="/community"
           ><img src="images/icon_arrow-back.svg" alt="back"
@@ -83,8 +63,6 @@
           </div>
         </div>
       </main>
-
-      <!-- footer -->
       <footer>
         <div class="home">
           <a href="/main"><i class="fa-solid fa-house"></i></a>
@@ -101,7 +79,60 @@
       </footer>
     </div>
 
-    <!-- fontA -->
+    <div class="wrap <%= langArr[0].lang[1].en %> en">
+      <header>
+        <a href="/community"
+          ><img src="images/icon_arrow-back.svg" alt="back"
+        /></a>
+        <h1>Clinics</h1>
+      </header>
+      <main>
+        <div class="map-wrap">
+          <div id="mapEn" style="width: 100%; height: 45vh"></div>
+          <div class="custom_zoomcontrol radius_border">
+            <span onclick="zoomIn()"
+              ><img
+                src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
+                alt="확대"
+            /></span>
+            <span onclick="zoomOut()"
+              ><img
+                src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
+                alt="축소"
+            /></span>
+          </div>
+        </div>
+        <div class="clinic-info">
+          <div class="clinic-name info">
+            <h3>Organ</h3>
+            <p></p>
+          </div>
+          <div class="clinic-add info">
+            <h3>Add</h3>
+            <p></p>
+          </div>
+          <div class="clinic-tel info">
+            <h3>Tel</h3>
+            <p></p>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="home">
+          <a href="/main"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <div class="achievement">
+          <a href="/achievement"><i class="fa-solid fa-trophy"></i></a>
+        </div>
+        <div class="community active">
+          <a href="/community"><i class="fa-solid fa-user-group"></i></a>
+        </div>
+        <div class="calendar">
+          <a href="/calendar"><i class="fa-solid fa-calendar-days"></i></a>
+        </div>
+      </footer>
+    </div>
+
     <script
       src="https://kit.fontawesome.com/67eff22c15.js"
       crossorigin="anonymous"
@@ -113,22 +144,28 @@
           center: new kakao.maps.LatLng(37.3817344, 126.9203944), // 지도의 중심좌표
           level: 4, // 지도의 확대 레벨
         };
-
+      let mapContainerEn = document.getElementById("mapEn"), // 지도를 표시할 div
+        mapOptionEn = {
+          center: new kakao.maps.LatLng(37.3817344, 126.9203944), // 지도의 중심좌표
+          level: 4, // 지도의 확대 레벨
+        };
       // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
       let map = new kakao.maps.Map(mapContainer, mapOption);
-
+      let mapEn = new kakao.maps.Map(mapContainerEn, mapOptionEn);
       // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
       function zoomIn() {
         map.setLevel(map.getLevel() - 1);
+        mapEn.setLevel(mapEn.getLevel() - 1);
       }
 
       // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
       function zoomOut() {
         map.setLevel(map.getLevel() + 1);
+        mapEn.setLevel(mapEn.getLevel() + 1);
       }
 
       // 가까운 클리닉 찾기 및 지도 이동,
-      function panTo(lat, lon) {
+      function moveMap(lat, lon) {
         fetch("json/clinicData.json")
           .then((res) => {
             return res.json();
@@ -144,7 +181,7 @@
 
             let minGap = Math.min(...gap);
 
-            let nearId = gap.indexOf(minGap, 0);
+            let nearId = gap.indexOf(minGap);
 
             let choosedClinic = data[nearId];
 
@@ -174,7 +211,7 @@
                 <a href="${data[i].url}" target="_blank">
                   <div class="marker"></div>
                 </a>
-                <button class="title" onclick="panTo(${data[i].lat}, ${data[i].lon})">${data[i].name}</button>
+                <button class="title" onclick="moveMap(${data[i].lat}, ${data[i].lon})">${data[i].name}</button>
               </div>`;
 
               positions[i] = new kakao.maps.LatLng(data[i].lat, data[i].lon);
@@ -182,6 +219,71 @@
               // 커스텀 오버레이를 생성합니다
               var customOverlay = new kakao.maps.CustomOverlay({
                 map: map,
+                position: positions[i],
+                content: contents[i],
+                yAnchor: 1,
+              });
+            }
+          });
+      }
+      function moveMapEn(lat, lon) {
+        fetch("json/clinicDataEn.json")
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            mapEn.setLevel(4);
+            // 현재위치 기준 가까운 클리닉 찾기
+            let gap = [];
+            for (let i = 0; i < data.length; i++) {
+              gap[i] =
+                Math.abs(data[i].lat - lat) + Math.abs(data[i].lon - lon);
+            }
+
+            let minGap = Math.min(...gap);
+
+            let nearId = gap.indexOf(minGap);
+
+            let choosedClinic = data[nearId];
+
+            const nameEl = document.querySelector(
+              ".en .clinic-info .clinic-name p"
+            );
+            const addEl = document.querySelector(
+              ".en .clinic-info .clinic-add p"
+            );
+            const telEl = document.querySelector(
+              ".en .clinic-info .clinic-tel p"
+            );
+            nameEl.innerHTML = choosedClinic.name;
+            addEl.innerHTML = choosedClinic.add;
+            telEl.innerHTML = choosedClinic.tel;
+
+            var moveLatLon = new kakao.maps.LatLng(
+              choosedClinic.lat,
+              choosedClinic.lon
+            );
+
+            // 지도 중심을 부드럽게 이동시킵니다
+            // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
+            mapEn.panTo(moveLatLon);
+
+            // 커스텀 오버레이
+            let contents = [];
+            let positions = [];
+            for (let i = 0; i < data.length; i++) {
+              contents[i] = `<div class="customoverlay">
+                <a href="${data[i].url}" target="_blank">
+                  <div class="marker"></div>
+                </a>
+                <button class="title" onclick="moveMapEn(${data[i].lat}, ${data[i].lon})"><p>${data[i].name}</p></button>
+              </div>`;
+
+              positions[i] = new kakao.maps.LatLng(data[i].lat, data[i].lon);
+
+              // 커스텀 오버레이를 생성합니다
+              var customOverlay = new kakao.maps.CustomOverlay({
+                map: mapEn,
                 position: positions[i],
                 content: contents[i],
                 yAnchor: 1,
@@ -202,17 +304,27 @@
         };
         myLat = pos.lat;
         myLon = pos.lon;
-        panTo(myLat, myLon);
+        moveMap(myLat, myLon);
+        moveMapEn(myLat, myLon);
       }
 
       function geoFalse() {
         let divEl = document.querySelector("#map");
+        let divElEn = document.querySelector("#mapEn");
         divEl.innerHTML = `
             <div class = "alert">
               <p>앗!</P>
               <p><%= name %>님의 위치를</p>
               <p>찾을 수 없어요.</P>
               <p>위치 권한을 허용해주세요.</P>
+            <div>
+          `;
+        divElEn.innerHTML = `
+            <div class = "alert">
+              <p>Oops!</P>
+              <p>I can't find </p>
+              <p><%= name %>'s location.</P>
+              <p>Please allow location permission.</P>
             <div>
           `;
       }
