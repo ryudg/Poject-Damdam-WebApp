@@ -1,9 +1,8 @@
+# Project : 담담(Damdam)
 
-# 금연 앱 제작 : 담담(Damdam)
-
-> Link : https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/
+> cloudtype : https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/
 >
-> 시안 : https://www.figma.com/file/zDxduSGMj8QbVyKRWfuUov/%EA%B8%88%EC%97%B0%EC%95%B1?node-id=0%3A1
+> figma : https://www.figma.com/file/zDxduSGMj8QbVyKRWfuUov/%EA%B8%88%EC%97%B0%EC%95%B1?node-id=0%3A1
 <br>
 
 # Description
@@ -23,29 +22,29 @@
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">
 <br>
 
-# 구현 이미지
+# Screenshot
 
 ![화면 캡처 2023-01-13 121553](https://user-images.githubusercontent.com/103430498/212229183-4ab12a5c-d78c-4a5f-a18f-12a621b6b070.png)
 <br>
 
-## 제작 일정
+## Production schedule
 
-- 제작 기간 : 2023-01-09 ~ 2023-01-18
+- 2023-01-09 ~ 2023-01-18
 <br>
 
 ![화면_캡처_2023-01-09_165431](https://user-images.githubusercontent.com/103430498/211432717-74ccbc91-0f07-4abd-8fba-7d24654256f9.png)
 <br>
 
 
-## 업무 분담
+## Team
 
-- 김민수 : 지식 + , 변화 단계, 지도
-- 김명아 : 달력, 달력 메모장
-- 안정원 : 금단증상 극복, 업적, 채팅
-- 유동균 : 메인 페이지, 사용자 정보 입력 페이지
-- 최정호 : 내 정보, 설정(데이터 초기화,언어 변경, 테마 변경)
+- [김민수](https://github.com/chunjaeilu) : 지식 + , 변화 단계, 지도
+- [김명아](https://github.com/myeongakim7) : 달력, 달력 메모장
+- [안정원](https://github.com/geniunahn) : 금단증상 극복, 업적, 채팅
+- [유동균](https://github.com/ryudg) : 메인 페이지, 사용자 정보 입력 페이지
+- [최정호](https://github.com/goodcodemakers) : 내 정보, 설정(데이터 초기화,언어 변경, 테마 변경)
 
-## SEO 최적화
+## SEO optimization
 
 - favicon 및 meta tag 최적화
 - 모바일 브라우저 toolbar 영역 색상 main color로 변경
@@ -62,17 +61,17 @@
 ```
 <br>
 
-## 설치
+## Install
 
 ```bash
 $ npm i
 ```
 <br>
 
-## 실행
+## Run
 http://localhost:3001
 
-## 페이지별 주요 기능
+## Pages description
 
 <details>
     <summary>페이지별 주요 기능 자세히 </summary>
