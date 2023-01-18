@@ -1,38 +1,53 @@
+# Project : 담담(Damdam)
 
-# 금연 앱 제작
-> Link : https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/
-> 
-> 시안 : https://www.figma.com/file/zDxduSGMj8QbVyKRWfuUov/%EA%B8%88%EC%97%B0%EC%95%B1?node-id=0%3A1
+> cloudtype : https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/
+>
+> figma : https://www.figma.com/file/zDxduSGMj8QbVyKRWfuUov/%EA%B8%88%EC%97%B0%EC%95%B1?node-id=0%3A1
+<br>
 
 # Description
+
 - 금연 동기 부여 웹 앱
 - Node.js(express, ejs)를 이용해서 구현함
 - 클라우드 타입을 통해 배포함
+<br> 
+
 # Stack
+
 <img src="https://img.shields.io/badge/Html5-E34F26?style=for-the-badge&logo=Html5&logoColor=white"><img src="https://img.shields.io/badge/Css3-1572B6?style=for-the-badge&logo=Css3&logoColor=white"><img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white"><img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"><img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=Express&logoColor=white"><img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white">
+<br>
 
 # Tools
+
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=Figma&logoColor=white"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white">
+<br>
 
-# 구현 이미지 
+# Screenshot
+
 ![화면 캡처 2023-01-13 121553](https://user-images.githubusercontent.com/103430498/212229183-4ab12a5c-d78c-4a5f-a18f-12a621b6b070.png)
+<br>
 
-## 제작 일정
-- 제작 기간 : 2023-01-09 ~ 2023-01-18
+## Production schedule
+
+- 2023-01-09 ~ 2023-01-18
+<br>
+
 ![화면_캡처_2023-01-09_165431](https://user-images.githubusercontent.com/103430498/211432717-74ccbc91-0f07-4abd-8fba-7d24654256f9.png)
+<br>
 
 
-## 업무 분담
-- 김민수 : 지식 + , 변화 단계, 지도
-- 김명아 : 달력, 달력 메모장
-- 안정원 : 금단증상 극복, 업적, 채팅
-- 유동균 : 메인
-- 최정호 : 내 정보, 설정(데이터 초기화,언어 변경, 테마 변경)
+## Team
 
-## SEO 최적화
+- [김민수](https://github.com/chunjaeilu) : 지식 + , 변화 단계, 지도
+- [김명아](https://github.com/myeongakim7) : 달력, 달력 메모장
+- [안정원](https://github.com/geniunahn) : 금단증상 극복, 업적, 채팅
+- [유동균](https://github.com/ryudg) : 메인 페이지, 사용자 정보 입력 페이지
+- [최정호](https://github.com/goodcodemakers) : 내 정보, 설정(데이터 초기화,언어 변경, 테마 변경)
+
+## SEO optimization
+
 - favicon 및 meta tag 최적화
 - 모바일 브라우저 toolbar 영역 색상 main color로 변경
-
 ```javascript
 //...
 <meta name="theme-color" content="#1fab89" />
@@ -44,8 +59,23 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 //...
 ```
+<br>
 
-## 페이지별 주요 기능
+## Install
+
+```bash
+$ npm i
+```
+<br>
+
+## Run
+```bash
+$ npx nodemon index.js
+```
+- http://localhost:3001
+
+## Pages description
+
 <details>
     <summary>페이지별 주요 기능 자세히 </summary>
 
@@ -352,4 +382,15 @@ fetch("json/memo.json")
   });
 });
 ```
+- 달력 메모 삭제 기능
+```javascript
+// (index.js)
+app.post("/memoDelete/:day/:id", (req, res) => {
+  let selectMemo = memoArr.filter((e) => Object.keys(e)[0] == req.params.day)[req.params.id];
+  memoArr = memoArr.filter((e) => e !== selectMemo);
+  fs.writeFileSync("./public/json/memo.json", JSON.stringify(memoArr));
+  res.redirect("/calendar");
+});
+```
 </details>
+
