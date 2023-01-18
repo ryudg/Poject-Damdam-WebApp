@@ -638,6 +638,18 @@ app.post("/delete", upload.single("img"), function (req, res) {
 app.get("/calendar", function (req, res) {
   res.render("pages/calendar.ejs", { memoArr, modeArr });
 });
+// ----------calendar 메모 삭제----------
+app.post("/memoDelete/:day/:id", (req, res) => {
+  // 선택한 메모 값 찾기
+  // 전체 메모 배열(memoArr).filter((e) 각각의 배열 값(e) 중에서 프로퍼티 키 값(Object.keys(e)이 오늘 날짜와 일치하는 것 중에서) 선택한 메모의 i(인덱스 번호 값))
+  let selectMemo = memoArr.filter((e) => Object.keys(e)[0] == req.params.day)[
+    req.params.id
+  ];
+  // 전체 메모 배열에 새로운 배열 덮어쓰기 (선택한 메모를 제외한 값)
+  memoArr = memoArr.filter((e) => e !== selectMemo);
+  fs.writeFileSync("./public/json/memo.json", JSON.stringify(memoArr));
+  res.redirect("/calendar");
+});
 // ----------create----------
 // 달력 정보 추가
 app.post("/create", function (req, res) {

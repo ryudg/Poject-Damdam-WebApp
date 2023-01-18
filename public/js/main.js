@@ -158,7 +158,7 @@ function showCalendar() {
             // 기본 메모 박스는 빈값
             memoBox.innerHTML = "";
             // 메모 박스에 메모 정보 배열값을 각각 넣기
-            newMemoArr.forEach((e) => {
+            newMemoArr.forEach((e, i) => {
               memoBox.innerHTML += `
               <div class="content">
                 <div class="emotion"><img src="./images/emotion${e[memoDay][0].감정}.png" /></div>
@@ -169,7 +169,7 @@ function showCalendar() {
                   </div>
                   <div class="sub2"><p>${e[memoDay][0].내용}</p></div>
                 </div>
-                <div class="delete"><form action="memoDelete" method="post"><button>삭제</button></form></div>
+                <div class="delete"><form action="memoDelete/${memoDay}/${i}" method="post"><button><img src="./images/mdi_trash-can-outline.png" alt="delete"/></button></form></div>
               </div>
               `;
             });
