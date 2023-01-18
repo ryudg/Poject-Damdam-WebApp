@@ -1,13 +1,14 @@
 
 # 금연 앱 제작
 > Link : https://port-0-damdamv2-4fuvwk25lcstd4fc.gksl2.cloudtype.app/
-> 
+>
 > 시안 : https://www.figma.com/file/zDxduSGMj8QbVyKRWfuUov/%EA%B8%88%EC%97%B0%EC%95%B1?node-id=0%3A1
 
 # Description
 - 금연 동기 부여 웹 앱
 - Node.js(express, ejs)를 이용해서 구현함
 - 클라우드 타입을 통해 배포함
+
 # Stack
 <img src="https://img.shields.io/badge/Html5-E34F26?style=for-the-badge&logo=Html5&logoColor=white"><img src="https://img.shields.io/badge/Css3-1572B6?style=for-the-badge&logo=Css3&logoColor=white"><img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jQuery&logoColor=white"><img src="https://img.shields.io/badge/Javascript-F7DF1E?style=for-the-badge&logo=Javascript&logoColor=white"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white"><img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=Express&logoColor=white"><img src="https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=JSON&logoColor=white">
 
@@ -43,6 +44,11 @@
 //...
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 //...
+```
+
+## 설치
+```bash
+$ npm i
 ```
 
 ## 페이지별 주요 기능
@@ -364,7 +370,3 @@ app.post("/memoDelete/:day/:id", (req, res) => {
 ```
 </details>
 
-## 설치
-```bash
-$ npm i
-```
