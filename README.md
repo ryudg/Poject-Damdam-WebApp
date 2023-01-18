@@ -69,7 +69,10 @@ $ npm i
 <br>
 
 ## Run
-http://localhost:3001
+```bash
+$ npx nodemon index.js
+```
+- http://localhost:3001
 
 ## Pages description
 
