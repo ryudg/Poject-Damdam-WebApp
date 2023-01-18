@@ -395,5 +395,6 @@ app.post("/memoDelete/:day/:id", (req, res) => {
 </details>
     
 ## Complementary
-- Community site link 페이지 이동 > iframe 변경
+- Community site link 페이지 이동 > target _blank
 - Calendar 메모 작성 input value로 변경해서 즉시 수정 
+- 사용자 정보 local storage에 
