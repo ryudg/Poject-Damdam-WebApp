@@ -352,4 +352,19 @@ fetch("json/memo.json")
   });
 });
 ```
+- 달력 메모 삭제 기능
+```javascript
+// (index.js)
+app.post("/memoDelete/:day/:id", (req, res) => {
+  let selectMemo = memoArr.filter((e) => Object.keys(e)[0] == req.params.day)[req.params.id];
+  memoArr = memoArr.filter((e) => e !== selectMemo);
+  fs.writeFileSync("./public/json/memo.json", JSON.stringify(memoArr));
+  res.redirect("/calendar");
+});
+```
 </details>
+
+## 설치
+```bash
+$ npm i
+```
