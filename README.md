@@ -27,7 +27,7 @@
 - 김명아 : 달력, 달력 메모장
 - 안정원 : 금단증상 극복, 업적, 채팅
 - 유동균 : 메인
-- 최정호 : 내 정보, 설정
+- 최정호 : 내 정보, 설정(데이터 초기화,언어 변경, 테마 변경)
 
 ## SEO 최적화
 - favicon 및 meta tag 최적화
@@ -38,7 +38,7 @@
 <meta name="theme-color" content="#1fab89" />
 //...
 ```
-- 사용자에 의한 모바일 뷰포트 크기(scale) 조정 불
+- 사용자에 의한 모바일 뷰포트 크기(scale) 조정 불가
 ```javascript
 //...
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
@@ -47,7 +47,7 @@
 
 ## 페이지별 주요 기능
 <details>
-    <summary>페이지 주요 기능 </summary>
+    <summary>페이지별 주요 기능 자세히 </summary>
 
 ### 1. Splash
 - 페이지 접속시 처음으로 보여질 화면
@@ -133,6 +133,7 @@ test[2].Count.forEach((e) => {
 });
 fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
 ```
+- 사용자가 테마와 언어를 선택해서 사용할 수 있음
 
 ### 6. 업적
 ```json
