@@ -177,7 +177,7 @@ fs.writeFileSync("achieveDBv2.json", JSON.stringify(test));
         "date" : "2023-01-16",
        }
      ]
-   }
+   } 
 ]
 ``` 
 - 업적 josn 파일에서 `condition`에 맞는 조건을 계산해서 조건과 계산값이 일치(달성)하면 `date` property value를 달성 날짜로 추가
